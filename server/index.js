@@ -10,54 +10,55 @@ app.use(express.json());
 
 // setting up express request routing
 
-// get all restaurants
-app.get("/api/v1/restaurants", (req, res) => {
+// get all anomalies
+app.get("/api/v1/anomalies", (req, res) => {
     console.log("route handler ran");
   res.status(200).json({
     status: "success",
     data: {
-      restaurants: ["mcdonalds", "wendys"],
+      anomalies: ["anomaly_1", "anomaly_2"],
     },
   });
 });
 
-// get one restaurant
-app.get("/api/v1/restaurants/:id", (req, res) => {
+// get one anomaly
+app.get("/api/v1/anomalies/:id", (req, res) => {
   console.log(req);
   res.status(201).json({
     status: "success",
     data: {
-      restaurant: "mcdonalds_get",
+      restaurant: "anomaly_get",
     },
   });
 });
 
-// create a restaurant
-app.post("/api/v1/restaurants", (req, res) => {
+// create an anomaly
+app.post("/api/v1/anomalies", (req, res) => {
   console.log(req.body);
 
   res.status(200).json({
     status: "success",
     data: {
-      restaurant: "mcdonalds_post",
+      anomalies: "anomaly_post",
     },
   });
 });
 
-// update a restaurant
-app.put("/api/v1/restaurants/:id", (req, res) => {
+// update an anomaly
+app.put("/api/v1/anomalies/:id", (req, res) => {
   console.log(req.params.id);
   console.log(req.body);
 
   res.status(200).json({
     status: "success",
     data: {
-      restaurant: "mcdonalds_put",
+      anomalies: "anomalies_put",
     },
   });
 });
 
-app.delete("/api/v1/restaurants/:id", (req, res) => {
+// delete an anomaly
+app.delete("/api/v1/anomalies/:id", (req, res) => {
   res.status(204).json({
     status: "success",
   });
