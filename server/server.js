@@ -1,5 +1,5 @@
 require("dotenv").config();
-const express = require("express")
+const express = require("express");
 
 // express app instance
 const app = express();
