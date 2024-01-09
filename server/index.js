@@ -63,7 +63,7 @@ app.delete("/api/v1/restaurants/:id", (req, res) => {
   });
 })
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 3002;
 app.listen(port, () => {
   console.log(`server is up and listening on ${port}`);
 });
