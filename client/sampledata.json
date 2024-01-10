@@ -1,0 +1,36 @@
+{
+   "dataObject1": {
+      "County": "Dummy County 1",
+      "State": "Dummy State 1",
+      "DAO Member": "Dummy DAO Member 1",
+      "Impact Severity": "Dummy Severity 1",
+      "Reason": "Dummy Reason 1",
+      "Mitigation Plan": "Dummy Mitigation Plan 1",
+      "Clears": "Dummy Clears 1",
+      "Possible Hits": "Dummy Possible Hits 1",
+      "Automation Status": "Dummy Automation Status 1",
+      "DOB Redaction?": "Dummy DOB Redaction 1",
+      "Status": "Dummy Status 1",
+      "Last Reviewed Date": "Dummy Last Reviewed Date 1",
+      "Issue Start Date": "Dummy Issue Start Date 1",
+      "Est Resolution Date": "Dummy Est Resolution Date 1",
+      "Issue Resolve Date": "Dummy Issue Resolve Date 1"
+   },
+   "dataObject2": {
+      "County": "Dummy County 2",
+      "State": "Dummy State 2",
+      "DAO Member": "Dummy DAO Member 2",
+      "Impact Severity": "Dummy Severity 2",
+      "Reason": "Dummy Reason 2",
+      "Mitigation Plan": "Dummy Mitigation Plan 2",
+      "Clears": "Dummy Clears 2",
+      "Possible Hits": "Dummy Possible Hits 2",
+      "Automation Status": "Dummy Automation Status 2",
+      "DOB Redaction?": "Dummy DOB Redaction 2",
+      "Status": "Dummy Status 2",
+      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
+      "Issue Start Date": "Dummy Issue Start Date 2",
+      "Est Resolution Date": "Dummy Est Resolution Date 2",
+      "Issue Resolve Date": "Dummy Issue Resolve Date 2"
+   }
+}
