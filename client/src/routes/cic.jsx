@@ -19,7 +19,7 @@ const ActiveItemsPage = () => {
   };
 
   const filteredItems = items.filter(item =>
-    item.County.toLowerCase().includes(searchTerm.toLowerCase())
+    item.County.toLowerCase().includes(searchTerm.toLowerCase()) && item.Status === 'Active'
   );
 
   return (
