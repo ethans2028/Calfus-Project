@@ -5,6 +5,7 @@ import AnomalyDetailPage from './routes/AnomalyDetailPage';
 import Home from './routes/Home';
 import UpdatePage from './routes/UpdatePage';
 import Cic from './routes/cic';
+import AuditPage from './routes/AuditPage';
 
 const App = () => {
   return <div>
@@ -14,6 +15,7 @@ const App = () => {
         <Route exact path="/cic" element={<Cic/>}/>
         <Route exact path="/anomalies/:id/update" element={<UpdatePage/>}/>
         <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
+        <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>
       </Routes>
     </Router>
   </div>
