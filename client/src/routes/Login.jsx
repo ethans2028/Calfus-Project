@@ -2,7 +2,10 @@ import React from 'react'
 
 const Login = () => {
   return (
-    <div>Login</div>
+    <div>
+      <h1>Anomaly Tracker Login</h1>
+      
+    </div>
   )
 }
 
