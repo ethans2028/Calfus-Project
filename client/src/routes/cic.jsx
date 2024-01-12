@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import AnomalyDetailPage from './AnomalyDetailPage';
 import UpdatePage from './UpdatePage';
-import Home from './Home';
+import Home from './Login';
 import sampleData from '../sampleData.json';
 
 const ActiveItemsPage = () => {
