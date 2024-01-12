@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AnomalyDetailPage from './AnomalyDetailPage';
+import AnomalyDetailPage from './cic';
 import UpdatePage from './NewAnomalyPage';
 import Home from './Login';
 import sampleData from '../sampleData.json';

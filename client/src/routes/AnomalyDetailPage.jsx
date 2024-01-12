@@ -1,37 +1,50 @@
-import React from 'react'
-import {useParams} from 'react-router-dom'
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import sampleData from '../sampleData.json';
 
 const AnomalyDetailPage = () => {
-  const issueID = useParams();
-    // temporary data for testing - will read from database later
-    const tempData = [
-        {id: 1, uname: 'somename1', actions: 'edited field A'},
-        {id: 2, uname: 'somename2', actions: 'edited field B'},
-        {id: 3, uname: 'somename3', actions: 'edited field C'}
-    ]
+  const dataArray = Object.values(sampleData);
+  const [items, setItems] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
 
-    // code to read from database goes here
+  useEffect(() => {
+    setItems(dataArray);
+  }, []);
 
-    
-    // mapping the data into a table format (will format the table later (heh))
-    const mappedData = tempData.map((edit) => 
-        <tr key={edit.id}>
-            <th>{edit.uname}</th>
-            <th>{edit.actions}</th>
-        </tr>
-    );
-    
+  // const mappedData = dataArray.map((edit) => 
+  //       <tr key={edit.id}>
+  //           <th>{edit.uname}</th>
+  //           <th>{edit.actions}</th>
+  //       </tr>
+  // );
   return (
-    <div> 
-      <div>
-      <h1>Issue ID {issueID.id}</h1>
-        <table><tbody>{mappedData}</tbody></table>
-        
-    </div>
-
-
-    </div>
-  )
+    <div>
+      
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {
+            dataArray.map((item) => (
+               <div 
+                  key={item.id}
+                  style={{
+                  color: 'blue',
+                  textDecoration: 'none',
+                  border: '1px solid lightgrey',
+                  borderRadius: '5px',
+                  padding: '5px',
+                  margin: '5px',
+                  }}
+               >
+                  <h1>County</h1>
+                  {item.County}
+                  <h1></h1>
+                  {item.County}
+                  
+               </div>
+            ))
+            }
+          </div>
+        </div>
+  );
 }
 
 export default AnomalyDetailPage

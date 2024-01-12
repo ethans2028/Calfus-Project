@@ -15,7 +15,7 @@
       "Issue Start Date": "Dummy Issue Start Date 1",
       "Est Resolution Date": "Dummy Est Resolution Date 1",
       "Issue Resolve Date": "Dummy Issue Resolve Date 1",
-      "id": "Dummy ID 1"
+      "id": 1
    },
    "dataObject2": {
       "County": "Dummy County A",
@@ -33,6 +33,6 @@
       "Issue Start Date": "Dummy Issue Start Date 2",
       "Est Resolution Date": "Dummy Est Resolution Date 2",
       "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
+      "id": 2
    }
 }
