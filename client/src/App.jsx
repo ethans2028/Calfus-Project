@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { Link } from 'react-router-dom';
 import AnomalyDetailPage from './routes/AnomalyDetailPage';
 import Login from './routes/Login';
+import UpdatePage from './routes/UpdatePage';
 import Cic from './routes/cic';
 import AuditPage from './routes/AuditPage';
 
