@@ -17,6 +17,7 @@ const AnomalyDetailPage = () => {
   //           <th>{edit.actions}</th>
   //       </tr>
   // );
+  
   return (
     <div>
       
