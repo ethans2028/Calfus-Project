@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import { Link } from 'react-router-dom';
 import AnomalyDetailPage from './routes/AnomalyDetailPage';
 import Login from './routes/Login';
+import UpdatePage from './routes/UpdatePage';
 import Cic from './routes/cic';
 import AuditPage from './routes/AuditPage';
 
@@ -12,6 +13,7 @@ const App = () => {
       <Routes> 
         <Route exact path="/" element={<Login/>}/>
         <Route exact path="/cic" element={<Cic/>}/>
+        <Route exact path="/anomalies/:id/update" element={<UpdatePage/>}/>
         <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
         <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>
       </Routes>
