@@ -13,6 +13,7 @@ const App = () => {
       <Routes> 
         <Route exact path="/" element={<Login/>}/>
         <Route exact path="/cic" element={<Cic/>}/>
+        <Route exact path="/anomalies/:id/update" element={<UpdatePage/>}/>
         <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
         <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>
       </Routes>
