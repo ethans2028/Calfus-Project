@@ -18,6 +18,63 @@ body {
   padding: 0 15px;
 }
 
+.columnlabel{
+  border: 1px solid #ddd; /* Define the border color and width */
+  padding: 10px; /* Define the padding inside the box */
+}
+
+
+/* the following are for rows in a table */
+
+
+.horizontal-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  white-space: nowrap;
+}
+
+.county-name {
+  flex: 3;
+  display: flex;
+  flex-direction: row; 
+}
+
+.zip-code {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+.county-id {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-created {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.date-updated {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-link {
+  flex: 1;
+}
+
+.details-link {
+  flex: 1;
+}
+
+
+
 h1, h2, h3, h4, h5, h6 {
   color: #444;
   margin-bottom: 10px;
