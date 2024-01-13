@@ -37,7 +37,6 @@
    },
    "dataObject3": {
       "County": "Dummy County C",
-<<<<<<< HEAD
       "State": "Dummy State 2",
       "DAO Member": "Dummy DAO Member 2",
       "Impact Severity": "Dummy Severity 2",
@@ -359,22 +358,5 @@
       "Est Resolution Date": "Dummy Est Resolution Date 2",
       "Issue Resolve Date": "Dummy Issue Resolve Date 2",
       "id": "Dummy ID 2"
-=======
-      "State": "Dummy State 3",
-      "DAO Member": "Dummy DAO Member 3",
-      "Impact Severity": "Dummy Severity 3",
-      "Reason": "Dummy Reason 3",
-      "Mitigation Plan": "Dummy Mitigation Plan 3",
-      "Clears": "Dummy Clears 3",
-      "Possible Hits": "Dummy Possible Hits 3",
-      "Automation Status": "Dummy Automation Status 3",
-      "DOB Redaction?": "Dummy DOB Redaction 3",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 3",
-      "Issue Start Date": "Dummy Issue Start Date 3",
-      "Est Resolution Date": "Dummy Est Resolution Date 3",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 3",
-      "id": "Dummy ID 3"
->>>>>>> Charles
    }
 }
