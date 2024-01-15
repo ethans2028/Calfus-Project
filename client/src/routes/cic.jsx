@@ -52,7 +52,7 @@ const ActiveItemsPage = () => {
                   <div className="county-id">{item.id}</div>
                   <div className="date-created">{item.DateOfBirth}</div>
                   <div className="date-updated">{item.LastEdited}</div>
-                  <Link className="edit-link" to={`/Edit/${item.id}`}>Edit</Link>
+                  <Link className="edit-link" to={`/anomalies/:${item.id}/changes`}>Edit</Link>
                   <Link className= "details-link" to={`/anomalies/:${item.id}`}>Details</Link>
                 </div>
               ))
