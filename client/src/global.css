@@ -116,3 +116,62 @@ input, textarea {
 .link:hover {
   text-decoration: underline;
 }
+
+.details-page {
+  position: relative;
+}
+
+.details-data {
+  display: flex;
+  flex-direction: column; 
+  justify-self: center;
+  margin-top: 2%;
+}
+
+.details-data table{
+  margin: 25px 50px;
+  table-layout: fixed;
+  border-spacing: 30px;
+  border: 1px solid black;
+}
+
+.details-data td, th {
+  padding: 3px;
+  
+}
+.details-data td {
+  background-color: lightgrey;
+  height: 50px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.long-data {
+  height: 100px !important; 
+  width: 200px;
+  height: 100px;
+  
+}
+
+.edit-btn {
+  position: absolute;
+  left: 50%;
+}
+.page-header {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.login-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center !important;
+  margin: 12% 40% ;
+}
