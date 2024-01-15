@@ -34,7 +34,7 @@ const ActiveItemsPage = () => {
       <div className="container">
         <h1>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
-          <input type="text" placeholder="Search by county name or zip" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
+          <input type="text" placeholder="Search by county name or zip" style={{ marginRight: '5px' }}/>
           <Link to="/NewAnomalyPage" className="button"> + New Entry</Link>        
         </div>
         <div className="horizontal-div" style={{ backgroundColor: "white"}}>
