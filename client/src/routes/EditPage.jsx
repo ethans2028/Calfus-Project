@@ -1,7 +1,10 @@
-// EditPage.js
 import React, { useEffect, useState } from 'react';
-import '../global.css'
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import sampleData from '../sampleData.json';
+import '../global.css'; // Import the global CSS file
+
 const EditPage = () => {
+  const [redirect_home, setRedirect_home] = useState(false);
   //open text
   const [reason, setReason] = useState('');
   const [county, setCounty] = useState('');
@@ -21,7 +24,10 @@ const EditPage = () => {
   const [dobRedaction, setDobRedaction] = useState('');
   const [status, setStatus] = useState('');
 
-
+  const handleButtonClick_home = () => {
+    // Set redirect to true when the button is clicked
+    setRedirect_home(true);
+  };
  
   const handleSubmit = () => {
     // need to do more of submit logic and page switch
@@ -34,11 +40,17 @@ const EditPage = () => {
       document.title = 'Default Title'; // Set the default title when the component unmounts
     };
   }, []);
+  if (redirect_home) {
+    return <Navigate to="/cic"/>;
+  }
 
   return (
     <div>
-     
+        <button onClick={handleButtonClick_home}  style={{
+          margin: '10px',
+        }}>Back</button>
       <h2>Edit Report</h2>
+
       <form onSubmit={handleSubmit}>
 
       <label>
