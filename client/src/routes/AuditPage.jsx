@@ -101,7 +101,7 @@ const AuditPage = () => {
     //   (this will need to be cleaned up later, might need help with this)
     <div>
         <css></css>
-        <Link to={`../anomalies/${issueID.id}`}>Back</Link>
+        <Link to={`../cic`}>Back</Link>
         <div style={{fontSize: "40px"}}><b>Anomaly {issueID.id}</b></div>
         <div style={{fontSize: "36px"}}><b>Audit Log</b></div>
         <input type="text" placeholder="Filter by username" onChange={changeUname}></input>

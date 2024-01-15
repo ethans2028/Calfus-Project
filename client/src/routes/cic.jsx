@@ -45,6 +45,8 @@ const ActiveItemsPage = () => {
           <div className="date-updated" style={{ fontWeight: 'bold' }}>Date Updated</div>
           <div className="edit-link" style={{ fontWeight: 'bold' }}>Edit</div>
           <div className="details-link" style={{ fontWeight: 'bold' }}>Details</div>
+          <div className="details-link" style={{ fontWeight: 'bold' }}>Audit</div>
+
         </div>  
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
@@ -55,8 +57,9 @@ const ActiveItemsPage = () => {
                   <div className="county-id">{item.id}</div>
                   <div className="date-created">{item.DateOfBirth}</div>
                   <div className="date-updated">{item.LastEdited}</div>
-                  <Link className="edit-link" to={`/anomalies/:${item.id}/changes`}>Edit</Link>
+                  <Link className="edit-link" to={`/anomalies/:${item.id}/edit`}>Edit</Link>
                   <Link className= "details-link" to={`/anomalies/:${item.id}`}>Details</Link>
+                  <Link className= "details-link" to={`/anomalies/:${item.id}/changes`}>Audit</Link>
                 </div>
               ))
               ) : (
