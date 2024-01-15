@@ -161,3 +161,17 @@ input, textarea {
   text-align: center;
   margin-top: 3%;
 }
+
+.login-page {
+  display: flex;
+  flex-direction: column !important;
+}
+
+.login-elements {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  vertical-align: center !important;
+  margin: 12% 40% ;
+}
