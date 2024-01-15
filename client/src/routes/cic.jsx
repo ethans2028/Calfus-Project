@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import AnomalyDetailPage from './cic';
-import UpdatePage from './NewAnomalyPage';
-import Home from './Login';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 
@@ -35,7 +32,7 @@ const ActiveItemsPage = () => {
         <h1>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by county name or zip" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
-          <Link to="/NewAnomalyPage" className="button"> + New Entry</Link>        
+          <Link to="/NewPage" className="button"> + New Entry</Link>        
         </div> 
         <div className="horizontal-div" style={{ backgroundColor: "white"}}>
           <div className="county-name" style={{ fontWeight: 'bold' }}>County Name</div>
