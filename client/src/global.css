@@ -116,3 +116,35 @@ input, textarea {
 .link:hover {
   text-decoration: underline;
 }
+
+.details-page {
+  text-align: center;
+  margin-top: 5%;
+}
+
+.details-data {
+  display: flex;
+  flex-direction: column; 
+  justify-self: center;
+  margin-top: 5%;
+}
+
+.details-data table{
+  margin: 20px 50px;
+  table-layout: fixed;
+  border-spacing: 30px;
+  border: 1px solid black;
+}
+
+.details-data td {
+  background-color: lightgrey;
+  padding: 3px; 
+}
+
+.long-data {
+  height: 100px;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  
+}

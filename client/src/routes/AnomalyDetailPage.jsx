@@ -1,44 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import sampleData from '../sampleData.json';
+import '../global.css'; // Import the global CSS file
+
 
 const AnomalyDetailPage = () => {
-  const dataArray = Object.values(sampleData);
-  const [items, setItems] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+
   
   const record = sampleData.dataObject11;
-  useEffect(() => {
-    setItems(dataArray);
-  }, []);
-
-  // const mappedData = dataArray.map((edit) => 
-  //       <tr key={edit.id}>
-  //           <th>{edit.uname}</th>
-  //           <th>{edit.actions}</th>
-  //       </tr>
-  // );
   
   return (
-    <div style={{textAlign: 'center'}}>
+    <div className='details-page'>
       
-      <div >
+      <div className='details-head'>
         <h1>Anomaly Detail Page: {record.id}</h1>
         
-        <Link to="/">Home</Link>
       </div>
-      
-      <table style={{margin: "50px"}}>
+      <div className='details-data  '>
+      <table>
         <tr>
           <th>Last Edited By</th>
           <th>Last Reviewed Date</th>
         </tr>
         <tr>
-          <td>{record['DAO Member']}</td>
+          <td >{record['DAO Member']}</td>
           <td>{record['Last Reviewed Date']}</td>
         </tr>
       </table>
-      <table style={{margin: "50px"}}>
+      <table>
         <tr>
           <th>State</th>
           <th>County</th>
@@ -46,7 +35,7 @@ const AnomalyDetailPage = () => {
           <th>Issue Start Date</th>
           <th>Estimated Resolve Date</th>
         </tr>
-        <tr style={{margin: "50px"}}>
+        <tr>
           
           <td>{record.State}</td>
           <td>{record.County}</td>
@@ -57,63 +46,37 @@ const AnomalyDetailPage = () => {
       </table>
 
 
-      <table style={{margin: "50px"}}>
-        <tr>
-          <th>Clears</th>
-          <th>Possible Hits</th>
-          
-        </tr>
-        <tr>
-          <td>{record.Clears}</td>
-          <td>{record['Possible Hits']}</td>
-        </tr>
-      </table>
-
-      <table style={{margin: "50px"}}>
+      <table>
         <tr>
           <th>Reason</th>
           <th>Mitigation Plan</th>
+        </tr>
+        <tr>
+          <td className='long-data'>{record['Mitigation Plan']}</td>
+          <td className='long-data'>{record.Clears}</td>
+          
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Clears</th>
+          <th>Possible Hits</th>
           <th>Automation Status</th>
-          <th>DOB Redactions</th>
+          <th>DOB Redaction?</th>
         </tr>
         <tr>
           <td>{record.Reason}</td>
-          <td>{record['Mitigation Plan']}</td>
+          <td>{record['Possible Hits']}</td>
           <td>{record['Automation Status']}</td>
-          <td>{record['DOB Redactions']}</td>
+          <td>{record['DOB Redaction?']}</td>
         </tr>
       </table>
-      <button style={{
-        margin: '10px',
-      }}>Edit</button>
+      </div>
+      <button>Edit</button>
     </div>
     
   );
 }
 
 export default AnomalyDetailPage
-
-{/* <div style={{ display: 'flex', flexDirection: 'column' }}>
-       {
-        record.map((item) => (
-            
-            
-            <div 
-              key={item}
-              style={{
-              color: 'blue',
-              textDecoration: 'none',
-              border: '1px solid lightgrey',
-              borderRadius: '5px',
-              padding: '5px',
-              margin: '5px',
-              }}
-            >
-              <h1></h1>
-              {item}
-              
-            </div>
-          
-        ))
-      }
-      </div> */}

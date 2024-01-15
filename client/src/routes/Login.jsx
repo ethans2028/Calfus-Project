@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Navigate} from 'react-router-dom';
 import cic from './cic.jsx';
+import '../global.css'; // Import the global CSS file
 
 const Login = () => {
 
