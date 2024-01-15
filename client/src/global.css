@@ -118,33 +118,46 @@ input, textarea {
 }
 
 .details-page {
-  text-align: center;
-  margin-top: 5%;
+  position: relative;
 }
 
 .details-data {
   display: flex;
   flex-direction: column; 
   justify-self: center;
-  margin-top: 5%;
+  margin-top: 2%;
 }
 
 .details-data table{
-  margin: 20px 50px;
+  margin: 25px 50px;
   table-layout: fixed;
   border-spacing: 30px;
   border: 1px solid black;
 }
 
+.details-data td, th {
+  padding: 3px;
+  
+}
 .details-data td {
   background-color: lightgrey;
-  padding: 3px; 
+  height: 50px;
+  text-align: left;
+  vertical-align: top;
 }
 
 .long-data {
-  height: 100px;
-  text-align: center;
+  height: 100px !important; 
   width: 200px;
   height: 100px;
   
+}
+
+.edit-btn {
+  position: absolute;
+  left: 50%;
+}
+.page-header {
+  text-align: center;
+  margin-top: 3%;
 }

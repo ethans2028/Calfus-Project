@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Navigate} from 'react-router-dom';
-import cic from './cic.jsx';
 import '../global.css'; // Import the global CSS file
 
 const Login = () => {
@@ -18,13 +17,8 @@ const Login = () => {
   }
 
   return (
-    <div style={{
-      textAlign: 'center',
-      
-    }}>
-      <h1 style={{
-        textAlign: 'center',
-      }}>Anomaly Tracker</h1>
+    <div className='login-page'>
+      <h1 className='page-header'>Anomaly Tracker</h1>
       <h4>Username</h4>
       <input type="text" placeholder=""/>
       <h4>Password</h4>
