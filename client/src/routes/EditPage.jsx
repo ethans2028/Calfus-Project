@@ -1,8 +1,6 @@
 // EditPage.js
 import React, { useEffect, useState } from 'react';
-//import '../global.css'
-import './EditPage.css'
-
+import '../global.css'
 const EditPage = () => {
   //open text
   const [reason, setReason] = useState('');

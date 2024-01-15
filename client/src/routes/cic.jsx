@@ -33,11 +33,10 @@ const ActiveItemsPage = () => {
   return (
       <div className="container">
         <h1>Current Impacted Counties</h1>
-        <input type="text" placeholder="Search by county name or zip" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by county name or zip" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
           <Link to="/NewAnomalyPage" className="button"> + New Entry</Link>        
-        </div>
+        </div> 
         <div className="horizontal-div" style={{ backgroundColor: "white"}}>
           <div className="county-name" style={{ fontWeight: 'bold' }}>County Name</div>
           <div className="zip-code" style={{ fontWeight: 'bold' }}>ZIP code</div>
