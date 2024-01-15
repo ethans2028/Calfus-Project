@@ -33,6 +33,7 @@ const ActiveItemsPage = () => {
   return (
       <div className="container">
         <h1>Current Impacted Counties</h1>
+        <input type="text" placeholder="Search by county name or zip" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by county name or zip" style={{ marginRight: '5px' }}/>
           <Link to="/NewAnomalyPage" className="button"> + New Entry</Link>        
@@ -55,8 +56,8 @@ const ActiveItemsPage = () => {
                   <div className="county-id">{item.id}</div>
                   <div className="date-created">{item.DateOfBirth}</div>
                   <div className="date-updated">{item.LastEdited}</div>
-                  <Link className="edit-link" to={`/Edit/${item.id}`}>Edit</Link>
-                  <Link className= "details-link" to={`/AnomalyDetailPage/${item.id}`}>Details</Link>
+                  <Link className="edit-link" to={`/anomalies/:${item.id}/changes`}>Edit</Link>
+                  <Link className= "details-link" to={`/anomalies/:${item.id}`}>Details</Link>
                 </div>
               ))
               ) : (
