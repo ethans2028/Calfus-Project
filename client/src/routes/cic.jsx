@@ -33,16 +33,19 @@ const ActiveItemsPage = () => {
   return (
       <div className="container">
         <h1>Current Impacted Counties</h1>
-        <input type="text" placeholder="Search by county name or zip"/>
+        <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
+          <input type="text" placeholder="Search by county name or zip" style={{ marginRight: '5px' }}/>
+          <Link to="/NewAnomalyPage" className="button"> + New Entry</Link>        
+        </div>
         <div className="horizontal-div" style={{ backgroundColor: "white"}}>
           <div className="county-name" style={{ fontWeight: 'bold' }}>County Name</div>
           <div className="zip-code" style={{ fontWeight: 'bold' }}>ZIP code</div>
-          <div className="county-id" style={{ fontWeight: 'bold' }}>ID</div>
+          <div className="county-id" style={{ fontWeight: 'bold' }}>ID</div> 
           <div className="date-created" style={{ fontWeight: 'bold' }}>Date Created</div>
           <div className="date-updated" style={{ fontWeight: 'bold' }}>Date Updated</div>
           <div className="edit-link" style={{ fontWeight: 'bold' }}>Edit</div>
           <div className="details-link" style={{ fontWeight: 'bold' }}>Details</div>
-        </div>
+        </div>  
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => (
