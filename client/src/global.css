@@ -19,13 +19,9 @@ body {
 }
 
 .columnlabel{
-  border: 1px solid #ddd; /* Define the border color and width */
-  padding: 10px; /* Define the padding inside the box */
+  border: 1px solid #ddd; 
+  padding: 10px; 
 }
-
-
-/* the following are for rows in a table */
-
 
 .horizontal-div {
   display: flex;
@@ -85,19 +81,36 @@ p {
 }
 
 button {
-  display: inline-block;
-  background-color: #007BFF;
-  color: #fff;
   border: none;
-  padding: 10px 20px;
-  margin-top: 20px;
-  cursor: pointer;
+  color: white;
+  text-align: center;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  display: inline-block;
+  font-size: 16px;
+  height: 47px;
+  width: 150px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #c9c8c8;
+}
+
+.button {
+  border: none;
+  color: #ffffff;
+  background-color: rgb(221, 220, 220);
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  height: 47px;
+  width: 150px;
+}
+
+.button:hover {
+  background-color: #c9c8c8;
 }
 
 input, textarea {

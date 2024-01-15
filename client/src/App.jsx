@@ -17,6 +17,8 @@ const App = () => {
           <Routes> 
             <Route exact path="/" element={<Login/>}/>
             <Route exact path="/cic" element={<Cic/>}/>
+            <Route exact path="/AnomalyDetailPage" element={<AnomalyDetailPage/>}/>
+            <Route exact path="/NewAnomalyPage" element={<NewAnomalyPage/>}/>
             <Route exact path="/anomalies/:id/new" element={<NewAnomalyPage/>}/>
             <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
             <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>

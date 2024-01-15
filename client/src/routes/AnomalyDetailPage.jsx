@@ -5,16 +5,12 @@ import '../global.css'; // Import the global CSS file
 
 
 const AnomalyDetailPage = () => {
-
-  
   const record = sampleData.dataObject11;
-  
   return (
     <div className='details-page'>
       
       <div className='page-header'>
         <h1>Anomaly Detail Page: {record.id}</h1>
-        
       </div>
       <div className='details-data  '>
         <table>
@@ -40,7 +36,7 @@ const AnomalyDetailPage = () => {
             <td>{record.State}</td>
             <td>{record.County}</td>
             <td>{record['Impact Severity']}</td>
-            <td>{record['Issue Start Date']}</td>
+            <td>{record['Issue Sart Date']}</td>
             <td>{record['Issue Resolve Date']}</td>
           </tr>
         </table>
