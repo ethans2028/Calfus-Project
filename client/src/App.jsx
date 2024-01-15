@@ -6,6 +6,7 @@ import Login from './routes/Login';
 import NewAnomalyPage from './routes/NewAnomalyPage';
 import Cic from './routes/cic';
 import AuditPage from './routes/AuditPage';
+import EditPage from './routes/EditPage';
 import { AnomalyContextProvider } from './context/AnomalyContext';
 
 const App = () => {
@@ -16,9 +17,12 @@ const App = () => {
           <Routes> 
             <Route exact path="/" element={<Login/>}/>
             <Route exact path="/cic" element={<Cic/>}/>
+            <Route exact path="/AnomalyDetailPage" element={<AnomalyDetailPage/>}/>
+            <Route exact path="/NewAnomalyPage" element={<NewAnomalyPage/>}/>
             <Route exact path="/anomalies/:id/new" element={<NewAnomalyPage/>}/>
             <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
             <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>
+            <Route exact path="/anomalies/:id/edit" element={<EditPage/>}/>
           </Routes>
         </Router>
       </div>
@@ -27,3 +31,4 @@ const App = () => {
 }
 
 export default App;
+
