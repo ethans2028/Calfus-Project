@@ -19,10 +19,6 @@ const App = () => {
             <Route exact path="/cic" element={<Cic/>}/>
             <Route exact path="/AnomalyDetailPage" element={<AnomalyDetailPage/>}/>
             <Route exact path="/NewAnomalyPage" element={<NewAnomalyPage/>}/>
-            <Route exact path="/anomalies/:id/new" element={<NewAnomalyPage/>}/>
-            <Route exact path="/anomalies/:id" element={<AnomalyDetailPage/>}/>
-            <Route exact path="/anomalies/:id/changes" element={<AuditPage/>}/>
-            <Route exact path="/anomalies/:id/edit" element={<EditPage/>}/>
           </Routes>
         </Router>
       </div>
