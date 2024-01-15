@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 
@@ -8,13 +8,29 @@ const AnomalyDetailPage = () => {
 
   
   const record = sampleData.dataObject11;
+
+  const [redirect_home, setRedirect_home] = useState(false);
+
+  const handleButtonClick_home = () => {
+    // Set redirect to true when the button is clicked
+    setRedirect_home(true);
+  };
+
+  // Redirect to another page if redirect state is true
+  if (redirect_home) {
+    return <Navigate to="/cic"/>;
+  }
+
   
   return (
     <div className='details-page'>
-      
+      <button onClick={handleButtonClick_home}  style={{
+          margin: '10px',
+        }}>Back</button>
+
       <div className='page-header'>
         <h1>Anomaly Detail Page: {record.id}</h1>
-        
+
       </div>
       <div className='details-data  '>
         <table>
