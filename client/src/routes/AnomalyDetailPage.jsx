@@ -21,9 +21,7 @@ const AnomalyDetailPage = () => {
 
   return (
     <div className='details-page'>
-      <button onClick={handleButtonClick_home}  style={{
-          margin: '10px',
-        }}>Back</button>
+      <Link to="/cic" className="button"> Back </Link>        
 
       <div className='page-header'>
         <h1>Anomaly Detail Page: {record.id}</h1>

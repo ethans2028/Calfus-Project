@@ -46,9 +46,7 @@ const NewPage = () => {
 
   return (
     <div>
-        <button onClick={handleButtonClick_home}  style={{
-          margin: '10px',
-        }}>Back</button>
+      <Link to="/NewPage" className="button"> Back </Link>        
       <h2>New Report</h2>
 
       <form onSubmit={handleSubmit}>
@@ -176,7 +174,7 @@ const NewPage = () => {
         </label>
         <br />
 
-        <button type="submit">Create</button>
+        <button className="button" type="submit">Create</button>
       </form>
     </div>
   );

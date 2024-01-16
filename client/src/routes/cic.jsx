@@ -158,27 +158,32 @@ const ActiveItemsPage = () => {
     }
   }
 
-
   const filteredItems = items.filter(item => {
     if (searchTerm === '') {
       return item.Status === 'Active';
     }
-    return item.County.toLowerCase().includes(searchTerm.toLowerCase()) && item.Status === 'Active';
+    const searchTermLower = searchTerm.toLowerCase();
+    return (
+      item['County']?.toLowerCase().startsWith(searchTermLower) ||
+      item['State']?.toLowerCase().startsWith(searchTermLower) ||
+      item['Impact Severity']?.toLowerCase().startsWith(searchTermLower) ||
+      item['Last Reviewed Date']?.toLowerCase().startsWith(searchTermLower)
+    ) && item['Status'] === 'Active';
   });
 
   return (
       <div className="container">
         <h1>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
-          <input type="text" placeholder="Search by county name" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
+          <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
           <Link to="/NewPage" className="button"> + New Entry</Link>        
         </div> 
-        <div className="horizontal-div" style={{ backgroundColor: "white"}}>
-          <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer' }}>St.</div>
-          <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County</div>
-          <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity</div> 
-          <div className="large-header" onClick={sortReason} style={{ cursor: 'pointer' }}>Reason</div>
-          <div className="small-header" onClick={sortLastReviewed} style={{ cursor: 'pointer' }}>Last Review</div>
+        <div className="horizontal-div" style={{ backgroundColor: "#c6bab2"}}>
+          <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer', paddingLeft: '10px'}}>St.⇅</div>
+          <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County⇅</div>
+          <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity⇅</div> 
+          <div className="large-header" onClick={sortReason} style={{ cursor: 'pointer' }}>Reason⇅</div>
+          <div className="small-header" onClick={sortLastReviewed} style={{ cursor: 'pointer' }}>Last Review⇅</div>
           <div className="xxsmall-header">Edit</div>
           <div className="xsmall-header">Details</div>
           <div className="xsmall-header">Audit</div>
@@ -186,15 +191,15 @@ const ActiveItemsPage = () => {
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => (
-                <div style={{ backgroundColor: index % 2 === 1 ? 'white' : '#f2f2f2' }} className="horizontal-div">
-                  <div className="xxsmall-element">{item['State']}</div>
+                <div style={{ backgroundColor: index % 2 === 1 ? ' #c6bab2' : '#d7cbc4' }} className="horizontal-div">
+                  <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item['State']}</div>
                   <div className="medium-element">{item['County']}</div>
                   <div className="small-element">{item['Impact Severity']}</div> 
                   <div className="large-element">{item['Reason']}</div>
                   <div className="small-element">{item['Last Reviewed Date']}</div>
-                  <Link className="xxsmall-element" to={`/anomalies/:${item.id}/edit`}>Edit</Link>
-                  <Link className="xsmall-element" to={`/anomalies/:${item.id}`}>Details</Link>
-                  <Link className="xsmall-element" to={`/anomalies/:${item.id}/changes`}>Audit</Link>
+                  <Link className="xxsmall-element link" to={`/anomalies/:${item.id}/edit`}>Edit</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.id}`}>Details</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.id}/changes`}>Audit</Link>
                 </div>
               ))
               ) : (

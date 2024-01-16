@@ -46,9 +46,8 @@ const EditPage = () => {
 
   return (
     <div>
-        <button onClick={handleButtonClick_home}  style={{
-          margin: '10px',
-        }}>Back</button>
+      <Link to="/cic" className="button"> Back </Link>        
+
       <h2>Edit Report</h2>
 
       <form onSubmit={handleSubmit}>
@@ -176,7 +175,7 @@ const EditPage = () => {
         </label>
         <br />
 
-        <button type="submit">Submit</button>
+        <button className="button" type="submit">Submit</button>
       </form>
     </div>
   );

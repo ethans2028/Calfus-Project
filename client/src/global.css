@@ -9,7 +9,7 @@ body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
-  background-color: #f5f5f5;
+  background-color: #DDD0C8;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
   align-items: center;
   justify-content: center; 
   white-space: nowrap;
-  gap: 10px;
+  gap: 5px;
 }
 
 .large-header {
@@ -138,7 +138,7 @@ button:hover {
 .button {
   border: none;
   color: #ffffff;
-  background-color: rgb(221, 220, 220);
+  background-color: #323232;
   text-align: center;
   text-decoration: none;
   display: flex;
@@ -147,10 +147,11 @@ button:hover {
   font-size: 16px;
   height: 47px;
   width: 150px;
+  border-radius: 25px;
 }
 
 .button:hover {
-  background-color: #c9c8c8;
+  background-color: #6b6b6b;
 }
 
 input, textarea {
@@ -159,10 +160,11 @@ input, textarea {
   border: 1px solid #ddd;
   margin-bottom: 20px;
   font-size: 1rem;
+  border-radius: 25px;
 }
 
 .link {
-  color: #007BFF;
+  color: #2153aa;
   text-decoration: none;
 }
 

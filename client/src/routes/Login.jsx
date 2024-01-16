@@ -25,7 +25,7 @@ const Login = () => {
         <h4>Password</h4>
         <input type="password" placeholder=""/>
         <br />
-        <button onClick={handleButtonClick}  style={{
+        <button className= 'button' onClick={handleButtonClick} style={{
           margin: '10px',
         }}>Login</button>
       </div>
