@@ -5,7 +5,7 @@ import '../global.css'; // Import the global CSS file
 
 
 const AnomalyDetailPage = () => {
-  const record = sampleData.dataObject11;
+  const record = sampleData.Current[0];
 
   const [redirect_home, setRedirect_home] = useState(false);
 

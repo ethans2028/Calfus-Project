@@ -1,389 +1,4330 @@
 {
-   "DataObject1": {
-      "County": "Dummy County B",
-      "State": "Dummy State 1",
-      "DAO Member": "Dummy DAO Member 1",
-      "Impact Severity": "Dummy Severity 1",
-      "Reason": "Dummy Reason 1",
-      "Mitigation Plan": "Dummy Mitigation Plan 1",
-      "Clears": "Dummy Clears 1",
-      "Possible Hits": "Dummy Possible Hits 1",
-      "Automation Status": "Dummy Automation Status 1",
-      "Zip": "12350",
-      "DateOfBirth": "01-01-1995",
-      "LastEdited": "02-01-1995",
-      "DOB Redaction?": "Dummy DOB Redaction 1",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 1",
-      "Issue Start Date": "Dummy Issue Start Date 1",
-      "Est Resolution Date": "Dummy Est Resolution Date 1",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 1",
-      "id": "Dummy ID 1"
-   },
-   "DataObject2": {
-      "County": "Dummy County A",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12351",
-      "DateOfBirth": "01-01-1996",
-      "LastEdited": "02-01-1996",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject3": {
-      "County": "Dummy County C",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 5"
-   },
-   "dataObject4": {
-      "County": "Dummy County D",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Zip": "12359",
-      "DateOfBirth": "01-01-2020",
-      "LastEdited": "02-01-2023",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 7"
-   },
-   "dataObject5": {
-      "County": "Dummy County E",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject6": {
-      "County": "Dummy County F",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject7": {
-      "County": "Dummy County G",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12353",
-      "DateOfBirth": "01-01-1999",
-      "LastEdited": "02-01-1999",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 10"
-   },
-   "dataObject8": {
-      "County": "Dummy County H",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject9": {
-      "County": "Dummy County I",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject11": {
-      "County": "Dummy County J",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject12": {
-      "County": "Dummy County k",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Zip": "12355",
-      "DateOfBirth": "01-01-2000",
-      "LastEdited": "02-01-2001",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 22"
-   },
-   "dataObject13": {
-      "County": "Dummy County l",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject14": {
-      "County": "Dummy County m",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject15": {
-      "County": "Dummy County n",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject16": {
-      "County": "Dummy County o",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject17": {
-      "County": "Dummy County p",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject18": {
-      "County": "Dummy County q",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12349",
-      "DateOfBirth": "01-01-1993",
-      "LastEdited": "02-01-1993",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject19": {
-      "County": "Dummy County r",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12347",
-      "DateOfBirth": "01-01-1992",
-      "LastEdited": "02-01-1992",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject20": {
-      "County": "Dummy County s",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12346",
-      "DateOfBirth": "01-01-1991",
-      "LastEdited": "02-01-1991",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Resolved",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 2"
-   },
-   "dataObject21": {
-      "County": "Dummy County t",
-      "State": "Dummy State 2",
-      "DAO Member": "Dummy DAO Member 2",
-      "Impact Severity": "Dummy Severity 2",
-      "Reason": "Dummy Reason 2",
-      "Mitigation Plan": "Dummy Mitigation Plan 2",
-      "Clears": "Dummy Clears 2",
-      "Possible Hits": "Dummy Possible Hits 2",
-      "Automation Status": "Dummy Automation Status 2",
-      "Zip": "12345",
-      "DateOfBirth": "01-01-1990",
-      "LastEdited": "02-01-1990",
-      "DOB Redaction?": "Dummy DOB Redaction 2",
-      "Status": "Active",
-      "Last Reviewed Date": "Dummy Last Reviewed Date 2",
-      "Issue Start Date": "Dummy Issue Start Date 2",
-      "Est Resolution Date": "Dummy Est Resolution Date 2",
-      "Issue Resolve Date": "Dummy Issue Resolve Date 2",
-      "id": "Dummy ID 21"
-   }
+"Current":[
+ {
+  "County": "SACRAMENTO",
+  "State": "CA",
+  "DAO Member (User)": "Sameul Adams",
+  "Impact Severity": "New normal",
+  "Reason": "Lorem Epsom this is a sample text\n\nUpdate on 9\/16\/2022: Lorem Epsom this is a sample text\n",
+  "Mitigation Plan": "Lorem Epsom this is a sample text\n\n\nUpdate on 8\/2\/2022: Lorem Epsom this is a sample text",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "03\/30\/2022",
+  "Est Resolution Date": "New Normal"
+ },
+ {
+  "County": "SAN JOAQUIN",
+  "State": "CA",
+  "DAO Member (User)": "Sameul Adams",
+  "Impact Severity": "New normal",
+  "Reason": "Lorem Epsom this is a sample text",
+  "Mitigation Plan": "Lorem Epsom this is a sample text",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "Aug-21",
+  "Est Resolution Date": "New Normal"
+ },
+ {
+  "County": "All Counties",
+  "State": "MI",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Long-term",
+  "Reason": "Lorem Epsom this is a sample text",
+  "Mitigation Plan": "Lorem Epsom this is a sample text",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "04\/13\/2023",
+  "Est Resolution Date": "Fluid Situation"
+ },
+ {
+  "County": "Cook",
+  "State": "IL",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Lorem Epsom this is a sample text",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/04\/2023",
+  "Issue Start Date": "06\/27\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Hillsborough",
+  "State": "NH",
+  "DAO Member (User)": "Cindy Hewson",
+  "Impact Severity": "Medium-term",
+  "Reason": "Severe clerk short-staffing has caused delays and increased TAT in NH, specfifically Hillsborough. Courts are currently 7-10 days behind.",
+  "Mitigation Plan": "We are actively working on solutions to mitigate this issue",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/11\/2023",
+  "Issue Start Date": "07\/20\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "San Bernardino",
+  "State": "CA",
+  "DAO Member (User)": "Cindy Hewson",
+  "Impact Severity": "New normal",
+  "Reason": "Lorem Epsom this is a sample text\nUpdate 8\/18\/23: Lorem Epsom this is a sample text",
+  "Mitigation Plan": "Adding additional researchers to visit different courthouses throughout San Bernardino to efficiently process searches with possible records.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In-Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "08\/14\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Fulton",
+  "State": "GA",
+  "DAO Member (User)": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Site blocking has caused processing delays in automation",
+  "Mitigation Plan": "We are performing manual searches with clerk assistance. We are monitoring the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/11\/2023",
+  "Issue Start Date": "08\/23\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Hinds",
+  "State": "MS",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Hinds, MS court system was compromised and has been taken offline until further notice. Searches are unable to be completed at this time. The court clerks do not have an estimated time for when services will be operational again. We will continue to monitor the situation closely.",
+  "Mitigation Plan": "The IT department is actively working to restore the system.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/04\/2023",
+  "Issue Start Date": "09\/08\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Fairfax",
+  "State": "VA",
+  "DAO Member (User)": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Changes in the online index has created a slowdown in processing. Please expect delays. Update 10\/17: The site has been taken down for maintenance and is expected to be down for a minimum of several days. We expect extended delays.",
+  "Mitigation Plan": "Processors have to work at a slower pace due to these changes, but all work is expected to return to normal throughput speeds.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/17\/2023",
+  "Issue Start Date": "09\/14\/2023",
+  "Est Resolution Date": "11\/01\/2023"
+ },
+ {
+  "County": "All Counties (except Johnson)",
+  "State": "KS",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "The Kansas Supreme Court today issued Administrative Order 2023-CC-073 declaring court clerk offices inaccessible for electronic filings. We are continuing to closely monitor the situation. Please expect delays until the online index is fully operational again.\n\nJohnson, KS is not impacted by the security breach as this county operates on a different platform.",
+  "Mitigation Plan": "The judicial branch is currently examining the security incident that distrupted access to the court systems to implement a solution to resume operations.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/17\/2023",
+  "Issue Start Date": "10\/15\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Los Angeles",
+  "State": "CA",
+  "DAO Member (User)": "Sameul Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "The online index is producing intermittent errors as research is conducted. Expect delays.",
+  "Mitigation Plan": "The courthouse's IT department is actively working on remediating the error.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In-Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "10\/19\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "All Counties",
+  "State": "WI",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Connectivity issues with the online index are causing delays.",
+  "Mitigation Plan": "Efforts are underway to actively address and resolve the connectivity issues.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/23\/2023",
+  "Issue Start Date": "09\/11\/2023",
+  "Est Resolution Date": "11\/07\/2023"
+ },
+ {
+  "County": "Hale",
+  "State": "TX",
+  "DAO Member (User)": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Ongoing issues accessing case dockets via the court primary index. Searches with possible records can not be processed at this time.",
+  "Mitigation Plan": "Efforts are underway to actively address and resolve the access issues.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Research Method": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/24\/2023",
+  "Issue Start Date": "10\/24\/2023",
+  "Est Resolution Date": "No ETA"
+ }
+],
+"Resolved":[
+ {
+  "County": "MARICOPA",
+  "State": "AZ",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "The Justice Court was temporarily offline due to updates being made on their website. This created an issue with automation causing delays in turnaround time as research had to be conducted manually. The Justice Court is back online, but still expect delays on searches with possible records.\n\nUpdate 9\/29: The court clerk that was responsible for records research has retired and a new clerk is being trained in fulfilling requests. As a result, the current ETA for this court is 6 weeks for searches with possible records.",
+  "Mitigation Plan": "We are working to shift volume to our highest performing researchers to improve TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fully Automated",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/10\/2022",
+  "Issue Start Date": "06-Sep-22",
+  "Est Resolution Date": "10\/14\/2022"
+ },
+ {
+  "County": "EL DORADO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "As of 11\/1\/2021, El Dorado has taken down their online site so they can replace it with a new one. Our researchers were initially told that it would take 2 weeks, then the clerks said that the new system wouldn't be available until after the first of the year. It is still not available and there is no estimate for when the new site will become available. In the meantime, the clerks are conducting all searches for our researchers and providing details for matching cases found. However, there are significant delays because the clerks are overwhelmed with the number of requests from the research community. No additional clerks have been assigned to assist researchers.",
+  "Mitigation Plan": "Unfortunately, the El Dorado online index is still down. Our researchers checked with the clerks on 2\/24\/2022, but they have no ETA for its return. Our researchers are finding that the clerks are inconsistent in completing their searches. The clerks will complete several hundred one week, then nothing the next. Please continue to see delays in El Dorado for the time being. Will continue to shift volume to better performing researchers.\n12\/22\/22: El Dorado public index is now available which will provide more consistency with throughput and improve TAT.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "12\/19\/2022",
+  "Issue Start Date": "Nov-21",
+  "Est Resolution Date": "12\/27\/2022"
+ },
+ {
+  "County": "MARIN",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "The delays in Marin have been present since the COVID-19 pandemic. There is only one courthouse in Marin - with no direct public access at this time. Our researchers fax, email, or drop off lists of possible case numbers to the clerks. The court will only provide researchers with 6 cases per 30-minute appointment. There's also a call-in phone line, but clerks will not handle any research questions over the phone. Researchers are limited to 1 appointment per day and must schedule an appointment to view case files, pick up copies, & verify DOB\/other personal identifiers.",
+  "Mitigation Plan": "Clerks have stated that it can take 6 months to complete requests as they are short staffed and busy. Our researchers have observed that some clerks are quicker to return lists than others, but they have no control over which clerk works on which list. They think this could be because of the location of the case files or that some of them aren't scanned into the system.\n\nOur researchers will be adding resources to Marin to increase the number of cases they process each day, but given that the issue lies with the court, we cannot guarantee that this will significantly impact our completion rates. The court has no plans to make changes, add resources, or increase the number of cases provided to researchers. Our researchers have told us that this will be the \"new normal\" for the foreseeable future.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "02\/13\/2023",
+  "Issue Start Date": "Mar-20",
+  "Est Resolution Date": "02\/13\/2023"
+ },
+ {
+  "County": "MERCED",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "As of 11\/29\/2021, the online site is offline due to maintenance and we are unable to conduct research via automation. At first the clerks claimed this was a temporary issue, but it has yet to be resolved over a month later. The IT team is supposedly working to restore the online site but doesn't have an ETA for when it will be back up.\n\nOur researchers have still been completing searches via the clerks but there are delays. Most clerks will only search 3 names per turn. Searches with possible records are taking longer since case printouts must be ordered. Our researchers will be 100% reliant on the clerks until the online site is restored.\n\nUpdate on 3\/2\/2022: We received more information about the ongoing issues in Merced. A lawsuit was filed in September 2021 that would prevent the public index from providing DOB, much like the original lawsuit that was filed in Riverside. Read more about the official lawsuit here.",
+  "Mitigation Plan": "Our researchers have added resources to help run clerk searches, which will in short-term them to catch up on the oldest searches. We will continue to monitor Merced and move volume to other researchers as needed. However, it is important to stress that the main source of the delays is researcher reliance on clerk assistance while the online site is offline.\n\nUpdate on 3\/2\/2022: The Merced index is still not online and per the clerks, will not be returned to use pending a current lawsuit. If the online site is deprecated, our researchers will be 100% reliant on clerk assistance going forward, which will likely result in delays for the foreseeable future.\n\nUpdate on 8\/2\/2022: The backlog is starting to come down thanks to this strategy. We'll continue to monitor the backlog and move volume to our highest performing researchers.\n\nUpdate on 8\/8\/2022: Backlog is now steady. Will continue to monitor.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/08\/2022",
+  "Issue Start Date": "Nov-21",
+  "Est Resolution Date": "08\/08\/2022"
+ },
+ {
+  "County": "SAN BERNARDINO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "Searches with possible cases must be conducted by the clerks and there are in-court restrictions causing major delays.",
+  "Mitigation Plan": "Shifting volume to better performing researchers to process pending searches more efficiently.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No - But the court is getting ready to redact DOB",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/08\/2022",
+  "Issue Start Date": "Feb-22",
+  "Est Resolution Date": "08\/10\/2022"
+ },
+ {
+  "County": "SAN DIEGO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "The delays in San Diego are due to COVID. The primary method of obtaining case data at the height of the pandemic was by calling the clerks on a researcher phone line - this is the same method that is in place today. Researchers can visit the courts now, but this only adds a handful of extra cases completed each day. Keep in mind that this is cases and not searches. A single search could have 5-10 cases (or more). Our researchers are still experiencing long wait times on the phone and in person at the court.\n\nUpdate 7\/27 - DOB has been redacted from San Diego public website which may cause delays with clear searches as well continue to cause delays on those with possible records.",
+  "Mitigation Plan": "During the pandemic, the court laid off, furloughed, or force-retired many clerks. We've been told that the court has no plan to restaff to previous levels. Our researchers have told us that this will be the \"new normal\" for the foreseeable future.\nWe are working closely with our researchers to find new avenues to verifying the DOB in timely fashion.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Resolved",
+  "Last Reviewed Date": "01\/09\/2023",
+  "Issue Start Date": "Mar-20",
+  "Est Resolution Date": "01\/17\/2023"
+ },
+ {
+  "County": "SANTA CLARA",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "The delays in Santa Clara are due to COVID and the recent CA DOB redactions.\n\nTwo of the four Santa Clara locations have been permanently closed, so there are currently only two locations available for research. As such, there is much competition amongst researchers for the public terminals. Researchers are alShort-termed to sign up for 1 hour sessions at the PAT each day, but spend most of their time waiting for open slots. Also, the number of researchers alShort-termed in the court is limited due to social distancing. In addition, the court is short staffed and doesn't plan to add additional clerks until 2022.\n\nThese barriers have been further complicated by the removal of the DOB from the readily available public access system. Checking DOB has added an extra step to the research process and causes further delays, though these are minor compared to the delays caused by the COVID restrictions.",
+  "Mitigation Plan": "Our researchers are working on the oldest searches with possible records, but still have searches that are several months old. Our researchers have told us that this will be the \"new normal\" for the foreseeable future.\n\nUpdate on 2\/7\/2022: The Gilroy court reopened on 2\/7\/2022, but the PATs weren't working. The PATs are operational as of 2\/8\/2022.\n\nUpdate on 7\/26\/2022: We're fully caught up on the backlog. Status updated to Resolved.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes - Partly COVID related and partly due to the recent CA DOB redaction",
+  "Status": "Resolved",
+  "Last Reviewed Date": "07\/26\/2022",
+  "Issue Start Date": "Mar-20",
+  "Est Resolution Date": "07\/26\/2022"
+ },
+ {
+  "County": "SANTA CLARA",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Since 12\/17\/22 automation within this jurisdiction had been unstable and as of today 12\/19 - full automation is down. This will impact how quickly searches are being processed. Until automation is restored, expect delays.",
+  "Mitigation Plan": "Automation restoration and stability is actively being worked on to lessen the impact this may have on turanround time.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "01\/17\/2023",
+  "Issue Start Date": "Dec-22",
+  "Est Resolution Date": "01\/23\/2023"
+ },
+ {
+  "County": "SAN FRANCISCO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Searches with possible records require clerk assistance which has caused delay in searches being completed. Previously, researchers could obtain case information by printing data. The court has cancelled this option and all searches are now reliant on court clerks to provide case information. The court is also understaffed at this time along with files being poorly unorganized. Expect delays.",
+  "Mitigation Plan": "Actively working with court clerks to reimplement the print out case option for researchers.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "11\/14\/2022",
+  "Issue Start Date": "Oct-22",
+  "Est Resolution Date": "11\/21\/2022"
+ },
+ {
+  "County": "SOLANO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "All possible records must be submitted to the clerks in order to get complete information.",
+  "Mitigation Plan": "Shifting volume to better performing researchers to process pending searches more efficiently.\n\nUpdate on 8\/1\/2022: The backlog is starting to come down thanks to this strategy. We'll continue to monitor the backlog and move volume to our highest performing researchers.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/08\/2022",
+  "Issue Start Date": "Nov-21",
+  "Est Resolution Date": "08\/15\/2022"
+ },
+ {
+  "County": "VENTURA",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "The court is experiencing staff limitations and limited hours please expect delays on orders with possible cases.",
+  "Mitigation Plan": "We are actively working with our researchers towards solutions to completing searches with these limitations.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Resolved",
+  "Last Reviewed Date": "11\/28\/2022",
+  "Issue Start Date": "Jun-21",
+  "Est Resolution Date": "11\/28\/2022"
+ },
+ {
+  "County": "HONOLULU",
+  "State": "HI",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Searches with possible cases must be conducted by the clerks and there are in-court restrictions causing major delays.",
+  "Mitigation Plan": "Continuing to monitor pending searches, ensuring all pending are being expedited where possible given the current court restrictions.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/02\/2022",
+  "Issue Start Date": "Feb-22",
+  "Est Resolution Date": "08\/10\/2022"
+ },
+ {
+  "County": "COOK",
+  "State": "IL",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The entire research community lost capacity in Cook due to staffing issues among several of the largest researchers servicing the county.",
+  "Mitigation Plan": "Cook County is no longer in what we would classify as a 'backlog.' The clerks in Cook, IL added 24 new PATs (i.e. public access terminals aka court computers) across three courthouses, which is roughly a 50% increase in the number of available PATs. Researchers have been hired to fill up these new computers, which is helping to maintain our decreased TAT.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/08\/2022",
+  "Issue Start Date": "Oct-21",
+  "Est Resolution Date": "04\/22\/2022"
+ },
+ {
+  "County": "WASHOE",
+  "State": "NV",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Automation in Washoe has been unstable since March. The only way to conduct research is to go into the courthouse.\n\nMessage sent out to customers on 6\/13\/2022 via the dashboard: Our records indicate that you've recently run background checks in Washoe County, NV. As you may be aware, xxx is experiencing background check delays in this area. Our search includes the Second Judicial District Court as well as the Reno Justice Court.\n\nUnfortunately, automation for the Reno Justice Court has been experiencing technical difficulties since March. As a solution, we are sending researchers into the courthouse to complete the process manually. As a result, we are seeing some delays in turnaround times.\n\nA vast majority of the records returned in Washoe County are from the Reno Justice Court - including felonies and misdemeanors - so we believe it’s imperative to continue searching this court to provide you with the most comprehensive coverage. We will continue to provide updates on this situation as they become available.",
+  "Mitigation Plan": "Because there has been stable automation in place up until this point, there is no in-court research infrastructure (i.e. no court runners hired or trained, SOP, clerks aren't staffed to handle the volume, etc). Our partners are building this in real-time, hence why there are delays. Once the in-court research infrastructure is live, we will be able to complete the backlog.\n\nUpdate on 6\/22\/2022: Our researchers have finally begun making progress on the backlog. The additional resources they added are helping to process the backlog faster. We will continue to work with our partners until the backlog is gone.\n\nWill begin adjusting list sizes to maximize clerk productivity which should in turn improve TAT. Researchers work closely with court clerks to confirm hits\/clears which will avoid delays on clears.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "07\/26\/2022",
+  "Issue Start Date": "Mar-22",
+  "Est Resolution Date": "07\/26\/2022"
+ },
+ {
+  "County": "FAIRFAX",
+  "State": "VA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The website for Fairfax, VA is notoriously difficult to build automation to due to its extreme blocking protocols. Automation has to mimic human behavior to avoid being detected. As a result, searches can only be submitted during business hours and can never be submitted over the weekend. We received an unexpected influx of volume a few weeks ago that's taken us a few weeks to get through given the limitations of this automation.",
+  "Mitigation Plan": "We've been processing searches as quickly as possible, but it's extremely important to avoid the website's detection. Therefore, we're prioritizing the stability of the automation over speed to ensure we don't lose access to this website. We're making steady progress on the backlog and anticipate being caught up within the next 2 weeks.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fully Automated",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "07\/26\/2022",
+  "Issue Start Date": "May-22",
+  "Est Resolution Date": "07\/26\/2022"
+ },
+ {
+  "County": "SPALDING",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Delay due to being short staffed. They are now full capacity working through backlog, expect delays.",
+  "Mitigation Plan": "Continuing to monitor pending searches, ensuring all pending are being expedited. TAT is expected to improve in the next 2 weeks.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/15\/2022",
+  "Issue Start Date": "06\/07\/2022",
+  "Est Resolution Date": "08\/17\/2022"
+ },
+ {
+  "County": "FULTON",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Court is extremley understaffed and complete information on possible hits is missing for many cases. Expect delays.",
+  "Mitigation Plan": "Monitoring the staffing situation. Working towards a solution with researchers to retrieve full information on possible hits and moving volume as needed to researchers processing searches more efficiently.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fully Automated",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/15\/2022",
+  "Issue Start Date": "Jan-22",
+  "Est Resolution Date": "08\/17\/2022"
+ },
+ {
+  "County": "HARRIS",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Automation for county searches are currently being delayed due to the court's website limitations.",
+  "Mitigation Plan": "Searches are being processed as quickly as possible, but it's extremely important to avoid the website's detection. Therefore, we're prioritizing the stability of the automation over speed to ensure we don't lose access to this website.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fully Automated",
+  "DOB Redaction?": "No",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/15\/2022",
+  "Issue Start Date": "08\/10\/2022",
+  "Est Resolution Date": "08\/22\/2022"
+ },
+ {
+  "County": "CLAYTON",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Court is extremley understaffed and complete information on possible hits is missing for many cases. Expect delays.",
+  "Mitigation Plan": "Monitoring the staffing situation. Working towards a solution with researchers to retrieve full information on possible hits and moving volume as needed to researchers processing searches more efficiently.\n\nUpdate on 8\/29\/22: Moving to resolved as backlogs have subsided to sustainable levels.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/22\/2022",
+  "Issue Start Date": "Jan-22"
+ },
+ {
+  "County": "BERRIEN",
+  "State": "MI",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "We are seeing delays in Michigan as a result of the clerks limiting the number of DOBs they’ll confirm per researcher per day.",
+  "Mitigation Plan": "Continuing to monitor pending searches, ensuring all pending are being expedited where possible given the current court restrictions.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/15\/2022",
+  "Issue Start Date": "Jun-22",
+  "Est Resolution Date": "08\/29\/2022"
+ },
+ {
+  "County": "KENT",
+  "State": "MI",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "We are seeing delays in Kent as a result of the clerks limiting the number of DOBs they’ll confirm per researcher per day.",
+  "Mitigation Plan": "According to PBSA, Kent Circuit Court will be adding a new online system in late June\/early July so that authorized users can access DOBs themselves instead of via the clerks. The new system is only for Kent Circuit Court, not all counties and courts.\n\nUpdate on 8\/29: Kent Circuit Court online system is now online. Researchers are actively working through the backlog.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Resolved",
+  "Last Reviewed Date": "08\/29\/2022",
+  "Issue Start Date": "04\/11\/2022",
+  "Est Resolution Date": "08\/29\/2022"
+ },
+ {
+  "County": "SISKIYOU",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Due to ongoing cyber attacks, the county removed all case details from their online index indefinitely. The only way to obtain case information at this time is through the court clerks who are only handling a search or two per call.",
+  "Mitigation Plan": "We are actively working with our researchers towards solutions to completing searches with these limitations.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/26\/2022",
+  "Issue Start Date": "Sep-22",
+  "Est Resolution Date": "10\/03\/2022"
+ },
+ {
+  "County": "CHATHAM",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court made some changes to the online access system and are now having connectivity issues. Some searches are still able to be completed directly through the courthouse clerks, but we are experiencing delays.",
+  "Mitigation Plan": "Monitoring the system change situation. Our researchers are continuing to process searches through courthouse clerks, but extensive delays remain.\n\nUpdate on 8\/10\/2022: We are now processing searches in Chatham. The court has directed us to Research GA as the new source for criminal records and has advised case information has been migrated over. Backlog should be begin to decrease starting tomorrow.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/26\/2022",
+  "Issue Start Date": "07\/12\/2022"
+ },
+ {
+  "County": "CLARK",
+  "State": "NV",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "Searches with possible cases must be conducted by the clerks and there are in-court restrictions causing delays.\nUpdate 9\/29\/2022: District Court is short staffed. Extended search scope to expect 4+ week delays.",
+  "Mitigation Plan": "We're working to shift volume to our highest performing researchers to see if that improves TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/10\/2022",
+  "Issue Start Date": "07\/29\/2022",
+  "Est Resolution Date": "10\/17\/2022"
+ },
+ {
+  "County": "BEXAR",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The district and county courts public access terminal is down and researchers are unable to pull case information. The courts are aware and working on a solutions. There is no current ETA for a fix.",
+  "Mitigation Plan": "Researchers are able to process clears and will continue to do so until the county has fixed the issue",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/21\/2022",
+  "Issue Start Date": "10\/21\/2022"
+ },
+ {
+  "County": "SUFFOLK",
+  "State": "NY",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court was hit with a cyber attack around 9\/9. The system is completely down and researchers are unable to perform any sort of search at the moment. There is no current ETA for a fix.",
+  "Mitigation Plan": "Our researchers are working to determine whether there is a way to process orders while we wait on the court system to come back up.\n\nUpdate: The courthouse has a tentative reopening date on 10\/3\nUpdate: Courthouse reopened 10\/3 and searches are being processed in order they were received",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/24\/2022",
+  "Issue Start Date": "09\/09\/2022"
+ },
+ {
+  "County": "Cuyahoga",
+  "State": "OH",
+  "DAO Member": "Kenzie Hardon",
+  "Impact Severity": "Short-term",
+  "Reason": "The online index is having issues on searches with possible cases. This will not affect clear searches, but when attempting to look for case details on possible hits, they are now requiring a login. The researchers are working directly with the court to resolve this.",
+  "Mitigation Plan": "We will continue to monitor this and ensure that the researchers obtain the proper login.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "11\/18\/2022",
+  "Issue Start Date": "11\/18\/2022",
+  "Est Resolution Date": "11\/23\/2022"
+ },
+ {
+  "County": "PATCH",
+  "State": "PA",
+  "DAO Member": "Kenzie Hardon",
+  "Impact Severity": "Short-term",
+  "Reason": "PATCH is down due to unplanned maintenance with no current ETA, expect delays. The state police is actively working on this issue. 11\/21 update: The PATCH site is back up and running, but very slowly, expect edelays",
+  "Mitigation Plan": "We will continue to monitor this and notify you of any changes",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "11\/21\/2022",
+  "Issue Start Date": "11\/16\/2022"
+ },
+ {
+  "County": "FAIRFAX",
+  "State": "VA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Limitations in automation + research only being able to be ran during weekday business hours coupled with an influx of orders from xxx has resulted in a backlog for our researchers.",
+  "Mitigation Plan": "We are working closely with our researchers to make sure this backlog is prioritized and are looking at shifting additional volume to other researchers if the backlog does not decrease.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "11\/28\/2022",
+  "Issue Start Date": "09\/07\/2022"
+ },
+ {
+  "County": "Harrison",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "The county and district court system is currently down. No searches are able to complete at this time. There is currently no ETA for a resolution.",
+  "Mitigation Plan": "Our researchers are working to determine if there is a way to process searches while we wait for the court system to come back up.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "12\/19\/2022",
+  "Issue Start Date": "11\/18\/2022",
+  "Est Resolution Date": "12\/19\/2022"
+ },
+ {
+  "County": "Onondaga, Rockland, Clinton",
+  "State": "NY",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Due to a cyberattack, the public access terminals are currently unavailable in the following New York counties. This is a developing situation and we will provide further updates as they are made available. Please expect extended delays while the issues persist.",
+  "Mitigation Plan": "Our researchers are working to determine whether there is a way to process orders while we wait on the court system to come back up.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "01\/17\/2023",
+  "Issue Start Date": "01\/10\/2023",
+  "Est Resolution Date": "01\/26\/2023"
+ },
+ {
+  "County": "Kaufman",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Automation for the county has been down since 1\/10\/23",
+  "Mitigation Plan": "Attempts to get the new agent up and running are currently in progress. Threre is no ETA of a resolution at this time.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "01\/18\/2023",
+  "Issue Start Date": "01\/10\/2023",
+  "Est Resolution Date": "01\/27\/2023"
+ },
+ {
+  "County": "Multiple Counties - Assumption, Avoyelles, Beauregard, East Feliciana, Evangeline, Grant, Livingston, Madison, Ouachita, Plaquemines, Sabine, St. Bernard, St. Charles, St. Martin, St. Mary, Tensas, Union, Washington, West Baton Rouge, West Feliciana",
+  "State": "LA",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Access to the following Louisiana courts have been restored. Delays are still expected at this time. We will continue to monitor the situation and will notify you of any changes. Assumption, Plaquemines, Sabine, St. Bernard and St. Martin, Avoyelles, Beauregard, De Soto, East Feliciana, Evangeline, Grant, Iberia, Livingston, Madison, Ouachita, St. Charles, Union, Washington, Webster, West Baton Rouge and West Feliciana",
+  "Mitigation Plan": "Our researchers are working to determine whether there is a way to process orders while we wait on the court system to come back up.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "01\/24\/2023",
+  "Issue Start Date": "01\/03\/2023",
+  "Est Resolution Date": "01\/26\/2023"
+ },
+ {
+  "County": "Travis",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Severe weather conditions are causing delays on searches in Travis, TX. Due to the road conditions and severity of the ice storm, please expect delays. We will continue to monitor the situation and notify you of any changes.",
+  "Mitigation Plan": "Once weather conditions improve, researchers will resume completing searches and prioritize all backlogs.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "02\/02\/2022",
+  "Issue Start Date": "02\/01\/2022"
+ },
+ {
+  "County": "Multiple Counties",
+  "State": "TN",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Severe weather conditions are causing delays on searches in multiple counties in Tennessee. Due to the road conditions and severity of the ice storm, please expect delays in the following counties: Benton, Cheatham, Chester, Crockett, Decatur, Fayette, Fentress, Gibson, Hardeman, Hardin, Haywood, Henderson, Henry, Hickman , Humphreys, Lauderdale, Madison, McNairy, Obion, Perry, Stewart, Tipton. We will continue to monitor the situation and notify you of any changes.",
+  "Mitigation Plan": "Once weather conditions improve, researchers will resume completing searches and prioritize all backlogs.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "02\/02\/2022",
+  "Issue Start Date": "02\/01\/2022"
+ },
+ {
+  "County": "All Counties",
+  "State": "UT",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Automation has been unstable as of 2\/17\/23 and as of 2\/21\/23 - full automation is down. This will impact how quickly searches are being processed. Until automation is restored, expect delays.",
+  "Mitigation Plan": "Automation restoration and stability is actively being worked on to lessen the impact this may have on turanround time.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "02\/21\/2023",
+  "Issue Start Date": "02\/21\/2023",
+  "Est Resolution Date": "02\/27\/2023"
+ },
+ {
+  "County": "HONOLULU",
+  "State": "HI",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Searches with possible records require file pulls within the court for case information to be verified. Currently seeing turnaround time delays as the clerks are overwhelmed with the number of requests from the research community.",
+  "Mitigation Plan": "Researchers are working closely with the court clerks to determine better avenues in submitting requests to maximize productivity to improve TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "02\/21\/2023",
+  "Issue Start Date": "Jan-23"
+ },
+ {
+  "County": "Clayton",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court only has one clerk working in Superior Court - one quit without notice and the one that took their place is saying file pulls are put on hold until they are assigned. Additionally, there are usually 5 PATs in the State and Superior court however, there is only 1 working PAT in both. The other 4 are broken and they do not have an ETA as to when they will be fixed. This affects the entire research community. This will only affect possible hits and file pulls.",
+  "Mitigation Plan": "Our researchers are visiting the court 11\/22 to see what additional information they can obtain. We will continue to monitor this and notify you of changes.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In court",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/09\/2023",
+  "Issue Start Date": "11\/21\/2022"
+ },
+ {
+  "County": "Pickaway",
+  "State": "OH",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "A cyber attack has temporarily disabled the court's site.",
+  "Mitigation Plan": "Our researchers are visiting the court to see what additional information they can obtain. We will continue to monitor this and notify you of changes.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/07\/2023",
+  "Issue Start Date": "01\/10\/2023"
+ },
+ {
+  "County": "Houston",
+  "State": "TN",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court just onboarded a new part time clerk to handle background checks. Until this employee is fully trained, expect delays of greater than 10 days.",
+  "Mitigation Plan": "We are continuing to monitor the situation.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/08\/2023",
+  "Issue Start Date": "03\/07\/2023",
+  "Est Resolution Date": "03\/13\/2023"
+ },
+ {
+  "County": "ALL COUNTIES",
+  "State": "MD",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Long-term",
+  "Reason": "Automation for county and state searches have been very reliable up until now\n\nUnfortunately, automation attempts for our researchers have started failing recently (and for the industry as a whole)\n\nUPDATE: Automation is back online and functioning properly",
+  "Mitigation Plan": "Searches are being processed as quickly as possible, but it's extremely important to avoid the website's detection. Therefore, we're prioritizing the stability of the automation over speed to ensure we don't lose access to this website.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fully Automated",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/14\/2023",
+  "Issue Start Date": "Jun-22"
+ },
+ {
+  "County": "MERCED",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Merced removed their online index on 11\/19\/2021 which created a barrier for automation. At the time, court clerks claimed the online index being unavailable was temporary; however, the online index is still unavailable at this time with no ETA of when it will be available again. As of 1\/4\/2023, we were notified that the court clerks implemented a new policy of only processing 6 searches per day per researcher which will cause heavy delays in this area as there was previously no limit on the amount of searches court clerks would process each day.",
+  "Mitigation Plan": "The court is planning to re-install the in-court index which will alleviate delays and allow our researchers another avenue to conduct research. We do not have an ETA as to when this option will be available, but will provide updates as we are notified.\n\nUpdate on 1\/5\/23: The court anticipates the in-court index to be available in the next 6 weeks. Will continue to provide updates as we are made aware of a more firm timeline.\nUpdate on 3\/7\/23: Still no ETA on when in-court indexes will be available; however, additional researchers have been added in the interim.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/20\/2023",
+  "Issue Start Date": "01\/04\/2023",
+  "Est Resolution Date": "03\/27\/2023"
+ },
+ {
+  "County": "PIMA",
+  "State": "AZ",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "The Justice court is searched by default. Majority of delays in this county stem from the Justice court. When there are possible hits and files need to be obtained offsite, the turnaround time can take upwards of 30 business days to to be returned as there is only one clerk who pulls files in this county.",
+  "Mitigation Plan": "Shifting volume to better performing researchers to process pending searches more efficiently.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "03\/27\/2023",
+  "Issue Start Date": "Jun-22",
+  "Est Resolution Date": "04\/03\/2023"
+ },
+ {
+  "County": "HUMBOLDT",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Search requeests have to be conducted directly through the court clerks for both clear searches and searches with possible records. Limited researchers in this jurisdiction right now, will soon have more researchers to improve TAT.",
+  "Mitigation Plan": "Adding additional researchers to alleviate the number of pending searches and improve TAT.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "04\/03\/2023",
+  "Issue Start Date": "Jan-23",
+  "Est Resolution Date": "04\/10\/2023"
+ },
+ {
+  "County": "SAN BERNARDINO",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "On 10\/31\/2022 San Bernardino redacted DOB from their new online index. The old index has DOB available and this was the primary method for researchers to use to process searches. Now that DOB is no longer available with the updated index, expect delays. Clerks will confirm DOB on cases over the phone for up to 5 cases at a time.\nUpdate on 1\/17\/23: San Bernardino's online index is currently unavailable, causing automation to be down. Monitoring the situation and will provide an update as soon as the website\/automation are available again. Expect delays.\nUpdate on 1\/17\/23: The online index is available again as well as automation. Continue to expect delays on searches with possible records.",
+  "Mitigation Plan": "Actively working with our researchers towards solutions with automation and staffing to navigate through this limitation efficiently.\nUpdate on 12\/27\/22: Automation has helped improve TAT and process clears. Still expect delays on searches with possible records as researchers are heavily reliant on court clerks to obtain case information.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "04\/10\/2023",
+  "Issue Start Date": "30-Oct-22",
+  "Est Resolution Date": "04\/10\/2023"
+ },
+ {
+  "County": "Sharkey",
+  "State": "MS",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Long-term",
+  "Reason": "The court is closed due to tornado damage. There is currently no eta of when it will reopen. This closure affects all searches. Expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45020,
+  "Issue Start Date": 45015
+ },
+ {
+  "County": "Jefferson",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "In Jefferson, TX case information will not be available beginning March 3, 2023 as the courthouse transitions to a new online system. The court will not be able to conduct searches during this time. Estimated reopening is March 20, 2023. This closure affects all searches. Expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45027
+ },
+ {
+  "County": "Douglas, Shawnee, Wyandotte",
+  "State": "KS",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "As part of the KS Centralized Management System Project, public access in Douglas, Shawnee, and Wyandotte is down while they update to the new system. Expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45020,
+  "Issue Start Date": 45015
+ },
+ {
+  "County": "WASHINGTON",
+  "State": "AR",
+  "DAO Member": "John Doe",
+  "Impact Severity": "New normal",
+  "Reason": "The district court is a clerk search only court. Over the past several weeks, clerks have been out of office causing delays in processing searches",
+  "Mitigation Plan": "Our researchers are prioritizing the oldest searches with the clerks in an effort to decrease the backlog as soon as possible.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45034,
+  "Issue Start Date": 44810
+ },
+ {
+  "County": "Hall",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court recently overhauled\/changed their entire system and the old system was pulled from all access points. Researchers are currently only able to process clears and not possible hits, which is creating a backlog. Full access is not expected to be restored until the end of the month.",
+  "Mitigation Plan": "We are working closely with our researchers to make sure that backlog is prioritized.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45013,
+  "Issue Start Date": 44914
+ },
+ {
+  "County": "BRISTOL, ESSEX, HAMPDEN, MIDDLESEX, NORFOLK, PLYMOUTH, SUFFOLK, WORCESTER",
+  "State": "MA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Long-term",
+  "Reason": "Computer network Short-termdowns\/outages at courthouses. Searches take longer due to state’s software system (it takes 10x the amount of effort for a search in Suffolk County vs a search in Cook County, IL) Live Look\nExpected and unexpected courthouse closures cause delays (since research has to be conducted in the courthouses). Researcher attrition is new-normal in MA due to tedious nature of conducting searches there. A lot of competition to access PAT. Broken computer terminals\/equipment and some courts do not have computers.",
+  "Mitigation Plan": "Short Term: Researchers are going to smaller courts outside of major cities since there is less competition to conduct searches (and less sShort-term downs from web traffic)\n\nMedium Term: xxx is investing in court infrastructure to stabilize the software and reduce Short-term downs\n\nLong Term: xxx’s legal team is partnering with researchers and potentially lobbyists to advocate for online access to the PAT system",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-court researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45013,
+  "Issue Start Date": 44682
+ },
+ {
+  "County": "Hillsborough",
+  "State": "FL",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Changes in security measures have limited the functionality of automation. Please expect delays for the next 2-3 weeks.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45033,
+  "Issue Start Date": 45030
+ },
+ {
+  "County": "Gwinnett",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Automation has gone down and there is no current ETA for restoration. Searches will continue to be processed manually, but please expect delays.\nUpdate: Automation has been restored",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45029,
+  "Issue Start Date": 45019
+ },
+ {
+  "County": "State Searches",
+  "State": "IL",
+  "DAO Member": "John Doe",
+  "Impact Severity": "New normal",
+  "Reason": "Issues within the court is causing significant delays to state searches.",
+  "Mitigation Plan": "We are working closely with our researchers to make sure that backlog is prioritized.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45055,
+  "Issue Start Date": 44811
+ },
+ {
+  "County": "ENTIRE STATE",
+  "State": "PR",
+  "DAO Member": "John Doe",
+  "Impact Severity": "New normal",
+  "Reason": "\n\nResearchers have had a significant increase in searches requiring a copy of the candidate’s driver’s license or mother’s maiden name for search to be conducted causing delay in searches being completed.",
+  "Mitigation Plan": "Working closely with researchers to evaluate when each of those requests (driver’s license and mother’s maiden name) is required to prevent delays.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45054
+ },
+ {
+  "County": "Parker",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "The online index is offline, and clerks are unable to provide an ETA for when the site will be functioning. This closure affects all searches. Please expext delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "05\/12\/2023",
+  "Issue Start Date": 44999
+ },
+ {
+  "County": "FAIRFAX",
+  "State": "VA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Limitations in automation + research only being able to be ran during weekday business hours coupled with an influx of orders from xxx has resulted in a backlog for our researchers.",
+  "Mitigation Plan": "We are working closely with our researchers to make sure this backlog is prioritized and are looking at shifting additional volume to other researchers if the backlog does not decrease.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45054
+ },
+ {
+  "County": "All Counties",
+  "State": "SC",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Due to unexpected changes in the online index, automation is now down indefinitely. A small number of reports are still able to be processed manually daily (150~). Testing is currently underway for an automation fix, but there is no ETA.",
+  "Mitigation Plan": "We are working closely with our researchers to make sure that backlog is prioritized. The limited number of reports being processed are handled oldest to newest.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45013,
+  "Issue Start Date": 44896
+ },
+ {
+  "County": "All Counties",
+  "State": "RI",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Automation has gone down and will remain down for a minimum of 2-3 weeks. Searches will continue to be processed manually, but please expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45028,
+  "Issue Start Date": 45017
+ },
+ {
+  "County": "All Counties",
+  "State": "MO",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Automation for county and state searches is currently unstable. Clears can be processed but hits are put on hold.",
+  "Mitigation Plan": "Automation restoration and stability is actively being worked on to lessen the impact this may have on turanround time.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": 45058,
+  "Issue Start Date": 45055
+ },
+ {
+  "County": "Mitchell",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The county is closing for two weeks starting on 5\/15\/2023 to move the clerk's office to a new location. Searches will be on hold until the court reopens on 5\/30\/2023.",
+  "Mitigation Plan": "Researchers are confident in being able to efficiently process oustanding searches and have prepared to work OT if necessary.",
+  "Clears": "Not Processing (beginning 5\/15)",
+  "Possible Hits": "Not Processing (beginning 5\/15)",
+  "Automation Status": "In Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "05\/11\/2023",
+  "Issue Start Date": "05\/15\/2023"
+ },
+ {
+  "County": "Houston & Clarke",
+  "State": "AL",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Alabama's online index has recently undergone maintenance resulting in the removal of Houston and Clarke county. As a result, county level searches for Houston and Clarke are unable to be processed at this time. We are continuing to closely monitor the situation and anticipate these two counties being available again in the upcoming weeks. Please expect delays on Houston and Clarke county searches.\nUpdate 6\/5: Houston and Clarke have been added back to the online index. Searches are being processed.",
+  "Mitigation Plan": "Actively exploring alternative solutions to process searches manually.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/02\/2023",
+  "Issue Start Date": "05\/27\/2023",
+  "Est Resolution Date": "06\/05\/2023"
+ },
+ {
+  "County": "Statewide Searches\n(*NOT impacting county searches*)",
+  "State": "AL",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Alabama's online index has recently undergone maintenance resulting in the removal of Houston and Clarke county. Due to the removal of these two counties, the statewide search is no longer comprehensive and unable to be processed at this time. We are continuing to closely monitor the situation and anticipate these two counties being available again in the upcoming weeks. Please expect delays on Alabama statewide searches.\nUpdate 6\/5: Houston and Clarke have been added back to the online index. Searches are being processed.",
+  "Mitigation Plan": "Actively exploring alternative solutions to process searches manually.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/02\/2023",
+  "Issue Start Date": "05\/27\/2023",
+  "Est Resolution Date": "06\/05\/2023"
+ },
+ {
+  "County": "Douglas, Lancaster, Sarpy, Hall, Buffalo, Dodge, Platte, Madison, Dawson, Cass, Adams, Scotts Bluff, Dakota, Lincoln",
+  "State": "NE",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Online index is unstable and searches in these counties are unable to be processed at this time.\nUpdate 6\/6\/23: The online index is now stable and searches are processing again.",
+  "Mitigation Plan": "Actively exploring alternative solutions to process searches.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/05\/2023",
+  "Issue Start Date": "06\/03\/2023",
+  "Est Resolution Date": "06\/06\/2023"
+ },
+ {
+  "County": "Butler",
+  "State": "OH",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Changes in the court's site has caused delays in automation. Please expect delays for the next 1-2 weeks.",
+  "Mitigation Plan": "Automation is beginning to stabilize and we should return to regular TAT within the week.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Partial Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "05\/16\/2023",
+  "Issue Start Date": "05\/05\/2023"
+ },
+ {
+  "County": "King",
+  "State": "WA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Online index has been unstable resulting in turnaround time delays.",
+  "Mitigation Plan": "Online index stability is actively being worked on. Researchers are working OT to minimize the impact and return to 24-48hr turnaround time.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/12\/2023",
+  "Issue Start Date": "05\/12\/2023"
+ },
+ {
+  "County": "Clark",
+  "State": "NV",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Requests are being manually processed due to unplanned online maintenance. There is no ETA at this time as to when the online system will be available. Expect delays.\nUpdate 5\/30: Online system is fully available as of 5\/25, searches are no longer having to manually be processed. Still anticipate delays while the high number of pending searches are processed.",
+  "Mitigation Plan": "Searches are being processed manually until online index is available after maintenance is complete.\nUpdate 5\/30: Online system is fully available as of 5\/25, searches are no longer having to manually be processed. Still anticipate delays while the high number of pending searches are processed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/12\/2023",
+  "Issue Start Date": "05\/17\/2023"
+ },
+ {
+  "County": "Jefferson",
+  "State": "KY",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "A room at the courthouse containing half of the PATs has sporadically been unavailable to researchers including on 4\/21 and 4\/24. Additionally, an overall spike in volume has contributed to a backlog.",
+  "Mitigation Plan": "Researchers are working OT to bring the backlog back down and communicating with the court to receive advanced notice of any future closures.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "05\/08\/2023",
+  "Issue Start Date": "04\/22\/2023"
+ },
+ {
+  "County": "Lee",
+  "State": "FL",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Changes to the website have caused slight delays in processing. There is not current ETA for when regular throughput will resume.",
+  "Mitigation Plan": "Working with our vendors to explore alternatives to improve processing",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "N",
+  "Status": "Active",
+  "Last Reviewed Date": "06\/05\/2023",
+  "Issue Start Date": "05\/30\/2023"
+ },
+ {
+  "County": "All Counties",
+  "State": "MD",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "Automation for county and state searches is currently unstable.",
+  "Mitigation Plan": "Searches are being processed through manually and through automation. Automation restoration and stability is actively being worked on to lessen the impact this may have on turanround time.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "05\/11\/2023",
+  "Issue Start Date": "05\/11\/2023"
+ },
+ {
+  "County": "Washington",
+  "State": "AR",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The court in Washington, AR is currently closed due to a cyber attach. No searches can be processed until the court reopens. There is no ETA for when the courts will reopen. We will continue to monitor the situation and will notify you of any changes.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/07\/2023",
+  "Issue Start Date": "06\/09\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Bossier",
+  "State": "LA",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The court is experiencing an internet outage resulting in delays in processing searches. There is currently no ETA for a fix. We will continue to monitor the situation. Please expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/12\/2023",
+  "Issue Start Date": "07\/07\/2023",
+  "Est Resolution Date": "07\/13\/2023"
+ },
+ {
+  "County": "Itawamba",
+  "State": "MS",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The Itawamba Justice Courthouse was damaged by fire resulting from a lightning strike. We are currently unable to complete searches. There is no ETA for when the courthouse will resume normal processing. We will continue to monitor the situation closely. Please expect delays.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/12\/2023",
+  "Issue Start Date": "07\/07\/2023",
+  "Est Resolution Date": "07\/13\/2023"
+ },
+ {
+  "County": "All Counties",
+  "State": "NJ",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "An influx of volume has caused temporary delays across the state",
+  "Mitigation Plan": "Additional researchers are being brought in to assist and OT is being implemented until backlogs are reduced",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/19\/2023",
+  "Issue Start Date": "07\/17\/2023",
+  "Est Resolution Date": "07\/23\/2023"
+ },
+ {
+  "County": "Tarrant",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Changes to the website have caused some delays in processing. There is not current ETA for when regular throughput will resume.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/11\/2023",
+  "Issue Start Date": "06\/15\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Hempstead",
+  "State": "AR",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The court server is down. The courts are in the process of setting up a new server but there is currently no ETA for completion. Please expect delays.",
+  "Mitigation Plan": "Our researchers have been granted temporary and limited access to a clerk's workstation so please expect delays until the new server is operational.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/31\/2023",
+  "Issue Start Date": "07\/27\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Crittenden",
+  "State": "KY",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Crittenden County Courthouse will be closed 7\/17 - 7\/24 as they are relocating their offices to a new building. Searches will not be completed during the move and will resume processing on Monday, July 24.",
+  "Mitigation Plan": "We will continue to monitor when the court has completed move to new building to resume processing searches.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/17\/2023",
+  "Issue Start Date": "07\/17\/2023",
+  "Est Resolution Date": "07\/24\/2023"
+ },
+ {
+  "County": "Tarrant",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "Changes to the website have caused some delays in processing. There is not current ETA for when regular throughput will resume.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/11\/2023",
+  "Issue Start Date": "06\/15\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Cuyahoga",
+  "State": "OH",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "The site was taken off line for Memorial Day weekend which has caused a backlog to accrue. That backlog has grown due to additional court closures (Juneteenth and 4th of July) and sites going off line (Cleveland Municipal)",
+  "Mitigation Plan": "We are working with our vendor to allocate additional resources to Cuyahoga and researchers will be working OT until the backlog is handled.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/02\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Houston",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court migrated to a new system for the PATs. This new system requires individual logins for researchers, so we expect delays while this is being set up.",
+  "Mitigation Plan": "The researchers will be wokring directly with the clerks to expedite potential hits until the full system access is restored.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/02\/2023",
+  "Issue Start Date": "07\/25\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "All Counties",
+  "State": "MA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "PATs are currently inaccesible due to a statewide court system update. We expect delays until this is resolved with the court's IT department.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as we receive them.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/17\/2023",
+  "Issue Start Date": "08\/16\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Hillsborough",
+  "State": "FL",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Short-term",
+  "Reason": "Automation was temporarily offline which created a backlog. Expect delays while this is being resolved.",
+  "Mitigation Plan": "Efforts are underway to actively address and resolve the connectivity issues.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/02\/2023",
+  "Issue Start Date": "07\/30\/2023",
+  "Est Resolution Date": "08\/07\/2023"
+ },
+ {
+  "County": "All Counties",
+  "State": "HI",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Long-term",
+  "Reason": "Searches with possible records require file pulls within the court for case information to be verified. Court clerks have limited bandwith causing delays.\nUpdate 8\/11\/23: Maui has recently suffered from the devastation of wildfires on the island. As other counties across the state plan to support Maui, expect delays statewide. We will continue to monitor the situation and notify you of any changes.",
+  "Mitigation Plan": "Researchers are working closely with the court clerks to determine better avenues in submitting requests to maximize productivity and improve TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Partial Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/28\/2023",
+  "Issue Start Date": "05\/15\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Henry",
+  "State": "TN",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "Site instability has caused slowdowns with processing. We are continuing to closely monitor the situation. Please expect delays until the online index is fully operational again.",
+  "Mitigation Plan": "Site instability is actively being restored.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/06\/2023",
+  "Issue Start Date": "09\/06\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Richmond",
+  "State": "GA",
+  "DAO Member": "Michael Jordan",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court is still recovering from a recent cyber attack and all information still needs to be verified with clerks since PII has been removed from the terminals. Delays are to be expected here for the next several weeks.",
+  "Mitigation Plan": "Monitoring the situation closely with our vendors",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/25\/2023",
+  "Issue Start Date": "05\/30\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "All Counties",
+  "State": "KS",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The Kansas online index is unstable resulting in processing time delays. Currently there is no ETA for a fix. We are continuing to closely monitor the situation. Please expect delays until the online index is fully operational again.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.\nUpdate 7\/14\/23: Stability of the online index has been restored. Expect delays to improve as pending searches get processed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/04\/2023",
+  "Issue Start Date": "06\/28\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Dallas",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The courts are in the process of transitioning to a new system. Records from 5\/23\/23 to present are not accessible at this time which is resulting in manual searches being done with clerk assistance. There is currently no ETA for a fix. Please expect delays until the new website has transitioned and is fully operational.",
+  "Mitigation Plan": "We are performing manual searches with clerk assistance. We are monitoring the situation and will provide updates as needed.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/14\/2023",
+  "Issue Start Date": "07\/06\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "El Paso",
+  "State": "TX",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The in-court public access terminals and online index are experiencing connectivity issues. Searches are still being processed, but delays are to be expected.",
+  "Mitigation Plan": "Efforts are underway to actively address and resolve the connectivity issues.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "07\/31\/2023",
+  "Issue Start Date": "07\/14\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Sedgwick",
+  "State": "KS",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The court is migrating the public access system to a new website. No searches can be completed at this time. The court expects the new site to be available on 8\/7, but please expect delays for at least a week.",
+  "Mitigation Plan": "We are continuing to monitor the situation and will provide updates as needed.",
+  "Clears": "Not Processing",
+  "Possible Hits": "Not Processing",
+  "Automation Status": "In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "08\/14\/2023",
+  "Issue Start Date": "08\/03\/2023",
+  "Est Resolution Date": "08\/11\/2023"
+ },
+ {
+  "County": "Fentress, Campbell, Blount",
+  "State": "TN",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Medium-term",
+  "Reason": "The public access terminal is down, resulting in no searches being able to be performed. We are continuing to closely monitor the situation. Please expect delays until the online index is fully operational again.",
+  "Mitigation Plan": "Restoration of PATs is actively being restored.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Fentress & Campbell: In-Court Researcher\nBlount: Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/06\/2023",
+  "Issue Start Date": "09\/06\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Saline & Benton",
+  "State": "AR",
+  "DAO Member": "John Doe",
+  "Impact Severity": "Short-term",
+  "Reason": "The public access terminal is down, resulting in no searches being able to be performed. We are continuing to closely monitor the situation. Please expect delays until the online index is fully operational again. The current ETA for a fix is 9\/22.",
+  "Mitigation Plan": "Restoration of PATs is actively being restored.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Saline: In-Court Researcher\nBenton: Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "09\/06\/2023",
+  "Issue Start Date": "09\/06\/2023",
+  "Est Resolution Date": "09\/22\/2023"
+ },
+ {
+  "County": "Los Angeles",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Changes have been made to the online index. Please expect delays.",
+  "Mitigation Plan": "Our researcher's systems are actively being reprogrammed to the new site to efficiently conduct research.",
+  "Clears": "Delayed",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + Researcher",
+  "DOB Redaction?": "Yes",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/02\/2023",
+  "Issue Start Date": "09\/25\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Orange",
+  "State": "CA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "The court has made changes to the online index causing delays in searches being processed.",
+  "Mitigation Plan": "Researchers are working closely with the courthouse to determine if this is a permanent adjustment to site creating a new limitation to obtain case details on searches with possible records.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/02\/2023",
+  "Issue Start Date": "09\/21\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "All Counties",
+  "State": "WA",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Short-term",
+  "Reason": "The court is transitioning to a new site, expect slowdown in processing until the transition is complete.",
+  "Mitigation Plan": "Transition to new site is currently underway.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/02\/2023",
+  "Issue Start Date": "09\/06\/2023",
+  "Est Resolution Date": "No ETA"
+ },
+ {
+  "County": "Honolulu",
+  "State": "HI",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "New normal",
+  "Reason": "Searches with possible records require file pulls within the court for case information to be verified. Court clerks have limited bandwith causing delays.",
+  "Mitigation Plan": "Researchers are working closely with the court clerks to determine better avenues in submitting requests to maximize productivity and improve TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Partial Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/10\/2023",
+  "Issue Start Date": "05\/15\/2023",
+  "Est Resolution Date": "No ETA",
+  "Issue Resolve Date": "10\/16\/2023"
+ },
+ {
+  "County": "Clark",
+  "State": "NV",
+  "DAO Member": "Samuel Adams",
+  "Impact Severity": "Medium-term",
+  "Reason": "Searches with possible cases must be conducted by the clerks and there are in-court restrictions causing delays.",
+  "Mitigation Plan": "Researchers are working closely with the court clerks to determine better avenues in submitting requests to maximize productivity and improve TAT.",
+  "Clears": "Not Impacted",
+  "Possible Hits": "Delayed",
+  "Automation Status": "Automation + In-Court Researcher",
+  "DOB Redaction?": "No",
+  "Status": "Active",
+  "Last Reviewed Date": "10\/10\/2023",
+  "Issue Start Date": "09\/06\/2023",
+  "Est Resolution Date": "No ETA",
+  "Issue Resolve Date": "10\/23\/2023"
+ }
+],
+"Change Log":[
+ {
+  "Date": "07\/26\/2022",
+  "DAO Member": "Cindy Hewson",
+  "County": "SANTA CLARA",
+  "State": "CA",
+  "Change": "Updated  Mitigation Plan and updated Status to Resolved"
+ },
+ {
+  "Date": "07\/26\/2022",
+  "DAO Member": "Cindy Hewson",
+  "County": "FAIRFAX",
+  "State": "VA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "07\/29\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SAN DIEGO",
+  "State": "CA",
+  "Change": "Update on DOB redaction & mitigation plan"
+ },
+ {
+  "Date": "08\/01\/2022",
+  "DAO Member": "Cindy Hewson",
+  "County": "CLARK",
+  "State": "NV",
+  "Change": "Added the county to the spreadsheet"
+ },
+ {
+  "Date": "08\/02\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SACRAMENTO",
+  "State": "CA",
+  "Change": "Update on mitigation plan"
+ },
+ {
+  "Date": "08\/02\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "MERCED",
+  "State": "CA",
+  "Change": "Update on mitigation plan"
+ },
+ {
+  "Date": "08\/03\/2022",
+  "DAO Member": "John Doe",
+  "County": "KENT",
+  "State": "MI",
+  "Change": "Update on mitigation plan"
+ },
+ {
+  "Date": "08\/08\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "MERCED",
+  "State": "CA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/08\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SACRAMENTO",
+  "State": "CA",
+  "Change": "Added more detail to delay (reason column)"
+ },
+ {
+  "Date": "08\/10\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SAN BERNARDINO",
+  "State": "CA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/10\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "HONOLULU",
+  "State": "HI",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/10\/2022",
+  "DAO Member": "Cindy Hewson",
+  "County": "All",
+  "State": "All",
+  "Change": "Added start date"
+ },
+ {
+  "Date": "08\/10\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Chatham",
+  "State": "GA",
+  "Change": "Update on status"
+ },
+ {
+  "Date": "08\/15\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SOLANO",
+  "State": "CA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/16\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "SAN JOAQUIN",
+  "State": "CA",
+  "Change": "Added more detail to delay (reason column)"
+ },
+ {
+  "Date": "08\/17\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Spalding",
+  "State": "GA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/17\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Fulton",
+  "State": "GA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/22\/2022",
+  "DAO Member": "John Doe",
+  "County": "Harris",
+  "State": "TX",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/29\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Clayton",
+  "State": "GA",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/29\/2022",
+  "DAO Member": "John Doe",
+  "County": "Kent",
+  "State": "MI",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "08\/29\/2020",
+  "DAO Member": "John Doe",
+  "County": "Berrien",
+  "State": "MI",
+  "Change": "Updated Status to Resolved"
+ },
+ {
+  "Date": "09\/06\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "All",
+  "State": "Puerto Rico",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "09\/06\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Maricopa",
+  "State": "AZ",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "09\/09\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Fairfax",
+  "State": "VA",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "09\/09\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Siskiyou",
+  "State": "CA",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "09\/16\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Sacramento",
+  "State": "CA",
+  "Change": "Update on strict name search research (reason column)"
+ },
+ {
+  "Date": "09\/19\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Suffolk",
+  "State": "NY",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "09\/26\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Maricopa",
+  "State": "AZ",
+  "Change": "More detail added to reason for delay"
+ },
+ {
+  "Date": "09\/29\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Maricopa",
+  "State": "AZ",
+  "Change": "Update to reason for delay"
+ },
+ {
+  "Date": "09\/29\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Update to reason for delay"
+ },
+ {
+  "Date": "10\/03\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Sacramento",
+  "State": "CA",
+  "Change": "Updated mitigation plan"
+ },
+ {
+  "Date": "10\/03\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Joaquin",
+  "State": "CA",
+  "Change": "Updated mitigation plan"
+ },
+ {
+  "Date": "10\/03\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Ventura",
+  "State": "CA",
+  "Change": "Updated mitigation plan"
+ },
+ {
+  "Date": "10\/03\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Francisco",
+  "State": "CA",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "10\/10\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Chatham",
+  "State": "GA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "10\/14\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Maricopa",
+  "State": "AZ",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "10\/17\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "10\/31\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Suffolk",
+  "State": "NY",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "10\/31\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "11\/07\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Added detail to delay"
+ },
+ {
+  "Date": "11\/08\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Joaquin",
+  "State": "CA",
+  "Change": "Added detail to delay"
+ },
+ {
+  "Date": "11\/21\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "San Francisco",
+  "State": "CA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "11\/28\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Ventura",
+  "State": "CA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "12\/07\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Fairfax",
+  "State": "VA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "12\/12\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "SC",
+  "Change": "Added to spreadsheet to provide update on delays"
+ },
+ {
+  "Date": "12\/13\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Marin",
+  "State": "CA",
+  "Change": "Added Confluence link"
+ },
+ {
+  "Date": "12\/19\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Marin",
+  "State": "CA",
+  "Change": "Update verbiage under reason for delay"
+ },
+ {
+  "Date": "12\/19\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Santa Clara",
+  "State": "CA",
+  "Change": "Added county"
+ },
+ {
+  "Date": "12\/19\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "Harrison",
+  "State": "TX",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "12\/22\/2022",
+  "DAO Member": "Michael Jordan",
+  "County": "Hall",
+  "State": "GA",
+  "Change": "Added county"
+ },
+ {
+  "Date": "12\/27\/2022",
+  "DAO Member": "Samuel Adams",
+  "County": "El Dorado",
+  "State": "CA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "01\/04\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Merced",
+  "State": "CA",
+  "Change": "Added county"
+ },
+ {
+  "Date": "01\/05\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Merced",
+  "State": "CA",
+  "Change": "Added update to mitigation plan"
+ },
+ {
+  "Date": "01\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Humboldt",
+  "State": "CA",
+  "Change": "Added county"
+ },
+ {
+  "Date": "01\/17\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Multiple Counties",
+  "State": "NY",
+  "Change": "Added Counties"
+ },
+ {
+  "Date": "01\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Updated reason for delay"
+ },
+ {
+  "Date": "01\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Updated reason for delay"
+ },
+ {
+  "Date": "01\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "San Diego",
+  "State": "CA",
+  "Change": "Updated status to Resolved"
+ },
+ {
+  "Date": "01\/20\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "LA",
+  "Change": "Updated status of some parishes"
+ },
+ {
+  "Date": "01\/23\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Santa Clara",
+  "State": "CA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "01\/26\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Multiple Counties",
+  "State": "NY",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "01\/27\/2023",
+  "DAO Member": "John Doe",
+  "County": "Kaufman",
+  "State": "TX",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "01\/30\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "LA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "01\/30\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Honolulu",
+  "State": "HI",
+  "Change": "Added county"
+ },
+ {
+  "Date": "02\/02\/2023",
+  "DAO Member": "John Doe",
+  "County": "Travis",
+  "State": "TX",
+  "Change": "Added County"
+ },
+ {
+  "Date": "02\/07\/2023",
+  "DAO Member": "John Doe",
+  "County": "Travis",
+  "State": "TX",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "02\/07\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "TN",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "02\/13\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Marin",
+  "State": "CA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "14-Feb",
+  "DAO Member": "Michael Jordan",
+  "County": "Pickawau",
+  "State": "OH",
+  "Change": "Added County"
+ },
+ {
+  "Date": "02\/21\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "UT",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "02\/27\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "UT",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "02\/27\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Honolulu",
+  "State": "HI",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "03\/07\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Clayton",
+  "State": "GA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "03\/13\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Pickaway",
+  "State": "OH",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "03\/13\/2012",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "MD",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "03\/27\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Merced",
+  "State": "CA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/03\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Pima",
+  "State": "AZ",
+  "Change": "Updated status to resolved - write up to come as this is known to be a problematic county"
+ },
+ {
+  "Date": "04\/10\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Humboldt",
+  "State": "CA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/10\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Updated status to resolved - write up to come"
+ },
+ {
+  "Date": "04\/11\/2023",
+  "DAO Member": "John Doe",
+  "County": "Sharkey",
+  "State": "MS",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/11\/2023",
+  "DAO Member": "John Doe",
+  "County": "Jefferson",
+  "State": "TX",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/11\/2023",
+  "DAO Member": "John Doe",
+  "County": "Douglas, Shawnee, Wyandotte",
+  "State": "KS",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/11\/2023",
+  "DAO Member": "John Doe",
+  "County": "Puerto Rico",
+  "Change": "Updated status to delayed - System is back up"
+ },
+ {
+  "Date": "04\/13\/2023",
+  "DAO Member": "John Doe",
+  "County": "Antrim, Grand Traverse, Kent, Leelanau & Wayne",
+  "State": "MI",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "04\/14\/2023",
+  "DAO Member": "John Doe",
+  "County": "Puerto Rico",
+  "Change": "Updated status to not processing - System is down again"
+ },
+ {
+  "Date": "04\/17\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hillsborough",
+  "State": "FL",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "04\/18\/2023",
+  "DAO Member": "John Doe",
+  "County": "Washington",
+  "State": "AR",
+  "Change": "Updated status to resolved. Clerk assisted court and delays are new normal."
+ },
+ {
+  "Date": "04\/20\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hall",
+  "State": "GA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/20\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counites",
+  "State": "MA",
+  "Change": "Updated status to resolved - no backlog issues for several months"
+ },
+ {
+  "Date": "04\/21\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Updated status to include more counties"
+ },
+ {
+  "Date": "04\/21\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hillsborough",
+  "State": "FL",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/21\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Gwinnett",
+  "State": "GA",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "04\/24\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Fairfax",
+  "State": "VA",
+  "Change": "Added back to tracker"
+ },
+ {
+  "Date": "04\/25\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Updated to include more counties"
+ },
+ {
+  "Date": "04\/26\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Updated not processing counties"
+ },
+ {
+  "Date": "05\/01\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Jefferson",
+  "State": "KY",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "05\/03\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Removed Wayne & Bay, MI from list"
+ },
+ {
+  "Date": "05\/03\/2023",
+  "DAO Member": "John Doe",
+  "County": "Nueces",
+  "State": "TX",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "05\/09\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Removed Crawford from list"
+ },
+ {
+  "Date": "05\/09\/2023",
+  "DAO Member": "John Doe",
+  "County": "State Searches",
+  "State": "IL",
+  "Change": "Moved to resolved as this is the new normal"
+ },
+ {
+  "Date": "05\/09\/2023",
+  "DAO Member": "John Doe",
+  "County": "State Searches",
+  "State": "PR",
+  "Change": "Moved to resolved as this is the new normal"
+ },
+ {
+  "Date": "05\/11\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Mitchell",
+  "State": "GA",
+  "Change": "Added County"
+ },
+ {
+  "Date": "05\/12\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Added Kent and Presque Isle"
+ },
+ {
+  "Date": "05\/12\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "King",
+  "State": "WA",
+  "Change": "Added County"
+ },
+ {
+  "Date": "05\/12\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "Mi",
+  "Change": "Removed several counties, Added Hillsdale"
+ },
+ {
+  "Date": "05\/12\/2023",
+  "DAO Member": "John Doe",
+  "County": "Parker",
+  "State": "TX",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "05\/15\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Honolulu",
+  "State": "HI",
+  "Change": "Added county"
+ },
+ {
+  "Date": "05\/15\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Fairfax",
+  "State": "VA",
+  "Change": "Removed county from tracker - RC enabled"
+ },
+ {
+  "Date": "05\/16\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "SC",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "05\/16\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "RI",
+  "Change": "Updated status to resolved"
+ },
+ {
+  "Date": "05\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Added County"
+ },
+ {
+  "Date": "05\/18\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Removed Berrien from list"
+ },
+ {
+  "Date": "05\/25\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Removed Presque Isle and Macomb from list"
+ },
+ {
+  "Date": "05\/25\/2023",
+  "DAO Member": "John Doe",
+  "County": "Statewide",
+  "State": "MO",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/02\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Statewide, Houston & Clarke",
+  "State": "AL",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/02\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Mitchell",
+  "State": "GA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/02\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Richmond",
+  "State": "GA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/05\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Lee",
+  "State": "FL",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/05\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Statewide, Houston & Clarke",
+  "State": "AL",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/05\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Multiple Counties",
+  "State": "NE",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/12\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Updated the not processing counties"
+ },
+ {
+  "Date": "06\/12\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Butler",
+  "State": "OH",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/13\/2023",
+  "DAO Member": "John Doe",
+  "County": "Multiple Counties",
+  "State": "MI",
+  "Change": "Updated not processing counties"
+ },
+ {
+  "Date": "06\/15\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/15\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "King",
+  "State": "WA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/15\/2023",
+  "DAO Member": "John Doe",
+  "County": "Tarrant",
+  "State": "TX",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/23\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Jefferson",
+  "State": "KY",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/23\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Lee",
+  "State": "FL",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/23\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Multiple Counties",
+  "State": "MD",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "06\/27\/2023",
+  "DAO Member": "John Doe",
+  "County": "Cook",
+  "State": "IL",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "06\/28\/2023",
+  "DAO Member": "John Doe",
+  "County": "All Counties",
+  "State": "KS",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "07\/07\/2023",
+  "DAO Member": "John Doe",
+  "County": "Dallas",
+  "State": "TX",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "07\/07\/2023",
+  "DAO Member": "John Doe",
+  "County": "Washington",
+  "State": "AR",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "07\/13\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Bossier",
+  "State": "LA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "07\/13\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Itawamba",
+  "State": "MS",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "07\/14\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "El Paso",
+  "State": "TX",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "07\/19\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "NJ",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "07\/28\/2023",
+  "DAO Member": "John Doe",
+  "County": "Hempstead",
+  "State": "AR",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/02\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "NJ",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/02\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hillsborough",
+  "State": "FL",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/02\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hillsborough",
+  "State": "NH",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/03\/2023",
+  "DAO Member": "John Doe",
+  "County": "Sedgwick",
+  "State": "KS",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/11\/2023",
+  "DAO Member": "John Doe",
+  "County": "Tarrant",
+  "State": "TX",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/11\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "HI",
+  "Change": "Added update to reason for delays"
+ },
+ {
+  "Date": "08\/14\/2023",
+  "DAO Member": "John Doe",
+  "County": "Hempstead",
+  "State": "AR",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/14\/2023",
+  "DAO Member": "John Doe",
+  "County": "Tarrant",
+  "State": "TX",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/17\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Cuyahoga",
+  "State": "OH",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/17\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "MA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/17\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Houston",
+  "State": "GA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "San Bernardino",
+  "State": "CA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "08\/21\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "All Counties",
+  "State": "MA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "08\/21\/2023",
+  "DAO Member": "Michael Jordan",
+  "County": "Hillsborough",
+  "State": "FL",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "09\/06\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "HI",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "09\/06\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Honolulu",
+  "State": "HI",
+  "Change": "Updated tracker"
+ },
+ {
+  "Date": "09\/06\/2023",
+  "DAO Member": "John Doe",
+  "County": "Henry, Fentress, Campbell, Blount",
+  "State": "TN",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/06\/2023",
+  "DAO Member": "John Doe",
+  "County": "Saline & Benton",
+  "State": "AR",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/06\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "WA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/08\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Henry",
+  "State": "TN",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "09\/08\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Hinds",
+  "State": "MS",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/18\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/21\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Orange",
+  "State": "CA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "09\/25\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Los Angeles",
+  "State": "CA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "Dallas",
+  "State": "TX",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "All Counties",
+  "State": "KS",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "Benton & Saline",
+  "State": "AR",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "El Paso",
+  "State": "TX",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "Sedwick",
+  "State": "KS",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/04\/2023",
+  "DAO Member": "John Doe",
+  "County": "Campbel, Fentress, Blount",
+  "State": "TN",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/10\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Los Angeles",
+  "State": "CA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/10\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Orange",
+  "State": "CA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/10\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "WA",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/16\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Honolulu",
+  "State": "HI",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/17\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "KS",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "10\/23\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Los Angeles",
+  "State": "CA",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "10\/23\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Clark",
+  "State": "NV",
+  "Change": "Resolved"
+ },
+ {
+  "Date": "10\/23\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "All Counties",
+  "State": "WI",
+  "Change": "Added to tracker"
+ },
+ {
+  "Date": "10\/24\/2023",
+  "DAO Member": "Samuel Adams",
+  "County": "Hale",
+  "State": "TX",
+  "Change": "Added to tracker"
+ }
+],
+"Anomaly Tracker":[
+ {
+  "County": "PICKAWAY",
+  "State": "OH",
+  "Expiration Date": "02\/28\/2023",
+  "Notes": "cyber attack",
+  "Stoppage": "x"
+ },
+ {
+  "County": "BEAVER",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "BOX ELDER",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "CACHE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "CARBON",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "DAGGETT",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "DAVIS",
+  "State": "UT",
+  "Expiration Date": "03\/10\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "DUCHESNE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "EMERY",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "GARFIELD",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "GRAND",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "IRON",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "JUAB",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "KANE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "MILLARD",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "MORGAN",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "PIUTE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "RICH",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "SALT LAKE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "SAN JUAN",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "SANPETE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "SEVIER",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "SUMMIT",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "TOOELE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "UINTAH",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "UTAH",
+  "State": "UT",
+  "Expiration Date": "03\/10\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "WASATCH",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "WASHINGTON",
+  "State": "UT",
+  "Expiration Date": "03\/10\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "WAYNE",
+  "State": "UT",
+  "Expiration Date": "03\/02\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "WEBER",
+  "State": "UT",
+  "Expiration Date": "03\/10\/2023",
+  "Notes": "automation issues due to website updates, backlog is being processed now that automation is back up",
+  "Delayed": "X"
+ },
+ {
+  "County": "MERCED",
+  "State": "CA",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "working through backlog, clerks have imposed a maximum of 6 searches per day, per researcher - all volume is now with InformData as they have more resources to utilize",
+  "Backlog": "X"
+ },
+ {
+  "County": "WARREN",
+  "State": "MS",
+  "Expiration Date": "03\/13\/2023",
+  "Notes": "The justice portion of these orders are clerk searched and the vendor is at their mercy for results.",
+  "Backlog": "X"
+ },
+ {
+  "County": "KLEBERG",
+  "State": "TX",
+  "Expiration Date": "03\/13\/2023",
+  "Backlog": "X"
+ },
+ {
+  "County": "HARDIN",
+  "State": "TX",
+  "Expiration Date": "03\/13\/2023",
+  "Backlog": "X"
+ },
+ {
+  "County": "GIBSON",
+  "State": "TN",
+  "Expiration Date": "03\/13\/2023",
+  "Notes": "Courts longer allowing researchers to print anything from the system outside of what they call Party Detail Sheets. These papers contain case numbers, charges, and identifiers. However, it is not often that these pages contain all the necessary sentencing information. Going forward, when Party Detail sheets do not contain all the sentencing information we need, researcher now must pass the search on to the clerk for completion. The clerks have made it crystal clear that they have 7 (court cited 7-10) full business days to gather all the necessary information for the names that my researcher gives them. May experience delays",
+  "Backlog": "X"
+ },
+ {
+  "County": "JEFFERSON",
+  "State": "TX",
+  "Expiration Date": "04\/03\/2023",
+  "Notes": "The courts are updating to a new system. No searches are able to be processed until the update is complete, ETA 3\/17",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LEXINGTON",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "FLORENCE",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LANCASTER",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BEAUFORT",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "PICKENS",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ANDERSON",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SPARTANBURG",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "KERSHAW",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "YORK",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ORANGEBURG",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "DARLINGTON",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GEORGETOWN",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SUMTER",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LAURENS",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CHEROKEE",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "JASPER",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GREENWOOD",
+  "State": "SC",
+  "Expiration Date": "03\/31\/2023",
+  "Notes": "Automation issues due to constantly changing security measures - Rapidcourt expected to be back up in 1-2 weeks",
+  "Delayed": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "PARKER",
+  "State": "TX",
+  "Expiration Date": "04\/03\/2023",
+  "Notes": "PAT is down with no ETA",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HUMBOLDT",
+  "State": "CA",
+  "Expiration Date": "04\/07\/2023",
+  "Notes": "Baxter's researcher unable to make it to the court to process searches due to family emergency. Anticipate being caught up by end of week."
+ },
+ {
+  "County": "PARKER",
+  "State": "TX",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "PAT is down with no ETA",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "KENT",
+  "State": "MI",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "Courts paused bgc's until further notice",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WAYNE",
+  "State": "MI",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "Courts paused bgc's until further notice",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GRAND TRAVERSE",
+  "State": "MI",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "Courts paused bgc's until further notice",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ANTRIM",
+  "State": "MI",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "Courts paused bgc's until further notice",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LEELANAU",
+  "State": "MI",
+  "Expiration Date": "04\/24\/2023",
+  "Notes": "Courts paused bgc's until further notice",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MACOMB",
+  "State": "MI",
+  "Expiration Date": "07\/31\/2023",
+  "Notes": "Inaccessible County (onlly processing 70\/day)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SEDGWICK",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WYANDOTTE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SHAWNEE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "DOUGLAS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LEAVENWORTH",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RENO",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SALINE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "FINNEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "FORD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HARVEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LYON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MIAMI",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MCPHERSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ELLIS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GEARY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "DICKINSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SUMNER",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SEWARD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "POTTAWATOMIE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BARTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LABETTE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RILEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ATCHISON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "JEFFERSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "COWLEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BUTLER",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "PRATT",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "JACKSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CLOUD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MITCHELL",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RICE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CRAWFORD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "NEOSHO",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GRANT",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "DONIPHAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "KINGMAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MONTGOMERY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BROWN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "PAWNEE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RUSSELL",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MARSHALL",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "NEMAHA",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "OTTAWA",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "COFFEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "FRANKLIN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CHEROKEE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "THOMAS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "NORTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "STEVENS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "OSAGE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WABAUNSEE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HARPER",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SHERMAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ELLSWORTH",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "PHILLIPS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ROOKS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WILSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ALLEN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "STAFFORD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BARBER",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "EDWARDS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LOGAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RUSH",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SCOTT",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CLAY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GRAY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WICHITA",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "OSBORNE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "BOURBON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WASHINGTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "JEWELL",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "REPUBLIC",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "KEARNY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "KIOWA",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LINN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "TREGO",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ANDERSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GRAHAM",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MORTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HASKELL",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LINCOLN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MARION",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MEADE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "NESS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CLARK",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CHASE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "DECATUR",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SMITH",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CHEYENNE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HAMILTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "ELK",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "STANTON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GOVE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "HODGEMAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "LANE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GREENWOOD",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WOODSON",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "MORRIS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "COMANCHE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "RAWLINS",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "SHERIDAN",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "CHAUTAUQUA",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "WALLACE",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ },
+ {
+  "County": "GREELEY",
+  "State": "KS",
+  "Expiration Date": "2023-11-31",
+  "Notes": "site down due to security breach - no ETA for fix (Johnson, KS not impacted as they operate on a different system)",
+  "Delayed": "X",
+  "Stoppage": "X",
+  "Backlog": "X"
+ }
+]
 }

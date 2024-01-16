@@ -4,7 +4,7 @@ import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 
 const ActiveItemsPage = () => {
-  const dataArray = Object.values(sampleData);
+  const dataArray = Object.values(sampleData.Current);
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
