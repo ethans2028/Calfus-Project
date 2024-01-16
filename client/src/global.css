@@ -29,47 +29,87 @@ body {
   align-items: center;
   justify-content: center; 
   white-space: nowrap;
+  gap: 10px;
 }
 
-.county-name {
+.large-header {
+  flex: 13;
+  display: flex;
+  flex-direction: row; 
+  font-weight: bold;
+}
+
+.medium-header {
+  flex: 8;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.small-header {
+  flex: 3;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.xsmall-header {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+.xxsmall-header {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.large-element {
+  flex: 13;
+  display: flex;
+  flex-direction: row; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+
+.medium-element {
+  flex: 8;
+  display: flex;
+  flex-direction: row; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+
+.small-element {
   flex: 3;
   display: flex;
   flex-direction: row; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
 }
 
-.zip-code {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-}
-
-.county-id {
+.xsmall-element {
   flex: 2;
   display: flex;
-  flex-direction: row;
+  flex-direction: row; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
 }
 
-.date-created {
-  flex: 2;
-  display: flex;
-  flex-direction: row;
-}
-
-.date-updated {
-  flex: 2;
-  display: flex;
-  flex-direction: row;
-}
-
-.edit-link {
+.xxsmall-element {
   flex: 1;
+  display: flex;
+  flex-direction: row; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
 }
-
-.details-link {
-  flex: 1;
-}
-
-
 
 h1, h2, h3, h4, h5, h6 {
   color: #444;
