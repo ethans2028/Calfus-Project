@@ -197,9 +197,9 @@ const ActiveItemsPage = () => {
                   <div className="small-element">{item['Impact Severity']}</div> 
                   <div className="large-element">{item['Reason']}</div>
                   <div className="small-element">{item['Last Reviewed Date']}</div>
-                  <Link className="xxsmall-element link" to={`/anomalies/:${item.id}/edit`}>Edit</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.id}`}>Details</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.id}/changes`}>Audit</Link>
+                  <Link className="xxsmall-element link" to={`/anomalies/:${item.State}${item.County}/edit`}>Edit</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.State}${item.County}`}>Details</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.State}${item.County}/changes`}>Audit</Link>
                 </div>
               ))
               ) : (
