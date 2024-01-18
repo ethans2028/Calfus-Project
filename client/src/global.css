@@ -230,3 +230,9 @@ input, textarea {
   vertical-align: center !important;
   margin: 12% 40% ;
 }
+
+table, th, tr, td, tbody{
+  border: 1px solid black;
+  color: black;
+
+}
