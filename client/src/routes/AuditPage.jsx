@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {useParams, Link} from 'react-router-dom';
-
+import '../global.css';
 
 const AuditPage = () => {
     const issueID = useParams();
@@ -33,10 +33,7 @@ const AuditPage = () => {
     // all of the checkbox code (could use some help with cleaning up)
     const [tempRecheck, tempReadjust] = useState({ 'A': true, 'B': true, 'C': true, 'D': true})
     const Checkbox = ({ label, value, onChange})=>{
-        return (
-            <label><input type="checkbox" checked={value} onChange={onChange}/>
-        {label}</label>
-        )
+        return (<label><input type="checkbox" checked={value} onChange={onChange}/>{label}</label>)
     }
     // very messy code, probably a better way to do this
     // essentially, trying to update tempRecheck in terms of itself throws an error
@@ -82,23 +79,20 @@ const AuditPage = () => {
     // mapping the data into a table format
     const mappedData = filteredItems.map((edit) => 
         <tr key={edit.id}>
-            <td style={styleSet}>{edit.uname}</td>
-            <td style={styleSet}>{edit.modified.getFullYear()}-{edit.modified.getMonth()}-{edit.modified.getDate()} {edit.modified.getHours()}:{edit.modified.getMinutes()}:{edit.modified.getSeconds()}</td>
-            <td style={styleSet}>{edit.actions}</td>
+            <td>{edit.uname}</td>
+            <td>{edit.modified.getFullYear()}-{edit.modified.getMonth()}-{edit.modified.getDate()} {edit.modified.getHours()}:{edit.modified.getMinutes()}:{edit.modified.getSeconds()}</td>
+            <td>{edit.actions}</td>
         </tr>
     );
   return (
-    // changes from last time:
-    // - added some temporary styling to the table
-    // - added simple table headers
-    // - added "date + time" field to the table
-    // - added a simple header to the page with "Audit Log" and "Anomaly [id]" 
-    //   (again, will change once we start to read from database)
-    // - adjusted the table width to make it look better on the page
-    // - cleaned up table code a bit
-    // - added a "back" button (currently goes back to "data viewing" page)
-    // - added a (very messy) filtering system using both username and check boxes for "fields modified"
-    //   (this will need to be cleaned up later, might need help with this)
+    // did one quick change - basically set up all my stuff to fit with the global.css
+    // and updated that with the table formatting so my stuff looks OK
+    // checkboxes are still weird on the page, but as determined in discussion today, may not be necessary
+    // (also, table css is affecting Ethan's page as well (the anomaly detail page),
+    // make sure it looks okay on that page too!)
+
+    // the checkbox code is also modified, but that's mostly because I wanted to try and get them working manually
+    // they will be changed back *at some point*.
     <div>
         <css></css>
         <Link to="/cic" className="button"> Back</Link>        
@@ -106,16 +100,18 @@ const AuditPage = () => {
         <div style={{fontSize: "36px"}}><b>Audit Log</b></div>
         <input type="text" placeholder="Filter by username" onChange={changeUname}></input>
         <div>Filter by fields modified</div>
-        <Checkbox label='A' value={checkValueA} onChange={tempChangeA}/>
-        <Checkbox label='B' value={checkValueB} onChange={tempChangeB}/>
-        <Checkbox label='C' value={checkValueC} onChange={tempChangeC}/>
-        <table style={styleSet}>
-            <thead style={styleSet}>
-                <th style={styleSet} width={500}>Username</th>
-                <th style={styleSet} width={200}>Date/Time</th>
-                <th style={styleSet} width={1000}>Action</th>
+        <div>
+            <label><input type="checkbox" checked={checkValueA} onChange={tempChangeA} />A</label>
+            <label><input type="checkbox" checked={checkValueB} onChange={tempChangeB} />B</label>
+            <label><input type="checkbox" checked={checkValueC} onChange={tempChangeC} />C</label>
+        </div>
+        <table>
+            <thead>
+                <th width={500}>Username</th>
+                <th width={200}>Date/Time</th>
+                <th width={2000}>Action</th>
             </thead>
-            <tbody style={styleSet}>{mappedData}</tbody>
+            <tbody>{mappedData}</tbody>
             </table>
         
     </div>
