@@ -1,43 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, useParams } from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 
 
 const AnomalyDetailPage = () => {
-  const record = sampleData.Current[0];
+  
+  const params = useParams();
+  //const searchParams = new URLSearchParams(window.location.search);
+  // Stringify to JSON 
+  const json = JSON.stringify(params); 
 
-  const [redirect_home, setRedirect_home] = useState(false);
+  // Parse back to object
+  const parsed = JSON.parse(json);
 
-  const handleButtonClick_home = () => {
-    // Set redirect to true when the button is clicked
-    setRedirect_home(true);
-  };
+  // Destructure id property 
+  const {id} = parsed; 
+  const state = id.substring(1,3);
+  const county = id.substring(3);
+  const record = sampleData.Current.find(obj => {
+    return obj.State === state && obj.County === county; 
+  });
 
-  // Redirect to another page if redirect state is true
-  if (redirect_home) {
-    return <Navigate to="/cic"/>;
-  }
+
 
   return (
     <div className='details-page'>
       <Link to="/cic" className="button"> Back </Link>        
 
       <div className='page-header'>
-        <h1>Anomaly Detail Page: {record.id}</h1>
+        <h1>Anomaly Detail Page: {county}, {state}</h1>
       </div>
 
       <div className='details-data  '>
-        <table>
-          <tr>
-            <th>Last Edited By</th>
-            <th>Last Reviewed Date</th>
-          </tr>
-          <tr>
-            <td >{record['DAO Member']}</td>
-            <td>{record['Last Reviewed Date']}</td>
-          </tr>
-        </table>
         <table>
           <tr>
             <th>State</th>
@@ -56,7 +51,6 @@ const AnomalyDetailPage = () => {
           </tr>
         </table>
 
-
         <table>
           <tr>
             <th>Reason</th>
@@ -65,7 +59,6 @@ const AnomalyDetailPage = () => {
           <tr>
             <td className='long-data'>{record['Mitigation Plan']}</td>
             <td className='long-data'>{record.Clears}</td>
-            
           </tr>
         </table>
 
@@ -83,12 +76,22 @@ const AnomalyDetailPage = () => {
             <td>{record['DOB Redaction?']}</td>
           </tr>
         </table>
-
+        <table>
+          <tr>
+            <th>Last Edited By</th>
+            <th>Last Reviewed Date</th>
+          </tr>
+          <tr>
+            <td >{record['DAO Member (User)']}</td>
+            <td>{record['Last Reviewed Date']}</td>
+          </tr>
+        </table>
       </div>
       
-      <div className='edit-btn'>
-        <button>Edit</button>
-      </div>
+      <Link to={`/anomalies/${id}/edit`} className="button edit-btn"> Edit </Link>  
+      <Link to={`/anomalies/${id}/changes`} className="button edit-btn"> Audit Log </Link>  
+
+      
     </div>
     
   );
