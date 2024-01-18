@@ -19,15 +19,14 @@ const Login = () => {
   return (
     <div className='login-page'>
       <div className='login-elements'>
-        <h1 className='page-header'>Anomaly Tracker</h1>
+        <h1 className='page-header'>Data Supply Chain <br />County Outages & Anomaly Tracker</h1>
         <h4>Username</h4>
         <input type="text" placeholder=""/>
         <h4>Password</h4>
         <input type="password" placeholder=""/>
         <br />
-        <button className= 'button' onClick={handleButtonClick} style={{
-          margin: '10px',
-        }}>Login</button>
+          <button className= 'login-btn' onClick={handleButtonClick} >Login</button>
+        
       </div>
       
 
