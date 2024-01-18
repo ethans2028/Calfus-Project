@@ -178,16 +178,22 @@ const ActiveItemsPage = () => {
           <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
           <Link to="/NewPage" className="button"> + New Entry</Link>        
         </div> 
-        <div className="horizontal-div" style={{ backgroundColor: "#c6bab2"}}>
-          <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer', paddingLeft: '10px'}}>St.⇅</div>
-          <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County⇅</div>
-          <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity⇅</div> 
-          <div className="large-header" onClick={sortReason} style={{ cursor: 'pointer' }}>Reason⇅</div>
-          <div className="small-header" onClick={sortLastReviewed} style={{ cursor: 'pointer' }}>Last Review⇅</div>
-          <div className="xxsmall-header">Edit</div>
-          <div className="xsmall-header">Details</div>
-          <div className="xsmall-header">Audit</div>
-        </div>  
+        <div>
+          {filteredItems.length > 0 ? (
+            <div className="horizontal-div" style={{ backgroundColor: "#c6bab2"}}>
+              <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer', paddingLeft: '10px'}}>St.⇅</div>
+              <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County⇅</div>
+              <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity⇅</div> 
+              <div className="large-header" onClick={sortReason} style={{ cursor: 'pointer' }}>Reason⇅</div>
+              <div className="small-header" onClick={sortLastReviewed} style={{ cursor: 'pointer' }}>Last Review⇅</div>
+              <div className="xxsmall-header">Edit</div>
+              <div className="xsmall-header">Details</div>
+              <div className="xsmall-header">Audit</div>
+            </div>  
+          ) : (
+            <div></div>
+          )}
+        </div>
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => (
