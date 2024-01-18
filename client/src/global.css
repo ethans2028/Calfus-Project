@@ -172,49 +172,69 @@ input, textarea {
   text-decoration: underline;
 }
 
+.details-head {
+  margin-bottom: 2% !important;
+}
 .details-page {
   position: relative;
+  margin-top: 3%;
 }
 
 .details-data {
   display: flex;
   flex-direction: column; 
   justify-self: center;
-  margin-top: 2%;
 }
 
-.details-data table{
+.details-data table {
   margin: 25px 50px;
   table-layout: fixed;
   border-spacing: 30px;
   border: 1px solid black;
 }
 
+
 .details-data td, th {
-  padding: 3px;
-  
-}
-.details-data td {
-  background-color: lightgrey;
   height: 50px;
   text-align: left;
   vertical-align: top;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.details-data td {
+  background-color: white;
+}
+
+.details-data th {
+  background-color: lightgrey;
+  width: 200px;
 }
 
 .long-data {
-  height: 100px !important; 
-  width: 200px;
-  height: 100px;
+  height:200px !important; 
   
 }
 
-.edit-btn {
+.edit-btn-div {
   position: absolute;
+  display: inline-flex;
+  right: 50;
   left: 50%;
+  transform: translateX(-50%);
 }
+
+.details-back-btn {
+  margin-left: 50px;
+}
+
+.audit-btn {
+  margin-left: 30px;
+}
+
 .page-header {
   text-align: center;
-  margin-top: 3%;
+  margin-bottom: 8%;
 }
 
 .login-page {
@@ -223,16 +243,22 @@ input, textarea {
 }
 
 .login-elements {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  vertical-align: center !important;
-  margin: 12% 40% ;
+  background-color: white;
+  padding: 4% !important;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3); 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  text-align: center;
 }
 
-table, th, tr, td, tbody{
-  border: 1px solid black;
-  color: black;
-
+.login-btn {
+  margin: 10px;
+  background-color: #323232;
+  font-size: 16px;
+  height: 47px;
+  width: 150px;
+  border-radius: 25px;
 }
