@@ -26,28 +26,43 @@ const AnomalyDetailPage = () => {
 
   return (
     <div className='details-page'>
-      <Link to="/cic" className="button"> Back </Link>        
+      <Link to="/cic" className="button details-back-btn"> Back </Link>        
 
-      <div className='page-header'>
+      <div className='page-header details-head'>
         <h1>Anomaly Detail Page: {county}, {state}</h1>
       </div>
 
-      <div className='details-data  '>
+      <div className='details-data'>
         <table>
           <tr>
-            <th>State</th>
-            <th>County</th>
+            <th>Status</th>
+            <td>{record.Status}</td>
             <th>Impact Severity</th>
-            <th>Issue Start Date</th>
-            <th>Estimated Resolve Date</th>
+            <td>{record['Impact Severity']}</td>
+            <th>State</th>
+            <td>{record.State}</td>
+            <th>County</th>
+            <td>{record.County}</td>
           </tr>
           <tr>
-            
-            <td>{record.State}</td>
-            <td>{record.County}</td>
-            <td>{record['Impact Severity']}</td>
-            <td>{record['Issue Sart Date']}</td>
-            <td>{record['Issue Resolve Date']}</td>
+            <th>Last Review</th>
+            <td >{record['DAO Member (User)']}</td>
+            <th>Last Reviewed Date</th>
+            <td>{record['Last Reviewed Date']}</td>
+            <th>Issue Start Date</th>
+            <td>{record['Issue Start Date']}</td>
+            <th>Estimated Resolution Date</th>
+            <td>{record['Est Resolution Date']}</td>
+          </tr>
+          <tr>
+            <th>Research Method</th>
+            <td>{record['Research Method']}</td>
+            <th>Possible Hits</th>
+            <td>{record['Possible Hits']}</td>
+            <th>Clears</th>
+            <td>{record.Clears}</td>
+            <th>DOB Redaction?</th>
+            <td>{record['DOB Redaction?']}</td>
           </tr>
         </table>
 
@@ -56,45 +71,24 @@ const AnomalyDetailPage = () => {
             <th>Reason</th>
             <th>Mitigation Plan</th>
           </tr>
-          <tr>
+          <tr className='long-data'>
+            <td className='long-data'>{record.Reason}</td>
             <td className='long-data'>{record['Mitigation Plan']}</td>
-            <td className='long-data'>{record.Clears}</td>
-          </tr>
-        </table>
-
-        <table>
-          <tr>
-            <th>Clears</th>
-            <th>Possible Hits</th>
-            <th>Automation Status</th>
-            <th>DOB Redaction?</th>
-          </tr>
-          <tr>
-            <td>{record.Reason}</td>
-            <td>{record['Possible Hits']}</td>
-            <td>{record['Automation Status']}</td>
-            <td>{record['DOB Redaction?']}</td>
-          </tr>
-        </table>
-        <table>
-          <tr>
-            <th>Last Edited By</th>
-            <th>Last Reviewed Date</th>
-          </tr>
-          <tr>
-            <td >{record['DAO Member (User)']}</td>
-            <td>{record['Last Reviewed Date']}</td>
+            
           </tr>
         </table>
       </div>
       
-      <Link to={`/anomalies/${id}/edit`} className="button edit-btn"> Edit </Link>  
-      <Link to={`/anomalies/${id}/changes`} className="button edit-btn"> Audit Log </Link>  
+      <div className='edit-btn-div'>
+        <Link to={`/anomalies/${id}/edit`} className="button"> Edit </Link>  
+        <Link to={`/anomalies/${id}/changes`} className="button audit-btn"> Audit Log </Link>  
+      </div>
+      
 
       
     </div>
     
   );
-}
+} 
 
 export default AnomalyDetailPage

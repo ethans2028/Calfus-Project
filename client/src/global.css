@@ -172,47 +172,66 @@ input, textarea {
   text-decoration: underline;
 }
 
+.details-head {
+  margin-bottom: 2% !important;
+}
 .details-page {
   position: relative;
+  margin-top: 3%;
 }
 
 .details-data {
   display: flex;
   flex-direction: column; 
   justify-self: center;
-  margin-top: 2%;
 }
 
-.details-data table{
+.details-data table {
   margin: 25px 50px;
   table-layout: fixed;
   border-spacing: 30px;
   border: 1px solid black;
 }
 
+
 .details-data td, th {
-  padding: 3px;
-  
-}
-.details-data td {
-  background-color: lightgrey;
   height: 50px;
   text-align: left;
   vertical-align: top;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.details-data td {
+  background-color: white;
+}
+
+.details-data th {
+  background-color: lightgrey;
+  width: 200px;
 }
 
 .long-data {
-  height: 100px !important; 
-  width: 200px;
-  height: 100px;
+  height:200px !important; 
   
 }
 
-.edit-btn {
+.edit-btn-div {
   position: absolute;
+  display: inline-flex;
+  right: 50;
   left: 50%;
   transform: translateX(-50%);
 }
+
+.details-back-btn {
+  margin-left: 50px;
+}
+
+.audit-btn {
+  margin-left: 30px;
+}
+
 .page-header {
   text-align: center;
   margin-bottom: 8%;
