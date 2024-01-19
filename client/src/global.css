@@ -271,3 +271,12 @@ table, th, tr, td, tbody{
   border: 1px solid black;
   color: black;
 }
+
+.logo {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.login-header {
+  margin-bottom: 3% !important;
+}
