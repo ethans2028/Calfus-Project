@@ -143,7 +143,7 @@ const AuditPage = () => {
             </table>
         <br/>
         <div className='edit-btn-div'>
-          <Link to={`/anomalies/${issueID.id}`} className="button">Back</Link>
+          <Link to={`/anomalies/${issueID.id}`} className="button">Details</Link>
           <Link to="/cic" className="button audit-btn"> Home</Link>
         </div>
     </div>

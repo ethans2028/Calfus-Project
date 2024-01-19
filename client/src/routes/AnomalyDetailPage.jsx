@@ -24,7 +24,7 @@ const AnomalyDetailPage = () => {
 
   return (
     <div className='details-page'>
-      <Link to="/cic" className="button details-back-btn"> Home </Link>        
+              
 
       <div className='page-header details-head'>
         <h1>Anomaly Detail Page: {county}, {state}</h1>
@@ -80,6 +80,7 @@ const AnomalyDetailPage = () => {
       <div className='edit-btn-div'>
         <Link to={`/anomalies/${id}/edit`} className="button"> Edit </Link>  
         <Link to={`/anomalies/${id}/changes`} className="button audit-btn"> Audit Log </Link>  
+        <Link to="/cic" className="button"> Home </Link>
       </div>
       
 
