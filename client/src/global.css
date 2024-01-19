@@ -132,7 +132,7 @@ button {
 }
 
 button:hover {
-  background-color: #59a1aa;
+  background-color: #09626e;
 }
 
 .button {
@@ -148,10 +148,12 @@ button:hover {
   height: 47px;
   width: 150px;
   border-radius: 25px;
+  transition: 0.15s ease-in-out;
 }
 
 .button:hover {
-  background-color: #52a2ac;
+  background-color: #09626e;
+  
 }
 
 input, textarea {
