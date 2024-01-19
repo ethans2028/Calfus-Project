@@ -9,7 +9,7 @@ const AnomalyDetailPage = () => {
   const params = useParams();
   //const searchParams = new URLSearchParams(window.location.search);
   // Stringify to JSON 
-  const json = JSON.stringify(params); 
+  const json = JSON.stringify(params);
 
   // Parse back to object
   const parsed = JSON.parse(json);
@@ -17,16 +17,14 @@ const AnomalyDetailPage = () => {
   // Destructure id property 
   const {id} = parsed; 
   const state = id.substring(1,3);
-  const county = id.substring(3);
+  var county = id.substring(3);
   const record = sampleData.Current.find(obj => {
-    return obj.State === state && obj.County === county; 
+    return obj.State === state && obj.County === county;
   });
-
-
 
   return (
     <div className='details-page'>
-      <Link to="/cic" className="button details-back-btn"> Back </Link>        
+      <Link to="/cic" className="button details-back-btn"> Home </Link>        
 
       <div className='page-header details-head'>
         <h1>Anomaly Detail Page: {county}, {state}</h1>

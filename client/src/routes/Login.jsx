@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Navigate} from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
+import VariableName from "../assets/logo.jpg";
+import logo from '../assets/logo.jpg';
 
 const Login = () => {
 
@@ -19,7 +21,8 @@ const Login = () => {
   return (
     <div className='login-page'>
       <div className='login-elements'>
-        <h1 className='page-header'>Data Supply Chain <br />County Outages & Anomaly Tracker</h1>
+        <img className='logo' src={logo} alt='logo'/>
+        <h2 className='login-header page-header'>Data Supply Chain <br />County Outages & Anomaly Tracker</h2>
         <h4>Username</h4>
         <input type="text" placeholder=""/>
         <h4>Password</h4>
