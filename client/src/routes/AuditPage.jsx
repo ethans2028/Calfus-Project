@@ -83,7 +83,7 @@ const AuditPage = () => {
 
     // mapping the data into a table format
     const mappedData = filteredItems.map((edit, ind) => {
-        return (<tr key={edit.Date} style={{ backgroundColor: ind % 2 === 1 ? ' #c6bab2' : '#d7cbc4' }}>
+        return (<tr key={edit.Date} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
             <td>{edit['DAO Member']}</td>
             <td>{edit['Date']}</td>
             <td>{edit['Change']}</td>
@@ -127,14 +127,13 @@ const AuditPage = () => {
         
     */
     <div className='container'>        
-        <br/>
-        <Link to="/cic" className="button"> Home</Link>        
+        <br/>      
         <h1>Anomalies: {properlyCapitalize(county)}, {state}</h1>
         <h2>Audit Log</h2>
         <input type="text" placeholder="Filter by username" onChange={changeUname} size={5}/>
         <table>
             <thead>
-                <tr style={{backgroundColor: ' #c6bab2'}}>
+                <tr style={{backgroundColor: '#bcbcbc'}}>
                     <th width={500}>Username</th>
                     <th width={200}>Date</th>
                     <th width={2000}>Action</th>
@@ -143,7 +142,10 @@ const AuditPage = () => {
             <tbody>{mappedData}</tbody>
             </table>
         <br/>
-        <Link to={`/anomalies/${issueID.id}`} className="button">Back</Link>
+        <div className='edit-btn-div'>
+          <Link to={`/anomalies/${issueID.id}`} className="button">Back</Link>
+          <Link to="/cic" className="button audit-btn"> Home</Link>
+        </div>
     </div>
   )
   //
