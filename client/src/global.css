@@ -262,3 +262,9 @@ input, textarea {
   width: 150px;
   border-radius: 25px;
 }
+
+table, th, tr, td, tbody{
+  
+  border: 1px solid black;
+  color: black;
+}
