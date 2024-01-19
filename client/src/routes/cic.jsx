@@ -180,7 +180,7 @@ const ActiveItemsPage = () => {
         </div> 
         <div>
           {filteredItems.length > 0 ? (
-            <div className="horizontal-div" style={{ backgroundColor: "#c6bab2"}}>
+            <div className="horizontal-div" style={{ backgroundColor: "#bcbcbc"}}>
               <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer', paddingLeft: '10px'}}>St.⇅</div>
               <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County⇅</div>
               <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity⇅</div> 
@@ -197,7 +197,7 @@ const ActiveItemsPage = () => {
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => (
-                <div style={{ backgroundColor: index % 2 === 1 ? ' #c6bab2' : '#d7cbc4' }} className="horizontal-div">
+                <div style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
                   <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item['State']}</div>
                   <div className="medium-element">{item['County']}</div>
                   <div className="small-element">{item['Impact Severity']}</div> 
