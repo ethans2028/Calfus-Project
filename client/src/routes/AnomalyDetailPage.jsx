@@ -27,7 +27,7 @@ const AnomalyDetailPage = () => {
               
 
       <div className='page-header details-head'>
-        <h1>Anomaly Detail Page: {county}, {state}</h1>
+        <h1>Anomaly Details: {county}, {state}</h1>
       </div>
 
       <div className='details-data'>
