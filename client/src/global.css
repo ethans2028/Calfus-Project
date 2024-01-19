@@ -231,7 +231,7 @@ input, textarea {
 }
 
 .audit-btn {
-  margin-left: 30px;
+  margin: 0 30px;
 }
 
 .page-header {
