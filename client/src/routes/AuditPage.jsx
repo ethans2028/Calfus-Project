@@ -55,7 +55,8 @@ const AuditPage = () => {
 
     // determining how the items are filtered
     const filteredItems = simpleFilter.filter(item =>{
-        const left = item['DAO Member'].toLowerCase().includes(unameFilter.toLowerCase());
+      
+      const left = item['DAO Member'].toLowerCase().includes(unameFilter.toLowerCase());
         return left;
     }
     )
@@ -128,7 +129,7 @@ const AuditPage = () => {
     */
     <div className='container'>            
         <h1 className='page-header'>Audit Log: {properlyCapitalize(county)}, {state}</h1>
-        <input type="text" placeholder="Filter by username" onChange={changeUname} size={5}/>
+        <input type="text" placeholder="Search by Username" onChange={changeUname} size={5}/>
         <table>
             <thead>
                 <tr style={{backgroundColor: '#bcbcbc'}}>
