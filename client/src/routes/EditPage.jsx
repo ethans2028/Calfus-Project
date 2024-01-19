@@ -100,7 +100,7 @@ const EditPage = () => {
 
       <form onSubmit={handleSubmit}>
         <div className='details-data'>
-          <table>
+          <table className="ReportTable">
             <tr>
               <th>Status</th>
               <td>
@@ -168,8 +168,6 @@ const EditPage = () => {
             </label>
             <br />
             </td>
-
-
             <th>Last Reviewed Date</th>
             <td>
             <label>
@@ -273,7 +271,7 @@ const EditPage = () => {
           </table>
 
 
-          <table>
+          <table className="TextTable">
             <tr>
               <th>Reason</th>
               <th>Mitigation Plan</th>

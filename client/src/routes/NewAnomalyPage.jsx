@@ -1,189 +1,256 @@
-import React, { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
-import sampleData from '../sampleData.json';
+import React, { useState } from 'react';
+import { Link, Navigate } from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
 
-const NewPage = () => {
+const AddPage = () => {
   const [redirect_home, setRedirect_home] = useState(false);
-  //open text
+  const [redirect_DetailPage, setRedirectDetailPage] = useState(false);
+
+  // Open text
   const [reason, setReason] = useState('');
   const [county, setCounty] = useState('');
   const [username, setUsername] = useState('');
   const [extraLinks, setExtraLinks] = useState('');
   const [mitigationPlan, setMitigationPlan] = useState('');
+
+  //Dates
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [lastReview, setLastReview] = useState('');
+  const [lastReviewDate, setLastReviewDate] = useState('');
 
-
-  //drop down
+  // Drop down
   const [state, setState] = useState('');
   const [impactSeverity, setImpactSeverity] = useState('');
   const [clears, setClears] = useState('');
   const [possibleHits, setPossibleHits] = useState('');
   const [researched, setResearched] = useState('');
+  const [otherResearch, setOtherResearch] = useState('');
+
   const [dobRedaction, setDobRedaction] = useState('');
   const [status, setStatus] = useState('');
 
   const handleButtonClick_home = () => {
-    // Set redirect to true when the button is clicked
     setRedirect_home(true);
   };
- 
+
   const handleSubmit = () => {
-    // need to do more of submit logic and page switch
+    setRedirectDetailPage(true);
     console.log('Form submitted!');
+    // Add logic for handling the form submission (e.g., adding a new entry)
   };
 
-  useEffect(() => {
-    document.title = 'Main Title'; // Set the title when the component mounts
-    return () => {
-      document.title = 'Default Title'; // Set the default title when the component unmounts
-    };
-  }, []);
+  if (redirect_DetailPage) {
+    return <Navigate to="/anomalies/:CASACRAMENTO" />;
+  }
+
   if (redirect_home) {
-    return <Navigate to="/cic"/>;
+    return <Navigate to="/cic" />;
   }
 
   return (
-    <div>
-      <Link to="/NewPage" className="button"> Back </Link>        
-      <h2>New Report</h2>
+    <div className='details-page'>
+      <Link to="/cic" className="button">
+        Home
+      </Link>
+
+      <div className='page-header details-head'>
+        <h1>Add Report Page</h1>
+      </div>
 
       <form onSubmit={handleSubmit}>
+        <div className='details-data'>
+          <table className="ReportTable">
+            <tr>
+              <th>Status</th>
+              <td>
+                <label>
+                  <select value={status} onChange={(e) => setStatus(e.target.value)}>
+                    {['Active', 'Not Active'].map((statusOption) => (
+                      <option key={statusOption} value={statusOption}>
+                        {statusOption}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <br />
+              </td>
 
-      <label>
-          State:
-          <select value={state} onChange={(e) => setState(e.target.value)}>
-            <option value="Washington">WA</option>
-            <option value="Oregon">OR</option>
-            {/* Add more */}
-          </select>
-        </label>
-        <br />
+              <th>Impact Severity</th>
+              <td>
+                <label>
+                  <select value={impactSeverity} onChange={(e) => setImpactSeverity(e.target.value)}>
+                    {['Low', 'Medium', 'High'].map((severityOption) => (
+                      <option key={severityOption} value={severityOption}>
+                        {severityOption}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <br />
+              </td>
 
+              <th>State</th>
+              <td>
+                <label>
+                  <select value={state} onChange={(e) => setState(e.target.value)}>
+                    <option value="Washington">WA</option>
+                    <option value="Oregon">OR</option>
+                  </select>
+                </label>
+                <br />
+              </td>
 
-        <label>
-          County:
-          <input type="text" value={county} onChange={(e) => setCounty(e.target.value)} />
-        </label>
-        <br />
+              <th>County</th>
+              <td>
+                <label>
+                  <input
+                    type="text"
+                    value={county}
+                    onChange={(e) => setCounty(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
+            </tr>
 
-        <label>
-          Username:
-          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        </label>
-        <br />
+            {/* ... (other rows) */}
 
+            <tr>
+              <th>Last Review</th>
+              <td>
+                <label>
+                  <input
+                    type="text"
+                    value={lastReview}
+                    onChange={(e) => setLastReview(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
+              <th>Last Reviewed Date</th>
+              <td>
+                <label>
+                  <input
+                    type="date"
+                    value={lastReviewDate}
+                    onChange={(e) => setLastReviewDate(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
 
-        
-        <label>
-          Impact Severity:
-          <select value={impactSeverity} onChange={(e) => setImpactSeverity(e.target.value)}>
-            <option value="low">Low</option>
-            <option value="medium">Medium</option>
-            <option value="high">High</option>
-          </select>
-        </label>
-        <br />
+              <th>Issue Start Date</th>
+              <td>
+                <label>
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={(e) => setStartDate(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
 
+              <th>Estimated Resolution Date</th>
+              <td>
+                <label>
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={(e) => setEndDate(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
+            </tr>
 
-        <label>
-          Reason:
-          <textarea value={reason} onChange={(e) => setReason(e.target.value)} />
-        </label>
-        <br />
+            <tr>
+              <th>Research Method</th>
+              <td>
+                <label>
+                  <input
+                    type="text"
+                    value={researched}
+                    onChange={(e) => setResearched(e.target.value)}
+                  />
+                </label>
+                <br />
+              </td>
 
-        
-        <label>
-          Mitigation Plan:
-          <textarea value={mitigationPlan} onChange={(e) => setMitigationPlan(e.target.value)} />
-        </label>
-        <br />
+              <th>Possible Hits</th>
+              <td>
+                <label>
+                  <select value={possibleHits} onChange={(e) => setPossibleHits(e.target.value)}>
+                    <option value="Delayed Time">Delayed Time</option>
+                    <option value="Effects delivery date">Delivery Date</option>
+                  </select>
+                </label>
+                <br />
+              </td>
 
+              <th>Clears</th>
+              <td>
+                <label>
+                  <select value={clears} onChange={(e) => setClears(e.target.value)}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="other">Other</option>
+                  </select>
+                </label>
+                {clears === 'other' && (
+                  <>
+                    <br />
+                    <label>
+                      <input
+                        type="text"
+                        value={otherResearch}
+                        onChange={(e) => setOtherResearch(e.target.value)}
+                      />
+                    </label>
+                  </>
+                )}
+                <br />
+              </td>
 
-        <label>
-          Clears:
-          <input type="text" value={clears} onChange={(e) => setClears(e.target.value)} />
-        </label>
-        <br />
+              <th>DOB Redaction?</th>
+              <td>
+                <label>
+                  <select value={dobRedaction} onChange={(e) => setDobRedaction(e.target.value)}>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </label>
+                <br />
+              </td>
+            </tr>
+          </table>
 
-        <label>
-          Clears:
-          <select value={clears} onChange={(e) => setClears(e.target.value)}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        <br />
+          <table className="TextTable">
+            <tr>
+              <th>Reason</th>
+              <th>Mitigation Plan</th>
+            </tr>
+            <tr className='long-data'>
+              <td className='long-data'>
+                <textarea value={reason} onChange={(e) => setReason(e.target.value)} />
+              </td>
 
-        <label>
-          PossibleHits:
-          <select value={possibleHits} onChange={(e) => setPossibleHits(e.target.value)}>
-            <option value="Delayed Time">Delayed Time</option>
-            <option value="Effects delivery date">Delivery Date</option>
-          </select>
-        </label>
-        <br />
+              <td className='long-data'>
+                <textarea value={mitigationPlan} onChange={(e) => setMitigationPlan(e.target.value)} />
+              </td>
+            </tr>
+          </table>
+        </div>
 
-
-        <label>
-          Researched:
-          <select value={researched} onChange={(e) => setResearched(e.target.value)}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        <br />
-
-
-        <label>
-          DOB Redaction:
-          <select value={dobRedaction} onChange={(e) => setDobRedaction(e.target.value)}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        <br />
-
-
-        <label>
-          Status:
-          <select value={status} onChange={(e) => setStatus(e.target.value)}>
-            <option value="yes">Yes</option>
-            <option value="no">No</option>
-          </select>
-        </label>
-        <br />
-
-        <label>
-          Start Date:
-          <textarea value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-        </label>
-        <br />
-
-        
-        <label>
-          End Date:
-          <textarea value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-        </label>
-        <br />
-
-        <label>
-          Extra Links:
-          <input type="text" value={extraLinks} onChange={(e) => setExtraLinks(e.target.value)} />
-        </label>
-        <br />
-
-        <button className="button" type="submit">Create</button>
+        <div className='edit-btn-div'>
+          <button className="button" type="submit">
+            Submit
+          </button>
+        </div>
       </form>
     </div>
   );
 };
 
-export default NewPage;
-
-
-
-
-  
-  
+export default AddPage;
