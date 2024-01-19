@@ -265,12 +265,3 @@ input, textarea {
   width: 150px;
   border-radius: 25px;
 }
-
-.logo {
-  width: 30%;
-  margin: 0 auto;
-}
-
-.login-header {
-  margin-bottom: 3% !important;
-}
