@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 95%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -40,7 +40,7 @@ body {
 }
 
 .medium-header {
-  flex: 8;
+  flex: 5;
   display: flex;
   flex-direction: row;
   font-weight: bold;
@@ -76,7 +76,7 @@ body {
 }
 
 .medium-element {
-  flex: 8;
+  flex: 5;
   display: flex;
   flex-direction: row; 
   overflow: hidden;
