@@ -7,7 +7,7 @@ import '../global.css';
 import AnomalyFinder from '../apis/AnomalyFinder';
 
 const ActiveItemsPage = () => {
-  useEffect(async () => {
+  useEffect(() => {
     try { // gets anomalies from the base url+added path
       const response = AnomalyFinder.getAnomalies("/");
       console.log(response);
