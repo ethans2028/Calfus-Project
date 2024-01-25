@@ -15,7 +15,7 @@ const pool = new Pool({
   }
 });
 
-pool.query('SELECT * FROM pg_tables', (err, res) => {
+pool.query('SELECT * FROM report', (err, res) => {
   console.log(err, res);
   pool.end();
 });
