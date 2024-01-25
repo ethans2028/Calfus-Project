@@ -1,13 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import sampleData from '../sampleData.json';
-import '../global.css'; 
+import '../global.css';
+
+// backend imports
+import AnomalyFinder from '../apis/AnomalyFinder';
 
 const ActiveItemsPage = () => {
+  useEffect(async () => {
+    try { // gets anomalies from the base url+added path
+      const response = AnomalyFinder.getAnomalies("/");
+      console.log(response);
+    } catch (error) { // if there is an error
+    }
+  }, []); 
+  
   const dataArray = Object.values(sampleData.Current);
   const [items, setItems] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
+  // run hook: bracket means it will only run when we mount
   useEffect(() => {
     setItems(dataArray);
   }, []);
