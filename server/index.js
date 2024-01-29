@@ -15,10 +15,48 @@ const pool = new Pool({
   }
 });
 
-pool.query('SELECT * FROM report', (err, res) => {
-  console.log(err, res);
-  pool.end();
-});
+const fetch_cic_data = () => {
+  console.log("fetch cic data")
+  return new Promise((resolve, reject) => {
+    pool.query('SELECT * FROM report', (err, res) => {
+      if (err) {
+        console.log(err)
+        reject(err)
+      } else {
+        resolve(res.rows)
+      }
+    })
+  }) 
+}
+
+const fetch_audit_data = (state, county) => {
+  console.log(`fetch audit data where state=${state} and county=${county}`)
+  return new Promise((resolve, reject) => {
+    pool.query(`SELECT * FROM audit_log WHERE state = $1 AND county = $2 LIMIT 1`, [state, county], (err, res) => {
+      if (err) {
+        console.log(err)
+        reject(err)
+      } else {
+        resolve(res.rows)
+      }
+    })
+  }) 
+}
+
+const fetch_county_data = (state, county) => {
+  console.log("fetch county data")
+  return new Promise((resolve, reject) => {
+    pool.query(`SELECT * FROM report WHERE state = $1 AND county = $2 LIMIT 1`, [state, county], (err, res) => {
+      if (err) {
+        console.log(err)
+        reject(err)
+      } else {
+        resolve(res.rows)
+      }
+    })
+  }) 
+}
+
 
 
 // express app instance
@@ -30,59 +68,33 @@ app.use(express.json());
 
 // setting up express request routing
 
-// get all anomalies
-app.get("/api/v1/anomalies", (req, res) => {
-    console.log("route handler ran");
-  res.status(200).json({
-    status: "success",
-    data: {
-      anomalies: ["anomaly_1", "anomaly_2"],
-    },
-  });
+app.get("/cic", async (req, res) => {
+  try {
+    const data = await fetch_cic_data();
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while fetching data' });
+  }
 });
 
-// get one anomaly
-app.get("/api/v1/anomalies/:id", (req, res) => {
-  console.log(req);
-  res.status(201).json({
-    status: "success",
-    data: {
-      restaurant: "anomaly_get",
-    },
-  });
+
+app.get("/audit", async (req, res) => {
+  try {
+    const data = await fetch_audit_data('CA', 'Sacramento');
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while fetching data' });
+  }
 });
 
-// create an anomaly
-app.post("/api/v1/anomalies", (req, res) => {
-  console.log(req.body);
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      anomalies: "anomaly_post",
-    },
-  });
+app.get("/county", async (req, res) => {
+  try {
+    const data = await fetch_county_data('CA', 'San Joaquin');
+    res.status(200).json(data);
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while fetching data' });
+  }
 });
-
-// update an anomaly
-app.put("/api/v1/anomalies/:id", (req, res) => {
-  console.log(req.params.id);
-  console.log(req.body);
-
-  res.status(200).json({
-    status: "success",
-    data: {
-      anomalies: "anomalies_put",
-    },
-  });
-});
-
-// delete an anomaly
-app.delete("/api/v1/anomalies/:id", (req, res) => {
-  res.status(204).json({
-    status: "success",
-  });
-})
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {
