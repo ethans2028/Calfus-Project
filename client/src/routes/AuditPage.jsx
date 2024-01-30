@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import {useParams, Link} from 'react-router-dom';
 import '../global.css';
 import sampleData from "../sampleData.json";
+import LogoutButton from "./LogoutButton.jsx";
 
 const AuditPage = () => {
     const issueID = useParams();    
@@ -110,22 +111,8 @@ const AuditPage = () => {
     }
   return (
     /*
-        all of the stuff that's changed:
-        - updated style to match Charles' - centering, margins, color palette 
-          (used the "container" architecture)
-        - temporarily removed the "filter by field" buttons (was having trouble getting them to work)
-        - slightly modified table code
-        - adjusted global.css again to change the table code (again)
-        - changed around the buttons - there is a "home" button up top that leads to cic,
-        "back" button on bottom goes to Anomaly Detail Page
-        - page now reads and updates from .json file
-        - modified a bit of spacing (you can use <br> to make line break spacing)
-
-        some things I thought of, but will not be here:
-        - sorting items by date/time - that doesn't seem necessary yet
-        - the table changes temporarily have key set to "date" - probably "name + date" is a good key
-          but don't want to deal with that right now, it's kind of complicated to do two-value keys for that
-        
+        temporarily put a "logout button" next to the "home" and "details" button
+        (this was mostly just for Auth0 testing)
     */
     <div className='container'>            
         <h1 className='page-header'>Audit Log: {properlyCapitalize(county)}, {state}</h1>
@@ -144,10 +131,11 @@ const AuditPage = () => {
         <div className='edit-btn-div'>
           <Link to={`/anomalies/${issueID.id}`} className="button">Details</Link>
           <Link to="/cic" className="button audit-btn"> Home</Link>
+          <LogoutButton/>
         </div>
     </div>
   )
-  //
+  
 }
 
 export default AuditPage

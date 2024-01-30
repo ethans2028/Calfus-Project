@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; 
+import LogoutButton from "./LogoutButton.jsx";
 
 const ActiveItemsPage = () => {
   const dataArray = Object.values(sampleData.Current);

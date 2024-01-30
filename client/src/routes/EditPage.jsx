@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
+import LogoutButton from "./LogoutButton.jsx";
 
 const EditPage = () => {
   
@@ -93,7 +94,6 @@ const EditPage = () => {
       <Link to="/cic" className="button">
         Home
       </Link>
-
       <div className='page-header details-head'>
         <h1>Edit Report Page</h1>
       </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
+import LogoutButton from "./LogoutButton.jsx";
 
 const AddPage = () => {
   const [redirect_home, setRedirect_home] = useState(false);
