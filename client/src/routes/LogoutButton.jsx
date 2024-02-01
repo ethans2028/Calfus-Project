@@ -9,10 +9,10 @@ import { useAuth0 } from "@auth0/auth0-react";
 // This will eventually be put on every page except (obviously) the login page
 // It's temporarily borrowing the button styling, but might be changed later
 
-export default function LogoutButton(){
+export default function LogoutButton({buttonType = 'button'}){
     const {logout} = useAuth0();
     return (
-      <button className='button' onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      <button className={buttonType} onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
         Log Out
       </button>
     );

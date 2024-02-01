@@ -173,7 +173,10 @@ const ActiveItemsPage = () => {
   });
 
   return (
+    // logout button added to top left
       <div className="container">
+        <br/> <br/>
+        <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          

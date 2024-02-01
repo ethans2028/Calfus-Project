@@ -111,10 +111,11 @@ const AuditPage = () => {
     }
   return (
     /*
-        temporarily put a "logout button" next to the "home" and "details" button
-        (this was mostly just for Auth0 testing)
+        logout button moved to top left side
     */
-    <div className='container'>            
+    <div className='container'>     
+        <br/> <br/>
+        <LogoutButton/>
         <h1 className='page-header'>Audit Log: {properlyCapitalize(county)}, {state}</h1>
         <input type="text" placeholder="Search by Username" onChange={changeUname} size={5}/>
         <table>
@@ -131,7 +132,7 @@ const AuditPage = () => {
         <div className='edit-btn-div'>
           <Link to={`/anomalies/${issueID.id}`} className="button">Details</Link>
           <Link to="/cic" className="button audit-btn"> Home</Link>
-          <LogoutButton/>
+          
         </div>
     </div>
   )

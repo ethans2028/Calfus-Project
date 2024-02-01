@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
-import LogoutButton from "./LogoutButton.jsx";
+import LogoutButton from "./LogoutButton.jsx"; // this is not needed on Edit page - why would you log out from here?
 
 const EditPage = () => {
   
@@ -91,7 +91,7 @@ const EditPage = () => {
 
   return (
     <div className='details-page'>
-      <Link to="/cic" className="button">
+      <Link to="/cic" className='button button-details'>
         Home
       </Link>
       <div className='page-header details-head'>

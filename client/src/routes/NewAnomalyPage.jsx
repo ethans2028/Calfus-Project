@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
-import LogoutButton from "./LogoutButton.jsx";
+import LogoutButton from "./LogoutButton.jsx";  // like the Edit page, I see no reason to put this here
 
 const AddPage = () => {
   const [redirect_home, setRedirect_home] = useState(false);
@@ -51,7 +51,7 @@ const AddPage = () => {
 
   return (
     <div className='details-page'>
-      <Link to="/cic" className="button">
+      <Link to="/cic" className="button button-details">
         Home
       </Link>
 
