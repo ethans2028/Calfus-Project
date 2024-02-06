@@ -4,7 +4,7 @@ CREATE TABLE change_log (
   dao_member varChar(50),
   county varChar(50),
   st varChar(50),
-  changes_made varChar(250),
+  changes_made varChar(250)
 );
 
 INSERT INTO change_log (id, change_date, dao_member, county, st, changes_made) 
