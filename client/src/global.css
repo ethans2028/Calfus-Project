@@ -177,9 +177,14 @@ input, textarea {
 .details-head {
   margin-bottom: 2% !important;
 }
+/*
+changed this just b/c it makes things line up better overall
+(basically has all of the titles, top left buttons line up together)
+*/
 .details-page {
   position: relative;
-  margin-top: 3%;
+  margin-top: 2.675%;
+  margin-left: 0.675%
 }
 
 .details-data {
@@ -277,7 +282,12 @@ table, th, tr, td, tbody{
   width: 30%;
   margin: 0 auto;
 }
+/* 
+Specifically for top-left buttons on Details/Edit pages
+This makes everything line up very nicely :)
+*/
+.button-details {
+  margin-left: 50px;
+  padding: 15px;
 
-.login-header {
-  
 }

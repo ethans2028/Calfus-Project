@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; 
+import LogoutButton from "./LogoutButton.jsx";
 
 const ActiveItemsPage = () => {
   const dataArray = Object.values(sampleData.Current);
@@ -172,7 +173,10 @@ const ActiveItemsPage = () => {
   });
 
   return (
+    // logout button added to top left
       <div className="container">
+        <br/> <br/>
+        <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
