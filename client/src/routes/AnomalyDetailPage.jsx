@@ -18,10 +18,11 @@ const AnomalyDetailPage = () => {
   const {id} = parsed; 
   const state = id.substring(1,3);
   var county = id.substring(3);
+  console.log(state, county);
   const record = sampleData.Current.find(obj => {
     return obj.State === state && obj.County === county;
   });
-
+  
   return (
     <div className='details-page'>
               
