@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-
+const cors = require("cors");
 const { Pool } = require('pg');
 
 
@@ -15,19 +15,6 @@ const pool = new Pool({
   }
 });
 
-const fetch_cic_data = () => {
-  console.log("fetch cic data")
-  return new Promise((resolve, reject) => {
-    pool.query('SELECT * FROM report', (err, res) => {
-      if (err) {
-        console.log(err)
-        reject(err)
-      } else {
-        resolve(res.rows)
-      }
-    })
-  }) 
-}
 
 const fetch_audit_data = (state, county) => {
   console.log(`fetch audit data where state=${state} and county=${county}`)
@@ -64,16 +51,24 @@ const app = express();
 
 // middleware: convert json from post request to a javascript object
 // anything written in the body will become a body object attached to the req object
+app.use(cors());
 app.use(express.json());
-
 // setting up express request routing
 
-app.get("/cic", async (req, res) => {
+app.get("/api/v1/anomalies", async (req, res) => {
   try {
-    const data = await fetch_cic_data();
-    res.status(200).json(data);
+    console.log("fetch cic data")
+    const datas = await pool.query('SELECT * FROM report');
+    res.status(200).json({
+      status: "success",
+      datas: datas.rows.length,
+      data: {
+        anomalies: datas.rows,
+      },
+    });
   } catch (err) {
-    res.status(500).json({ error: 'An error occurred while fetching data' });
+    res.status(500).json({ error: 'An error occurred while fetching data'});
+    console.log(err);
   }
 });
 

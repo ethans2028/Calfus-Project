@@ -1,31 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import sampleData from '../sampleData.json';
-import '../global.css'; 
+import '../global.css';
+//backend-imports
+import  AnomalyFinder  from '../apis/AnomalyFinder';
+import { AnomalyContext } from '../context/AnomalyContext';
+
 import LogoutButton from "./LogoutButton.jsx";
 
-const ActiveItemsPage = () => {
-  const dataArray = Object.values(sampleData.Current);
-  const [items, setItems] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
 
+const ActiveItemsPage = (props) => {
+  const {items, setItems} = useContext(AnomalyContext)
   useEffect(() => {
-    setItems(dataArray);
+    fetchData();  
   }, []);
+  
+  const fetchData = async () => {
+    try { // gets anomalies from the base url+added path
+      const response = await AnomalyFinder.get("/");
+      setItems(response.data.data.anomalies);
+      
+    } catch (error) { // if there is an error
+    }
+  };
+
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleSearch = event => {
     setSearchTerm(event.target.value);
   };
-
+  
   const [sortedBy, setSortedBy] = useState('NONE');
 
   const sortState = () => {
       if (sortedBy !== 'STATEASC') {
         const sortedItems = [...items].sort((a, b) => {
-          if (a.State < b.State) {
+          if (a.state < b.state) {
             return -1;
           }
-          if (a.State > b.State) {
+          if (a.state > b.state) {
             return 1;
           }
           return 0;
@@ -34,10 +46,10 @@ const ActiveItemsPage = () => {
         setSortedBy('STATEASC');
       } else {
         const sortedItems = [...items].sort((a, b) => {
-          if (a.State < b.State) {
+          if (a.state < b.state) {
             return 1;
           }
-          if (a.State > b.State) {
+          if (a.state > b.state) {
             return -1;
           }
           return 0;
@@ -50,10 +62,10 @@ const ActiveItemsPage = () => {
   const sortCounty = () => {
     if (sortedBy !== 'COUNTYASC') {
       const sortedItems = [...items].sort((a, b) => {
-        if (a.County < b.County) {
+        if (a.county < b.county) {
           return -1;
         }
-        if (a.County > b.County) {
+        if (a.county > b.county) {
           return 1;
         }
         return 0;
@@ -62,10 +74,10 @@ const ActiveItemsPage = () => {
       setSortedBy('COUNTYASC');
     } else {
       const sortedItems = [...items].sort((a, b) => {
-        if (a.County < b.County) {
+        if (a.county < b.county) {
           return 1;
         }
-        if (a.County > b.County) {
+        if (a.county > b.county) {
           return -1;
         }
         return 0;
@@ -78,10 +90,10 @@ const ActiveItemsPage = () => {
   const sortSeverity = () => {
     if (sortedBy !== 'SEVERITYASC') {
       const sortedItems = [...items].sort((a, b) => {
-        if (a['Impact Severity'] < b['Impact Severity']) {
+        if (a.impact_severity < b.impact_severity) {
           return -1;
         }
-        if (a['Impact Severity'] > b['Impact Severity']) {
+        if (a.impact_severity > b.impact_severity) {
           return 1;
         }
         return 0;
@@ -90,10 +102,10 @@ const ActiveItemsPage = () => {
       setSortedBy('SEVERITYASC');
     } else {
       const sortedItems = [...items].sort((a, b) => {
-        if (a['Impact Severity'] < b['Impact Severity']) {
+        if (a.impact_severity < b.impact_severity) {
           return 1;
         }
-        if (a['Impact Severity'] > b['Impact Severity']) {
+        if (a.impact_severity > b.impact_severity) {
           return -1;
         }
         return 0;
@@ -106,10 +118,10 @@ const ActiveItemsPage = () => {
   const sortReason = () => {
     if (sortedBy !== 'REASONASC') {
       const sortedItems = [...items].sort((a, b) => {
-        if (a.Reason < b.Reason) {
+        if (a.reason < b.reason) {
           return -1;
         }
-        if (a.Reason > b.Reason) {
+        if (a.reason > b.reason) {
           return 1;
         }
         return 0;
@@ -118,10 +130,10 @@ const ActiveItemsPage = () => {
       setSortedBy('REASONASC');
     } else {
       const sortedItems = [...items].sort((a, b) => {
-        if (a.Reason < b.Reason) {
+        if (a.reason < b.reason) {
           return 1;
         }
-        if (a.Reason > b.Reason) {
+        if (a.reason > b.reason) {
           return -1;
         }
         return 0;
@@ -134,10 +146,10 @@ const ActiveItemsPage = () => {
   const sortLastReviewed = () => {
     if (sortedBy !== 'LASTREVIEWEDASC') {
       const sortedItems = [...items].sort((a, b) => {
-        if (a['Last Reviewed Date'] < b['Last Reviewed Date']) {
+        if (a.last_reviewed_date < b.last_reviewed_date) {
           return -1;
         }
-        if (a['Last Reviewed Date'] > b['Last Reviewed Date']) {
+        if (a.last_reviewed_date > b.last_reviewed_date) {
           return 1;
         }
         return 0;
@@ -146,10 +158,10 @@ const ActiveItemsPage = () => {
       setSortedBy('LASTREVIEWEDASC');
     } else {
       const sortedItems = [...items].sort((a, b) => {
-        if (a['Last Reviewed Date'] < b['Last Reviewed Date']) {
+        if (a.last_reviewed_date < b.last_reviewed_date) {
           return 1;
         }
-        if (a['Last Reviewed Date'] > b['Last Reviewed Date']) {
+        if (a.last_reviewed_date > b.last_reviewed_date) {
           return -1;
         }
         return 0;
@@ -161,27 +173,28 @@ const ActiveItemsPage = () => {
 
   const filteredItems = items.filter(item => {
     if (searchTerm === '') {
-      return item.Status === 'Active';
+      return item.status === 'Active';
     }
     const searchTermLower = searchTerm.toLowerCase();
     return (
-      item['County']?.toLowerCase().startsWith(searchTermLower) ||
-      item['State']?.toLowerCase().startsWith(searchTermLower) ||
-      item['Impact Severity']?.toLowerCase().startsWith(searchTermLower) ||
-      item['Last Reviewed Date']?.toLowerCase().startsWith(searchTermLower)
-    ) && item['Status'] === 'Active';
+      item.county?.toLowerCase().startsWith(searchTermLower) ||
+      item.state?.toLowerCase().startsWith(searchTermLower) ||
+      item.impact_severity?.toLowerCase().startsWith(searchTermLower) ||
+      item.last_reviewed_date?.toLowerCase().startsWith(searchTermLower)
+    ) && item.status === 'Active';
   });
 
+
+  console.log(filteredItems);
   return (
-    // logout button added to top left
       <div className="container">
         <br/> <br/>
         <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
-          <Link to="/NewPage" className="button"> + New Entry</Link>        
-        </div> 
+          <Link to="/NewPage" className="button"> + New Entry</Link>
+        </div>
         <div>
           {filteredItems.length > 0 ? (
             <div className="horizontal-div" style={{ backgroundColor: "#bcbcbc"}}>
@@ -200,18 +213,21 @@ const ActiveItemsPage = () => {
         </div>
         <div className="box" style={{ display: 'flex', flexDirection: 'column', }}>
         {filteredItems.length > 0 ? (
-              filteredItems.map((item, index) => (
-                <div style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
-                  <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item['State']}</div>
-                  <div className="medium-element">{item['County']}</div>
-                  <div className="small-element">{item['Impact Severity']}</div> 
-                  <div className="large-element">{item['Reason']}</div>
-                  <div className="small-element">{item['Last Reviewed Date']}</div>
-                  <Link className="xxsmall-element link" to={`/anomalies/:${item.State}${item.County}/edit`}>Edit</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.State}${item.County}`}>Details</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.State}${item.County}/changes`}>Audit</Link>
+              filteredItems.map((item, index) => {
+                return (
+                  <div style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
+                  <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item.state}</div>
+                  <div className="medium-element">{item.county}</div>
+                  <div className="small-element">{item.impact_severity}</div> 
+                  <div className="large-element">{item.reason}</div>
+                  <div className="small-element">{item.last_reviewed_date}</div>
+                  <Link className="xxsmall-element link" to={`/anomalies/:${item.state}${item.county}/edit`}>Edit</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.state}${item.county}`}>Details</Link>
+                  <Link className="xsmall-element link" to={`/anomalies/:${item.state}${item.county}/changes`}>Audit</Link>
                 </div>
-              ))
+                )
+              
+            })
               ) : (
               <p>No results found</p>
               )}
