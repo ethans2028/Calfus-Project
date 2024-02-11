@@ -5,6 +5,9 @@ import '../global.css';
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 import { AnomalyContext } from '../context/AnomalyContext';
 
+import LogoutButton from "./LogoutButton.jsx";
+
+
 const ActiveItemsPage = (props) => {
   const {items, setItems} = useContext(AnomalyContext)
   useEffect(() => {
@@ -184,8 +187,9 @@ const ActiveItemsPage = (props) => {
 
   console.log(filteredItems);
   return (
-    
-    <div className="container">    
+      <div className="container">
+        <br/> <br/>
+        <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
           <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          

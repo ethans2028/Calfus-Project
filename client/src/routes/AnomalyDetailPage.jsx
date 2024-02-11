@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, useParams } from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
-
+import LogoutButton from "./LogoutButton.jsx";
 
 const AnomalyDetailPage = () => {
   
@@ -24,9 +24,11 @@ const AnomalyDetailPage = () => {
   });
   
   return (
+    /*
+      logout button added to top left
+    */
     <div className='details-page'>
-              
-
+      <LogoutButton buttonType='button button-details'/>
       <div className='page-header details-head'>
         <h1>Anomaly Details: {county}, {state}</h1>
       </div>
