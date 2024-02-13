@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
-import LogoutButton from "./LogoutButton.jsx"; // this is not needed on Edit page - why would you log out from here?
+import Popup from 'reactjs-popup'
 
 const EditPage = () => {
   
@@ -34,7 +34,11 @@ const EditPage = () => {
   const [dobRedaction, setDobRedaction] = useState('');
   const [status, setStatus] = useState('');
 
+  const [open, setOpen] = useState(false);
+  const closeModal = () => setOpen(false);
+      
 
+  const [changeDesc, setChangeDesc] = useState('');
 
   const params = useParams();
   //const searchParams = new URLSearchParams(window.location.search);
@@ -49,7 +53,8 @@ const EditPage = () => {
   const stateFromParams = id.substring(1, 3);
   const countyFromParams = id.substring(3);
   const record = sampleData.Current.find(obj => {
-    return obj.State === stateFromParams && obj.County === countyFromParams;
+    return obj.State.toLowerCase() === stateFromParams.toLowerCase() && 
+        obj.County.toLowerCase() === countyFromParams.toLowerCase();
   });
 
   const handleButtonClick_home = () => {
@@ -60,8 +65,15 @@ const EditPage = () => {
   const handleSubmit = () => {
     //e.preventDefault();
     // Need to implement more submit logic and page switch
-    setRedirectDetailPage(true);
+    console.log(changeDesc);
+    if (changeDesc != ''){
+      setRedirectDetailPage(true);
+    }
+
     console.log('Form submitted!');
+
+    // helper variable for making timestamps
+    const changeDate = new Date() // gives the current date and time
   };
 
   //used to convert dates from the JSON into the format used for type date in react
@@ -89,6 +101,7 @@ const EditPage = () => {
     return <Navigate to="/cic" />;
   }
 
+  // set "audit field" as "required"
   return (
     <div className='details-page'>
       <Link to="/cic" className='button button-details'>
@@ -97,7 +110,8 @@ const EditPage = () => {
       <div className='page-header details-head'>
         <h1>Edit Report Page</h1>
       </div>
-
+      
+      
       <form onSubmit={handleSubmit}>
         <div className='details-data'>
           <table className="ReportTable">
@@ -287,14 +301,22 @@ const EditPage = () => {
               </td>
             </tr>
           </table>
+        
         </div>
-
-        <div className='edit-btn-div'>
-          <button className="button" type="submit">
+        </form>
+        <Popup open={open} position='top center' onClose={closeModal}>
+          <h2>Please give a brief description of what you changed</h2>
+          <form>
+            <textarea value={changeDesc} onChange={(e)=>setChangeDesc(e.target.value)} required/>
+            <button className="button" type="submit" onClick={handleSubmit}> Submit </button>
+          </form>
+        </Popup>
+      <div className="edit-btn-div">
+        <button className="button" type="submit" onClick={()=>setOpen(o => !o)}>
             Submit
-          </button>
-        </div>
-      </form>
+        </button>
+      </div>
+      
     </div>
   );
 };
@@ -302,3 +324,7 @@ const EditPage = () => {
 export default EditPage;
 
 
+/*
+object holding facility
+
+*/

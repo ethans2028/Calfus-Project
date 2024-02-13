@@ -5,7 +5,7 @@ import '../global.css'; // Import the global CSS file
 import LogoutButton from "./LogoutButton.jsx";
 
 const AnomalyDetailPage = () => {
-  
+
   const params = useParams();
   //const searchParams = new URLSearchParams(window.location.search);
   // Stringify to JSON 
@@ -20,8 +20,9 @@ const AnomalyDetailPage = () => {
   var county = id.substring(3);
   console.log(state, county);
   const record = sampleData.Current.find(obj => {
-    return obj.State === state && obj.County === county;
+    return obj.State.toLowerCase() === state.toLowerCase() && obj.County.toLowerCase() === county.toLowerCase();
   });
+  console.log(record);
   
   return (
     /*

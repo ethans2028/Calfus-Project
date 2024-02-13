@@ -59,7 +59,7 @@ app.get("/api/v1/anomalies", async (req, res) => {
   try {
     console.log("fetch cic data")
     const datas = await pool.query('SELECT * FROM report');
-    res.status(200).json({
+    res.status(200).json({  // formatting
       status: "success",
       datas: datas.rows.length,
       data: {
@@ -73,8 +73,10 @@ app.get("/api/v1/anomalies", async (req, res) => {
 });
 
 
+
 app.get("/audit", async (req, res) => {
   try {
+    console.log("fetch audit data")
     const data = await fetch_audit_data('CA', 'Sacramento');
     res.status(200).json(data);
   } catch (err) {
@@ -84,7 +86,8 @@ app.get("/audit", async (req, res) => {
 
 app.get("/county", async (req, res) => {
   try {
-    const data = await fetch_county_data('CA', 'San Joaquin');
+    console.log("fetch county data");
+    const datas = await pool.query('SELECT * FROM report');
     res.status(200).json(data);
   } catch (err) {
     res.status(500).json({ error: 'An error occurred while fetching data' });

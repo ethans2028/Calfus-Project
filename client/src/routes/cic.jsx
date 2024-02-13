@@ -17,9 +17,11 @@ const ActiveItemsPage = (props) => {
   const fetchData = async () => {
     try { // gets anomalies from the base url+added path
       const response = await AnomalyFinder.get("/");
+      console.log(response.data.data.anomalies);
       setItems(response.data.data.anomalies);
       
     } catch (error) { // if there is an error
+      console.log("server error");
     }
   };
 

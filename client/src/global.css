@@ -291,3 +291,9 @@ This makes everything line up very nicely :)
   padding: 15px;
 
 }
+
+.popup-content{
+  background: rgb(255, 255, 255);
+  padding: 150px;
+  border: 1px solid black;
+}
