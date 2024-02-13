@@ -55,10 +55,63 @@ app.use(cors());
 app.use(express.json());
 // setting up express request routing
 
+app.put('/api/v1/anomalies/:id', async (req, res) => {
+  const { id } = req.params;
+  const newData = req.body;
+  const sql = `
+    UPDATE report 
+    SET county = $1, state = $2, dao_member_user = $3, impact_severity = $4, reason = $5, 
+        mitigation_plan = $6, clears = $7, possible_hits = $8, research_method = $9, 
+        dob_redaction = $10, status = $11, last_reviewed_date = $12, issue_start_date = $13, 
+        est_resolution_date = $14, links = $15, act_resolution_date = $16
+    WHERE id = $17
+  `;
+
+  const values = [
+    newData.county, newData.state, newData.dao_member_user, newData.impact_severity, newData.reason,
+    newData.mitigation_plan, newData.clears, newData.possible_hits, newData.research_method,
+    newData.dob_redaction, newData.status, newData.last_reviewed_date, newData.issue_start_date,
+    newData.est_resolution_date, newData.links, newData.act_resolution_date, id
+  ];
+
+  try{
+    console.log("attempting to update data")
+    const datas = await pool.query(sql, values);
+    res.status(200).json({
+      status: "success",
+      data: {
+        anomalies: datas.rows,
+      },
+    });
+
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while updating data'});
+    console.log(err);
+  }
+});
+
 app.get("/api/v1/anomalies", async (req, res) => {
   try {
-    console.log("fetch cic data")
     const datas = await pool.query('SELECT * FROM report');
+    res.status(200).json({
+      status: "success",
+      datas: datas.rows.length,
+      data: {
+        anomalies: datas.rows,
+      },
+    });
+
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while fetching data'});
+    console.log(err);
+  }
+});
+
+app.get("/api/v1/anomalies/:id", async (req, res) => {
+  try {
+    console.log("fetch anomoly data by id")
+    const { id } = req.params;
+    const datas = await pool.query('SELECT * FROM report WHERE id = $1', [id]);
     res.status(200).json({
       status: "success",
       datas: datas.rows.length,
@@ -72,24 +125,6 @@ app.get("/api/v1/anomalies", async (req, res) => {
   }
 });
 
-
-app.get("/audit", async (req, res) => {
-  try {
-    const data = await fetch_audit_data('CA', 'Sacramento');
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'An error occurred while fetching data' });
-  }
-});
-
-app.get("/county", async (req, res) => {
-  try {
-    const data = await fetch_county_data('CA', 'San Joaquin');
-    res.status(200).json(data);
-  } catch (err) {
-    res.status(500).json({ error: 'An error occurred while fetching data' });
-  }
-});
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {

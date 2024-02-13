@@ -2,14 +2,17 @@ import React, {useState, createContext} from 'react';
 
 export const AnomalyContext = createContext();
 
-// give all components access to data being read from the server.
-// Avoids constantly passing in props to all the components
 export const AnomalyContextProvider = props => {
-  // stores list of anomalies. sets value of object based on the outcome of a function, only changing the virtual DOM
   const [items, setItems] = useState([]);
-  
+  const [selectedItem, setSelectedItem] = useState(null); // Add this line
+
+  const selectItem = (id) => {
+    const item = items.find(item => item.id === id);
+    setSelectedItem(item);
+  }
+
   return (
-    <AnomalyContext.Provider value={{items, setItems}}>
+    <AnomalyContext.Provider value={{items, setItems, selectedItem, selectItem}}>
       {props.children}
     </AnomalyContext.Provider>
   );

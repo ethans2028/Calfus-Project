@@ -9,7 +9,7 @@ import LogoutButton from "./LogoutButton.jsx";
 
 
 const ActiveItemsPage = (props) => {
-  const {items, setItems} = useContext(AnomalyContext)
+  const [ items, setItems ] = useState([]);
   useEffect(() => {
     fetchData();  
   }, []);
@@ -184,8 +184,6 @@ const ActiveItemsPage = (props) => {
     ) && item.status === 'Active';
   });
 
-
-  console.log(filteredItems);
   return (
       <div className="container">
         <br/> <br/>
@@ -215,16 +213,17 @@ const ActiveItemsPage = (props) => {
         {filteredItems.length > 0 ? (
               filteredItems.map((item, index) => {
                 return (
-                  <div style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
-                  <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item.state}</div>
-                  <div className="medium-element">{item.county}</div>
-                  <div className="small-element">{item.impact_severity}</div> 
-                  <div className="large-element">{item.reason}</div>
-                  <div className="small-element">{item.last_reviewed_date}</div>
-                  <Link className="xxsmall-element link" to={`/anomalies/:${item.state}${item.county}/edit`}>Edit</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.state}${item.county}`}>Details</Link>
-                  <Link className="xsmall-element link" to={`/anomalies/:${item.state}${item.county}/changes`}>Audit</Link>
-                </div>
+                  <div key={item.id} style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
+                    <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item.state}</div>
+                    <div className="medium-element">{item.county}</div>
+                    <div className="small-element">{item.impact_severity}</div> 
+                    <div className="large-element">{item.reason.substring(0, 73)}...</div>
+                    <div className="small-element">{item.last_reviewed_date.substring(0, 10)}</div>                    
+                    <Link className="xxsmall-element link" to={`/anomalies/${item.id}/edit`}>Edit</Link>
+                    <Link className="xsmall-element link" to={`/anomalies/${item.id}`}>Details</Link>
+                    <Link className="xsmall-element link" to={`/anomalies/${item.id}/changes`}>Audit</Link>
+                    <div className="small-element">{item.id}</div>                    
+                  </div>
                 )
               
             })
