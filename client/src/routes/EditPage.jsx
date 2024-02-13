@@ -38,14 +38,24 @@ const EditPage = () => {
   if (isLoading == 'submitting') {
     return <div>Submitting...</div>; // Or any other loading indicator
   }
+  if (isLoading == 'error') {
+    return <div>Error...</div>; // Or any other loading indicator
+  }
+  if (isLoading == 'submitted') {
+    return <div><h>Success!</h><br></br><Link to="/cic" className='button button-details'>back to cic</Link></div>;
+  }
 
   const handleSubmit = () => {
+    setIsLoading('submitting');
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
+        setIsLoading('submitted');
+
       })
       .catch((error) => {
         console.error('Error updating item', error);
+        setIsLoading('submitted');
       });
   };
 
@@ -244,7 +254,6 @@ const EditPage = () => {
               </td>
             </tr>
           </table>
-
           <div className='edit-btn-div'>
             <button className="button" type="submit">
               Submit

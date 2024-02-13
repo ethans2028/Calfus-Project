@@ -156,6 +156,13 @@ button:hover {
   
 }
 
+.cic-overflow-rules{
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 input, textarea {
   width: 100%;
   padding: 10px;

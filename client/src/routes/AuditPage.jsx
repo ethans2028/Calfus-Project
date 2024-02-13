@@ -110,9 +110,6 @@ const AuditPage = () => {
         return toReturn;
     }
   return (
-    /*
-        logout button moved to top left side
-    */
     <div className='container'>     
         <br/> <br/>
         <LogoutButton/>
@@ -136,7 +133,6 @@ const AuditPage = () => {
         </div>
     </div>
   )
-  
 }
 
 export default AuditPage

@@ -3,67 +3,75 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate, useParams } fro
 import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 import LogoutButton from "./LogoutButton.jsx";
+import  AnomalyFinder  from '../apis/AnomalyFinder';
+
 
 const AnomalyDetailPage = () => {
   
-  const params = useParams();
-  //const searchParams = new URLSearchParams(window.location.search);
-  // Stringify to JSON 
-  const json = JSON.stringify(params);
+  const { id } = useParams();
+  const [ selectedItem, setSelectedItem ] = useState({});
+  const [isLoading, setIsLoading] = useState('loading'); // Add this line
 
-  // Parse back to object
-  const parsed = JSON.parse(json);
+  useEffect(() => {
+    fetchData();  
+  }, []);
 
-  // Destructure id property 
-  const {id} = parsed; 
-  const state = id.substring(1,3);
-  var county = id.substring(3);
-  console.log(state, county);
-  const record = sampleData.Current.find(obj => {
-    return obj.State === state && obj.County === county;
-  });
+  useEffect(() => {
+    console.log("it's changing!", selectedItem);
+  }, [selectedItem]);
+  
+  const fetchData = async () => {
+    AnomalyFinder.get(`/${id}`)
+    .then((response) => {
+      setSelectedItem(response.data.data.anomalies[0]);
+      setIsLoading('loaded'); 
+    })
+    .catch((error) => {
+      console.error('Error fetching data for anomaly', error);
+    });
+  }; 
+  if (isLoading == 'loading') {
+    return <div>Loading...</div>; 
+  }
   
   return (
-    /*
-      logout button added to top left
-    */
     <div className='details-page'>
       <LogoutButton buttonType='button button-details'/>
       <div className='page-header details-head'>
-        <h1>Anomaly Details: {county}, {state}</h1>
+        <h1>Anomaly Details: {selectedItem.county}, {selectedItem.state}</h1>
       </div>
 
       <div className='details-data'>
         <table>
           <tr>
             <th>Status</th>
-            <td>{record.Status}</td>
+            <td>{selectedItem.status || 'NO DATA'}</td>
             <th>Impact Severity</th>
-            <td>{record['Impact Severity']}</td>
+            <td>{selectedItem.impact_severity || 'NO DATA'}</td>
             <th>State</th>
-            <td>{record.State}</td>
+            <td>{selectedItem.state || 'NO DATA'}</td>
             <th>County</th>
-            <td>{record.County}</td>
+            <td>{selectedItem.county || 'NO DATA'}</td>
           </tr>
           <tr>
             <th>Last Review</th>
-            <td >{record['DAO Member (User)']}</td>
+            <td>{selectedItem.dao_member_user || 'NO DATA'}</td>
             <th>Last Reviewed Date</th>
-            <td>{record['Last Reviewed Date']}</td>
+            <td>{selectedItem.last_reviewed_date ? selectedItem.last_reviewed_date.substring(0, 10) : 'NO DATA'}</td>
             <th>Issue Start Date</th>
-            <td>{record['Issue Start Date']}</td>
+            <td>{selectedItem.issue_start_date ? selectedItem.issue_start_date.substring(0, 10) : 'NO DATA'}</td>
             <th>Estimated Resolution Date</th>
-            <td>{record['Est Resolution Date']}</td>
+            <td>{selectedItem.est_resolution_date ? selectedItem.est_resolution_date.substring(0, 10) : 'NO DATA'}</td>
           </tr>
           <tr>
             <th>Research Method</th>
-            <td>{record['Research Method']}</td>
+            <td>{selectedItem.research_method || 'NO DATA'}</td>
             <th>Possible Hits</th>
-            <td>{record['Possible Hits']}</td>
+            <td>{selectedItem.possible_hits || 'NO DATA'}</td>
             <th>Clears</th>
-            <td>{record.Clears}</td>
+            <td>{selectedItem.clears || 'NO DATA'}</td>
             <th>DOB Redaction?</th>
-            <td>{record['DOB Redaction?']}</td>
+            <td>{selectedItem.dob_redaction !== null ? selectedItem.dob_redaction.toString() : 'NO DATA'}</td>
           </tr>
         </table>
 
@@ -73,8 +81,8 @@ const AnomalyDetailPage = () => {
             <th>Mitigation Plan</th>
           </tr>
           <tr className='long-data'>
-            <td className='long-data'>{record.Reason}</td>
-            <td className='long-data'>{record['Mitigation Plan']}</td>
+            <td className='long-data'>{selectedItem.reason}</td>
+            <td className='long-data'>{selectedItem.mitigation_plan}</td>
             
           </tr>
         </table>
@@ -85,9 +93,6 @@ const AnomalyDetailPage = () => {
         <Link to={`/anomalies/${id}/changes`} className="button audit-btn"> Audit Log </Link>  
         <Link to="/cic" className="button"> Home </Link>
       </div>
-      
-
-      
     </div>
     
   );

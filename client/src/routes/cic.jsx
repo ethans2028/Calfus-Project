@@ -195,7 +195,7 @@ const ActiveItemsPage = (props) => {
         </div>
         <div>
           {filteredItems.length > 0 ? (
-            <div className="horizontal-div" style={{ backgroundColor: "#bcbcbc"}}>
+            <div className="horizontal-div" style={{ backgroundColor: "#bcbcbc" }}>
               <div className="xxsmall-header" onClick={sortState} style={{ cursor: 'pointer', paddingLeft: '10px'}}>St.⇅</div>
               <div className="medium-header" onClick={sortCounty} style={{ cursor: 'pointer' }}>County⇅</div>
               <div className="small-header" onClick={sortSeverity} style={{ cursor: 'pointer' }}>Severity⇅</div> 
@@ -214,15 +214,14 @@ const ActiveItemsPage = (props) => {
               filteredItems.map((item, index) => {
                 return (
                   <div key={item.id} style={{ backgroundColor: index % 2 === 1 ? '#d9d9d9' : '#eeeeee' }} className="horizontal-div">
-                    <div className="xxsmall-element" style={{ paddingLeft: '10px' }}>{item.state}</div>
-                    <div className="medium-element">{item.county}</div>
-                    <div className="small-element">{item.impact_severity}</div> 
-                    <div className="large-element">{item.reason.substring(0, 73)}...</div>
-                    <div className="small-element">{item.last_reviewed_date.substring(0, 10)}</div>                    
-                    <Link className="xxsmall-element link" to={`/anomalies/${item.id}/edit`}>Edit</Link>
-                    <Link className="xsmall-element link" to={`/anomalies/${item.id}`}>Details</Link>
-                    <Link className="xsmall-element link" to={`/anomalies/${item.id}/changes`}>Audit</Link>
-                    <div className="small-element">{item.id}</div>                    
+                    <div className="xxsmall-element" style={{ paddingLeft: '10px' }}><div className="cic-overflow-rules">{item.state}</div></div>
+                    <div className="medium-element"><div className="cic-overflow-rules">{item.county}</div></div>
+                    <div className="small-element"><div className="cic-overflow-rules">{item.impact_severity}</div></div>
+                    <div className="large-element"><div className="cic-overflow-rules">{item.reason}</div></div>
+                    <div className="small-element"><div className="cic-overflow-rules">{item.last_reviewed_date.substring(0, 10)}</div></div>                    
+                    <Link className="xxsmall-element link" to={`/anomalies/${item.id}/edit`}><div className="cic-overflow-rules">Edit</div></Link>
+                    <Link className="xsmall-element link" to={`/anomalies/${item.id}`}><div className="cic-overflow-rules">Details</div></Link>
+                    <Link className="xsmall-element link" to={`/anomalies/${item.id}/changes`}><div className="cic-overflow-rules">Audit</div></Link>
                   </div>
                 )
               
