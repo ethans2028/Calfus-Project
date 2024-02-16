@@ -5,11 +5,20 @@ import '../global.css';
 
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 import { AnomalyContext } from '../context/AnomalyContext';
+
+import Popup from 'reactjs-popup'
 const EditPage = () => {
   const { id } = useParams();
   const [ selectedItem, setSelectedItem ] = useState({});
   const [formValues, setFormValues] = useState({});
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
+
+  const [auditMessage, changeAuditMessage] = useState("");
+  const [popupOpen, swapPopupOpen] = useState(false);
+  const closeModal = () => swapPopupOpen(false);
+
+  // temporary variable for current user
+  const currentUser = "John Green";
 
   useEffect(() => {
     fetchData();  
@@ -46,17 +55,47 @@ const EditPage = () => {
   }
 
   const handleSubmit = () => {
+    if (auditMessage.trim() == "") return;
     setIsLoading('submitting');
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
-        setIsLoading('submitted');
 
       })
       .catch((error) => {
         console.error('Error updating item', error);
-        setIsLoading('submitted');
       });
+
+    const auditInfo = {report_id: id, datetime: new Date(),
+                      member: currentUser, change: auditMessage,
+                      county: selectedItem.county, state: selectedItem.state}
+    console.log(auditInfo)
+    console.log(auditInfo.report_id)
+
+    /*
+    !!! IMPORTANT !!!
+    This is not implemented to upload the audit information into the database!
+    I don't think there's an "update audit log" API call yet.
+
+    Basically, here's the API call that's expected:
+    "/:id/changes"
+    that will update the given Audit Log table.
+
+    The following code is assuming that API call exists (it does not yet)
+    Once the API is set up, uncomment the code and it should insert into the table!
+    
+    AnomalyFinder.put(`/${id}/changes`, auditInfo)
+      .then((response) => {
+        console.log('Successfully updated audit log!');
+      })
+      .catch((error) => {
+        console.error('Error updating item', error);
+      });
+
+
+    */
+
+    setIsLoading('submitted');
   };
 
   const handleInputChange = (event) => {
@@ -85,7 +124,7 @@ const EditPage = () => {
 
       <form onSubmit={(event) => { event.preventDefault(); handleSubmit(); }}>
       <div className='details-data'>
-        <table className="ReportTable">
+        <table>
           <tr>
             <th>Status</th>
             <td>
@@ -114,6 +153,35 @@ const EditPage = () => {
             </label>
             <br />
             </td>
+            <th>Issue Start Date</th>
+            <td>
+              <label>
+                <input
+                  name="issueStartDate"
+                  type="date"
+                  value={formValues.issueStartDate !== '' ? formValues.issueStartDate : formatDate(selectedItem['Issue Start Date'])}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <br />
+            </td>
+
+            <th>Estimated Resolution Date</th>
+            <td>
+              <label>
+                <input
+                  name="estimatedResolutionDate"
+                  type="date"
+                  value={formValues.estimatedResolutionDate !== '' ? formValues.estimatedResolutionDate : formatDate(selectedItem['Est Resolution Date'])}
+                  onChange={handleInputChange}
+                />
+              </label>
+              <br />
+            </td>
+            
+            </tr>
+            <tr>
+            
 
             <th>Last Review</th>
             <td>
@@ -142,33 +210,36 @@ const EditPage = () => {
               <br />
             </td>
 
-            <th>Issue Start Date</th>
+
+            <th>DOB Redaction?</th>
             <td>
               <label>
-                <input
-                  name="issueStartDate"
-                  type="date"
-                  value={formValues.issueStartDate !== '' ? formValues.issueStartDate : formatDate(selectedItem['Issue Start Date'])}
-                  onChange={handleInputChange}
-                />
+                <select name="dobRedaction" value={formValues.dobRedaction} onChange={handleInputChange}>
+                  {['yes', 'no'].map((redactionOption) => (
+                    <option key={redactionOption} value={redactionOption}>
+                      {redactionOption}
+                    </option>
+                  ))}
+                </select>
               </label>
               <br />
             </td>
-
-            <th>Estimated Resolution Date</th>
+            <th>Possible Hits</th>
             <td>
               <label>
-                <input
-                  name="estimatedResolutionDate"
-                  type="date"
-                  value={formValues.estimatedResolutionDate !== '' ? formValues.estimatedResolutionDate : formatDate(selectedItem['Est Resolution Date'])}
-                  onChange={handleInputChange}
-                />
+                <select name="possibleHits" value={formValues.possibleHits} onChange={handleInputChange}>
+                  {['Delayed Time', 'Effects delivery date'].map((hitOption) => (
+                    <option key={hitOption} value={hitOption}>
+                      {hitOption}
+                    </option>
+                  ))}
+                </select>
               </label>
               <br />
             </td>
-          </tr>
+            </tr>
 
+          
 
           <tr>
             <th>Research Method</th>
@@ -184,19 +255,7 @@ const EditPage = () => {
               <br />
             </td>
 
-            <th>Possible Hits</th>
-            <td>
-              <label>
-                <select name="possibleHits" value={formValues.possibleHits} onChange={handleInputChange}>
-                  {['Delayed Time', 'Effects delivery date'].map((hitOption) => (
-                    <option key={hitOption} value={hitOption}>
-                      {hitOption}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <br />
-            </td>
+            
             
             
             <th>Clears</th>
@@ -221,23 +280,19 @@ const EditPage = () => {
               <br />
             </td>
             
-            <th>DOB Redaction?</th>
-            <td>
-              <label>
-                <select name="dobRedaction" value={formValues.dobRedaction} onChange={handleInputChange}>
-                  {['yes', 'no'].map((redactionOption) => (
-                    <option key={redactionOption} value={redactionOption}>
-                      {redactionOption}
-                    </option>
-                  ))}
-                </select>
-              </label>
-              <br />
-            </td>
-
-          <table className="TextTable">
+            
+          
+          </tr>
+        </table>
+        <table className="TextTable">
+            <tr>
+              <th>Reason</th>
+              <th>Mitigation Plan</th>
+            </tr>
             <tr className='long-data'>
+
               <td className='long-data'>
+                
                 <textarea
                   name="reason"
                   value={formValues.reason !== '' ? formValues.reason : selectedItem.Reason}
@@ -254,15 +309,20 @@ const EditPage = () => {
               </td>
             </tr>
           </table>
-          <div className='edit-btn-div'>
-            <button className="button" type="submit">
-              Submit
-            </button>
-          </div>
-        </tr>
-        </table>
         </div>
       </form>
+      <Popup open={popupOpen} position='top center' onClose={closeModal}>
+          <h2>Please give a brief description of what you changed</h2>
+          <form>
+            <textarea value={auditMessage} onChange={(e)=>changeAuditMessage(e.target.value)} required/>
+            <button className="button" type="submit" onClick={handleSubmit}> Submit </button>
+          </form>
+      </Popup>
+      <div className='edit-btn-div'>
+            <button className="button" type="submit" onClick={()=>swapPopupOpen(o => !o)}>
+              Submit
+            </button>
+      </div>
     </div> 
   );
 };
