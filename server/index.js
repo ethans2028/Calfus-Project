@@ -109,7 +109,7 @@ app.get("/api/v1/anomalies", async (req, res) => {
 
 app.get("/api/v1/anomalies/:id", async (req, res) => {
   try {
-    console.log("fetch anomoly data by id")
+    console.log("fetch anomoly data by report_id")
     const { id } = req.params;
     const datas = await pool.query('SELECT * FROM report WHERE id = $1', [id]);
     res.status(200).json({
@@ -125,6 +125,24 @@ app.get("/api/v1/anomalies/:id", async (req, res) => {
   }
 });
 
+// get audit data for specified anomaly
+app.get("/api/v1/anomalies/:id/changes", async (req, res) => {
+  try {
+    console.log("fetch audit data by report id")
+    const { id } = req.params;
+    const datas = await pool.query('SELECT * FROM audit_log WHERE report_id = $1', [id]);
+    res.status(200).json({
+      status: "success",
+      datas: datas.rows.length,
+      data: {
+        anomalies: datas.rows,
+      },
+    });
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while fetching data'});
+    console.log(err);
+  }
+});
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {

@@ -13,7 +13,7 @@ const AnomalyDetailPage = () => {
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
 
   useEffect(() => {
-    fetchData();  
+    fetchData();
   }, []);
 
   useEffect(() => {

@@ -3,19 +3,57 @@ import {useParams, Link} from 'react-router-dom';
 import '../global.css';
 import sampleData from "../sampleData.json";
 import LogoutButton from "./LogoutButton.jsx";
+import  AnomalyFinder  from '../apis/AnomalyFinder';
+
 
 const AuditPage = () => {
-    const issueID = useParams();    
-    
-    // code to read from database goes here
-    const state = issueID.id.substring(1, 3);
-    const county = issueID.id.substring(3);
-    const dataArray = Object.values(sampleData['Change Log'])
-    const [thisData, modThisData] = useState([])
-    useEffect(() =>{
-        modThisData(dataArray);
-    }, []);
+  const { id } = useParams();    
+  const [ audits, setAudits ] = useState({});
+  const [isLoading, setIsLoading] = useState('loading'); // Add this line
+  
+  
 
+  // stephen's logic
+  const [unameFilter, f_u] = useState('')
+  // code to read from database goes here
+  
+  const dataArray = Object.values(sampleData['Change Log']);
+  const [thisData, modThisData] = useState([]);
+  useEffect(() =>{
+      modThisData(dataArray);
+  }, []);
+
+
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    console.log("it's changing!", audits);
+  }, [audits]);
+  
+  const fetchData = async () => {
+    AnomalyFinder.get(`/${id}/changes`)
+    .then((response) => {
+      setAudits(response.data.data.anomalies[0]);
+      setIsLoading('loaded'); 
+    })
+    .catch((error) => {
+      console.error('Error fetching data for anomaly', error);
+    });
+  }; 
+  if (isLoading == 'loading') {
+    return <div>Loading...</div>; 
+  }
+
+
+    
+  const state = id.substring(1, 3);
+  const county = id.substring(3);
+
+  console.log(audits.dao_member);
+    
     const simpleFilter = thisData.filter((data) => 
         county.toLowerCase().includes(data.County.toLowerCase()) && 
         data.State.toLowerCase() === state.toLowerCase()
@@ -25,7 +63,7 @@ const AuditPage = () => {
     
     
     // filtering code (stolen partially from Charlie's code)
-    const [unameFilter, f_u] = useState('')
+    
     const changeUname = event => {
         f_u(event.target.value);
     }
@@ -59,8 +97,7 @@ const AuditPage = () => {
       
       const left = item['DAO Member'].toLowerCase().includes(unameFilter.toLowerCase());
         return left;
-    }
-    )
+    })
     
     // could not get the checkbox code to work in a way I liked
     // so it's temporarily commented out - will be updated (somehow) in a later version
@@ -127,7 +164,7 @@ const AuditPage = () => {
             </table>
         <br/>
         <div className='edit-btn-div'>
-          <Link to={`/anomalies/${issueID.id}`} className="button">Details</Link>
+          <Link to={`/anomalies/${id}`} className="button">Details</Link>
           <Link to="/cic" className="button audit-btn"> Home</Link>
           
         </div>
