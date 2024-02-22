@@ -1,29 +1,18 @@
 import React, {useEffect, useState} from 'react'
 import {useParams, Link} from 'react-router-dom';
 import '../global.css';
-import sampleData from "../sampleData.json";
 import LogoutButton from "./LogoutButton.jsx";
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 
 
 const AuditPage = () => {
   const { id } = useParams();    
-  const [ audits, setAudits ] = useState({});
+  const [ audits, setAudits ] = useState([]);
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
-  
-  
-
   // stephen's logic
   const [unameFilter, f_u] = useState('')
   // code to read from database goes here
   
-  const dataArray = Object.values(sampleData['Change Log']);
-  const [thisData, modThisData] = useState([]);
-  useEffect(() =>{
-      modThisData(dataArray);
-  }, []);
-
-
 
   useEffect(() => {
     fetchData();
@@ -36,28 +25,20 @@ const AuditPage = () => {
   const fetchData = async () => {
     AnomalyFinder.get(`/${id}/changes`)
     .then((response) => {
-      setAudits(response.data.data.anomalies[0]);
+      console.log(response)
+      setAudits(response.data.data.anomalies);
       setIsLoading('loaded'); 
     })
     .catch((error) => {
       console.error('Error fetching data for anomaly', error);
     });
   }; 
-  if (isLoading == 'loading') {
+  if (isLoading === 'loading') {
     return <div>Loading...</div>; 
   }
 
 
-    
-  const state = id.substring(1, 3);
-  const county = id.substring(3);
-
-  console.log(audits.dao_member);
-    
-    const simpleFilter = thisData.filter((data) => 
-        county.toLowerCase().includes(data.County.toLowerCase()) && 
-        data.State.toLowerCase() === state.toLowerCase()
-    );
+  console.log(audits);
 
     // setting up for later - these are all the "modifiable" fields
     
@@ -68,67 +49,28 @@ const AuditPage = () => {
         f_u(event.target.value);
     }
 
-
-    
-    // all of the checkbox code (could use some help with cleaning up)
-    
-    /* const Checkbox = ({ label, value, onChange})=>{
-        return (<label><input type="checkbox" checked={value} onChange={onChange}/>{label}</label>)
-    }
-    const possibleFields = ['Severity', 
-        'Reason', 'Mitigation Plan', 'Clears', 'Possible Hits',
-        'Research Method', 'DOB Redaction', 'Status',
-        'Estimated Resolution Date', 'Links']
-
-    const [severity, modSeverity] = useState({key: 'severity', state: true})
-    const [reason, modReason] = useState({key: 'reason', state: true})
-    const [mitigation, modMitigation] = useState({key: 'mitigation', state: true})
-    const [clears, modClears] = useState({key: 'clears', state: true})
-    const [hits, modHits] = useState({key: 'hits', state: 'true'})
-    const [method, modMethod] = useState({key: 'method', state: 'true'})
-    const [dob, modDob] = useState({key: 'dob', state: true})
-    const [status, modStatus] = useState({key: 'status', state: true})
-    const [resolution, modResolution] = useState({key: 'resolution', state: true})
-    const [links, modLinks] = useState({key: 'links', state: true})
-    */
-
     // determining how the items are filtered
-    const filteredItems = simpleFilter.filter(item =>{
+/*     const filteredItems = audits.filter(item =>{
       
       const left = item['DAO Member'].toLowerCase().includes(unameFilter.toLowerCase());
         return left;
-    })
+    }) */
     
-    // could not get the checkbox code to work in a way I liked
-    // so it's temporarily commented out - will be updated (somehow) in a later version
-
-    // if it fits any of the criteria, it's in
-    /*function containsAny(dataPoint, list){
-        let b = true;
-        for (let item in list){
-            if (list[item] === true){
-                if (dataPoint['Change'].toLowerCase().includes(item.toLowerCase())) {
-                    console.log('contains ' + item);
-                    return true;
-                }
-            }else{
-                b = false;
-            }
-            console.log(item, b);
-        }
-        console.log(b);
-        return b;
-    }*/
 
     // mapping the data into a table format
-    const mappedData = filteredItems.map((edit, ind) => {
-        return (<tr key={edit.Date} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
-            <td>{edit['DAO Member']}</td>
-            <td>{edit['Date']}</td>
-            <td>{edit['Change']}</td>
+    const mappedData = audits.map((edit, ind) => {
+        console.log(edit.date)
+        const day = edit.date.substring(0, 10)
+        console.log(day)
+        const time = edit.date.substring(11, 19)
+        console.log(time)
+        return (<tr key={edit.id} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
+            <td>{edit.dao_member}</td>
+            <td>{day}   {time}</td>
+            <td>{edit.change}</td>
         </tr>)
     }
-    );
+    ); 
     
     function properlyCapitalize(string){
         let toReturn = "";
@@ -146,11 +88,31 @@ const AuditPage = () => {
         }
         return toReturn;
     }
+
+  // small bit of safety: if no records exist for it, it won't crash the website
+
+  if (audits.length === 0 && isLoading === 'loaded'){
+      return (
+        <div className='container'>     
+          <br/> <br/>
+          <LogoutButton/>
+          <h2> No Results Found</h2>
+          <p> 
+            This anomaly may not exist or an audit page may not exist for it.
+            Navigate back to the Main Page and try again.
+          </p>
+          <div className='edit-btn-div'>
+            <Link to="/cic" className="button audit-btn"> Home</Link>
+          </div>
+        </div>
+      );
+    
+  }
   return (
     <div className='container'>     
         <br/> <br/>
         <LogoutButton/>
-        <h1 className='page-header'>Audit Log: {properlyCapitalize(county)}, {state}</h1>
+        <h1 className='page-header'>Audit Log: {properlyCapitalize(audits[0].county)}, {audits[0].state}</h1>
         <input type="text" placeholder="Search by Username" onChange={changeUname} size={5}/>
         <table>
             <thead>
@@ -173,3 +135,7 @@ const AuditPage = () => {
 }
 
 export default AuditPage
+
+/* object holding facility
+
+*/

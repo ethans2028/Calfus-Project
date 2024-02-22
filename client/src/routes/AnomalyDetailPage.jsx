@@ -33,7 +33,23 @@ const AnomalyDetailPage = () => {
   if (isLoading == 'loading') {
     return <div>Loading...</div>; 
   }
-  
+  // safety - if selected item is not in the server
+  if (!selectedItem){
+    return (
+      <div className='container'>
+        <br/> <br/>
+        <LogoutButton/>
+        <h2> No Results Found</h2>
+        <p> 
+          This anomaly does not exist in the server.
+          Navigate back to the Main Page and try again.
+        </p>
+        <div className='edit-btn-div'>
+          <Link to="/cic" className="button audit-btn"> Home</Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className='details-page'>
       <LogoutButton buttonType='button button-details'/>
