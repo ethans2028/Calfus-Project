@@ -1,21 +1,23 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
-import sampleData from '../sampleData.json';
 import '../global.css'; 
 
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 import { AnomalyContext } from '../context/AnomalyContext';
 
-import Popup from 'reactjs-popup'
+const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "clears": "Clears", "county": "County",
+                              "dao_member_user": "Last Review", "dob_redaction": "DOB Redaction", "est_resolution_date": "Estimated Resolution Date",
+                              "id": "ID", "impact_severity": "Impact Severity", "issue_start_date": "Issue Start Date",
+                              "last_reviewed_date": "Last Reviewed Date", "links": "Links", "mitigation_plan": "Mitigation Plan",
+                              "possible_hits": "Possible Hits", "reason": "Reason", "research_method": "Research Method",
+                              "state": "State", "status": "Status"}
+
 const EditPage = () => {
   const { id } = useParams();
   const [ selectedItem, setSelectedItem ] = useState({});
   const [formValues, setFormValues] = useState({});
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
 
-  const [auditMessage, changeAuditMessage] = useState("");
-  const [popupOpen, swapPopupOpen] = useState(false);
-  const closeModal = () => swapPopupOpen(false);
 
   // temporary variable for current user
   const currentUser = "John Green";
@@ -41,21 +43,54 @@ const EditPage = () => {
   }; 
 
 
-  if (isLoading == 'loading') {
+  if (isLoading === 'loading') {
     return <div>Loading...</div>; // Or any other loading indicator
   }
-  if (isLoading == 'submitting') {
+  if (isLoading === 'submitting') {
     return <div>Submitting...</div>; // Or any other loading indicator
   }
-  if (isLoading == 'error') {
+  if (isLoading === 'error') {
     return <div>Error...</div>; // Or any other loading indicator
   }
-  if (isLoading == 'submitted') {
-    return <div><h>Success!</h><br></br><Link to="/cic" className='button button-details'>back to cic</Link></div>;
+  if (isLoading === 'submitted') {
+    return <div><h1>Success!</h1><br></br><Link to="/cic" className='button button-details'>back to cic</Link></div>;
   }
 
   const handleSubmit = () => {
-    if (auditMessage.trim() == "") return;
+
+    // check what fields were changed
+    var itemSet = []
+
+    for (let item in formValues){
+      if (formValues[item] !== selectedItem[item]){
+        itemSet.push(item)
+      }
+    }
+
+    // shortcut if no changes are detected - don't write to database
+    if (itemSet.length === 0){
+      console.log("no changes")
+      setIsLoading('submitted')
+      return;
+    }
+
+    var message = "Changed ";
+    var start = true;
+    for (let item in itemSet){
+      if (start){
+        start = false;
+        message = message + auditTranspositions[itemSet[item]];
+      }else{
+        message = message + ", " + auditTranspositions[itemSet[item]];
+      }
+
+    }
+
+    const auditInfo = {report_id: id, datetime: new Date(),
+                      member: currentUser, change: message,
+                      county: selectedItem.county, state: selectedItem.state}
+    console.log(auditInfo)
+
     setIsLoading('submitting');
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
@@ -66,11 +101,7 @@ const EditPage = () => {
         console.error('Error updating item', error);
       });
 
-    const auditInfo = {report_id: id, datetime: new Date(),
-                      member: currentUser, change: auditMessage,
-                      county: selectedItem.county, state: selectedItem.state}
-    console.log(auditInfo)
-    console.log(auditInfo.report_id)
+
 
     /*
     !!! IMPORTANT !!!
@@ -78,13 +109,13 @@ const EditPage = () => {
     I don't think there's an "update audit log" API call yet.
 
     Basically, here's the API call that's expected:
-    "/:id/changes"
+    "/:id/changes/audit"
     that will update the given Audit Log table.
 
     The following code is assuming that API call exists (it does not yet)
     Once the API is set up, uncomment the code and it should insert into the table!
     
-    AnomalyFinder.put(`/${id}/changes`, auditInfo)
+    AnomalyFinder.put(`/${id}/changes/audit`, auditInfo)
       .then((response) => {
         console.log('Successfully updated audit log!');
       })
@@ -143,7 +174,7 @@ const EditPage = () => {
             <th>Impact Severity</th>
             <td>
             <label>
-              <select name="impactSeverity" value={formValues.impactSeverity} onChange={handleInputChange}>
+              <select name="impact_severity" value={formValues.impact_severity} onChange={handleInputChange}>
                 {['Low', 'Medium', 'High'].map((severityOption) => (
                   <option key={severityOption} value={severityOption}>
                     {severityOption}
@@ -157,9 +188,9 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  name="issueStartDate"
+                  name="issue_start_date"
                   type="date"
-                  value={formValues.issueStartDate !== '' ? formValues.issueStartDate : formatDate(selectedItem['Issue Start Date'])}
+                  value={formValues.issue_start_date !== '' ? formValues.issue_start_date : formatDate(selectedItem['Issue Start Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -170,9 +201,9 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  name="estimatedResolutionDate"
+                  name="estimated_resolution_date"
                   type="date"
-                  value={formValues.estimatedResolutionDate !== '' ? formValues.estimatedResolutionDate : formatDate(selectedItem['Est Resolution Date'])}
+                  value={formValues.est_resolution_date !== '' ? formValues.est_resolution_date : formatDate(selectedItem['Est Resolution Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -187,9 +218,9 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  name="lastReview"
+                  name="last_review"
                   type="text"
-                  value={formValues.lastReview !== '' ? formValues.lastReview : selectedItem["DAO Member (User)"]}
+                  value={formValues.dao_member_user !== '' ? formValues.dao_member_user : selectedItem["DAO Member (User)"]}
                   onChange={handleInputChange}
                 />
               </label>
@@ -201,9 +232,9 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  name="lastReviewedDate"
+                  name="last_reviewed_date"
                   type="date"
-                  value={formValues.lastReviewedDate !== '' ? formValues.lastReviewedDate : formatDate(selectedItem['Last Reviewed Date'])}
+                  value={formValues.last_reviewed_date !== '' ? formValues.last_reviewed_date : formatDate(selectedItem['Last Reviewed Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -214,7 +245,7 @@ const EditPage = () => {
             <th>DOB Redaction?</th>
             <td>
               <label>
-                <select name="dobRedaction" value={formValues.dobRedaction} onChange={handleInputChange}>
+                <select name="dob_redaction" value={formValues.dob_redaction} onChange={handleInputChange}>
                   {['yes', 'no'].map((redactionOption) => (
                     <option key={redactionOption} value={redactionOption}>
                       {redactionOption}
@@ -227,7 +258,7 @@ const EditPage = () => {
             <th>Possible Hits</th>
             <td>
               <label>
-                <select name="possibleHits" value={formValues.possibleHits} onChange={handleInputChange}>
+                <select name="possible_hits" value={formValues.possible_hits} onChange={handleInputChange}>
                   {['Delayed Time', 'Effects delivery date'].map((hitOption) => (
                     <option key={hitOption} value={hitOption}>
                       {hitOption}
@@ -246,9 +277,9 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  name="researchMethod"
+                  name="research_method"
                   type="text"
-                  value={formValues.researchMethod !== '' ? formValues.researchMethod : selectedItem['Research Method']}
+                  value={formValues.research_method !== '' ? formValues.research_method : selectedItem['Research Method']}
                   onChange={handleInputChange}
                 />
               </label>
@@ -302,27 +333,18 @@ const EditPage = () => {
 
               <td className='long-data'>
                 <textarea
-                  name="mitigationPlan"
-                  value={formValues.mitigationPlan !== '' ? formValues.mitigationPlan : selectedItem['Mitigation Plan']}
+                  name="mitigation_plan"
+                  value={formValues.mitigation_plan !== '' ? formValues.mitigation_plan : selectedItem['Mitigation Plan']}
                   onChange={handleInputChange}
                 />
               </td>
             </tr>
           </table>
         </div>
+        <div className='edit-btn-div'>
+          <button className="button" type="submit" onClick={handleSubmit}> Submit </button>
+        </div>
       </form>
-      <Popup open={popupOpen} position='top center' onClose={closeModal}>
-          <h2>Please give a brief description of what you changed</h2>
-          <form>
-            <textarea value={auditMessage} onChange={(e)=>changeAuditMessage(e.target.value)} required/>
-            <button className="button" type="submit" onClick={handleSubmit}> Submit </button>
-          </form>
-      </Popup>
-      <div className='edit-btn-div'>
-            <button className="button" type="submit" onClick={()=>swapPopupOpen(o => !o)}>
-              Submit
-            </button>
-      </div>
     </div> 
   );
 };

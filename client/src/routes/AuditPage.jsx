@@ -38,8 +38,6 @@ const AuditPage = () => {
   }
 
 
-  console.log(audits);
-
     // setting up for later - these are all the "modifiable" fields
     
     
@@ -48,22 +46,17 @@ const AuditPage = () => {
     const changeUname = event => {
         f_u(event.target.value);
     }
-
-    // determining how the items are filtered
-/*     const filteredItems = audits.filter(item =>{
-      
-      const left = item['DAO Member'].toLowerCase().includes(unameFilter.toLowerCase());
-        return left;
-    }) */
     
 
+    const filtData = audits.filter(edit => {
+      if (unameFilter === '') return true;
+      return (edit.dao_member?.toLowerCase().includes(unameFilter.toLowerCase()));
+    });
+
     // mapping the data into a table format
-    const mappedData = audits.map((edit, ind) => {
-        console.log(edit.date)
+    const mappedData = filtData.map((edit, ind) => {
         const day = edit.date.substring(0, 10)
-        console.log(day)
         const time = edit.date.substring(11, 19)
-        console.log(time)
         return (<tr key={edit.id} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
             <td>{edit.dao_member}</td>
             <td>{day}   {time}</td>
@@ -98,7 +91,7 @@ const AuditPage = () => {
           <LogoutButton/>
           <h2> No Results Found</h2>
           <p> 
-            This anomaly may not exist or an audit page may not exist for it.
+            This anomaly may not exist or audit information was not found for it.
             Navigate back to the Main Page and try again.
           </p>
           <div className='edit-btn-div'>
