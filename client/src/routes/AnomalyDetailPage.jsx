@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, Navigate, useParams } from 'react-router-dom';
-import sampleData from '../sampleData.json';
 import '../global.css'; // Import the global CSS file
 import LogoutButton from "./LogoutButton.jsx";
 import  AnomalyFinder  from '../apis/AnomalyFinder';
@@ -30,10 +29,26 @@ const AnomalyDetailPage = () => {
       console.error('Error fetching data for anomaly', error);
     });
   }; 
-  if (isLoading == 'loading') {
+  if (isLoading === 'loading') {
     return <div>Loading...</div>; 
   }
-  
+  // safety - if selected item is not in the server
+  if (!selectedItem){
+    return (
+      <div className='container'>
+        <br/> <br/>
+        <LogoutButton/>
+        <h2> No Results Found</h2>
+        <p> 
+          This anomaly does not exist in the server.
+          Navigate back to the Main Page and try again.
+        </p>
+        <div className='edit-btn-div'>
+          <Link to="/cic" className="button audit-btn"> Home</Link>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className='details-page'>
       <LogoutButton buttonType='button button-details'/>
