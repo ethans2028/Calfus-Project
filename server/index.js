@@ -55,6 +55,38 @@ app.use(cors());
 app.use(express.json());
 // setting up express request routing
 
+app.put("/api/v1/anomalies/new", async(req, res) => {
+  const newData = req.body;
+  const sql = `
+    INSERT INTO report 
+    VALUES (DEFAULT, $1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)
+    ON CONFLICT DO NOTHING
+    RETURNING id
+  `;
+
+  const values = [
+    newData.county, newData.state, newData.dao_member_user, newData.impact_severity, newData.reason,
+    newData.mitigation_plan, newData.clears, newData.possible_hits, newData.research_method,
+    newData.dob_redaction, newData.status, newData.last_reviewed_date, newData.issue_start_date,
+    newData.est_resolution_date, newData.links, newData.act_resolution_date
+  ];
+
+  try{
+    console.log("attempting to add data")
+    const datas = await pool.query(sql, values);
+    res.status(200).json({
+      status: "success",
+      data: {
+        anomalies: datas.rows,
+      },
+    });
+
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while updating data'});
+    console.log(err);
+  }
+})
+
 app.put('/api/v1/anomalies/:id', async (req, res) => {
   const { id } = req.params;
   const newData = req.body;
@@ -89,6 +121,36 @@ app.put('/api/v1/anomalies/:id', async (req, res) => {
     console.log(err);
   }
 });
+
+
+
+app.put("/api/v1/anomalies/:id/changes", async(req, res) => {
+  const {id} = req.params;
+  const newData = req.body;
+  const sql = `
+  INSERT INTO audit_log 
+  VALUES (default, $1, $2, $3, $4, $5, $6)
+  ON CONFLICT DO NOTHING
+  `;
+
+  const values = [newData.report_id, newData.datetime, newData.member, newData.change, newData.county, newData.state];
+
+
+  try{
+    console.log("attempting to update audit data")
+    const datas = await pool.query(sql, values);
+    res.status(200).json({
+      status: "success",
+      data: {
+        anomalies: datas.rows,
+      },
+    });
+    console.log('success')
+  } catch (err) {
+    res.status(500).json({ error: 'An error occurred while updating data'});
+    console.log(err);
+  }
+})
 
 app.get("/api/v1/anomalies", async (req, res) => {
   try {
@@ -143,6 +205,8 @@ app.get("/api/v1/anomalies/:id/changes", async (req, res) => {
     console.log(err);
   }
 });
+
+
 
 const port = process.env.PORT || 3002;
 app.listen(port, () => {

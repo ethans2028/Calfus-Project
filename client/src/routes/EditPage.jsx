@@ -74,7 +74,7 @@ const EditPage = () => {
       return;
     }
 
-    var message = "Changed ";
+    var message = "Updated ";
     var start = true;
     for (let item in itemSet){
       if (start){
@@ -86,7 +86,7 @@ const EditPage = () => {
 
     }
 
-    const auditInfo = {report_id: id, datetime: new Date(),
+    const auditInfo = {report_id: id, datetime: new Date(Date.now()),
                       member: currentUser, change: message,
                       county: selectedItem.county, state: selectedItem.state}
     console.log(auditInfo)
@@ -102,29 +102,13 @@ const EditPage = () => {
       });
 
 
-
-    /*
-    !!! IMPORTANT !!!
-    This is not implemented to upload the audit information into the database!
-    I don't think there's an "update audit log" API call yet.
-
-    Basically, here's the API call that's expected:
-    "/:id/changes/audit"
-    that will update the given Audit Log table.
-
-    The following code is assuming that API call exists (it does not yet)
-    Once the API is set up, uncomment the code and it should insert into the table!
-    
-    AnomalyFinder.put(`/${id}/changes/audit`, auditInfo)
+    AnomalyFinder.put(`/${id}/changes`, auditInfo)
       .then((response) => {
         console.log('Successfully updated audit log!');
       })
       .catch((error) => {
         console.error('Error updating item', error);
       });
-
-
-    */
 
     setIsLoading('submitted');
   };
