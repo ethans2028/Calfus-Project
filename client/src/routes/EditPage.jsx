@@ -290,12 +290,9 @@ const EditPage = () => {
                 </select>
               </label>
               {formValues.clears === 'other' && (
-                <>
-                  <br />
                   <label>
-                    <input type="text" class="reason-mitigation-textbox" name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
+                    <input type="text" class="reason-mitigation-textbox"name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
                   </label>
-                </>
               )}
               <br />
             </td>

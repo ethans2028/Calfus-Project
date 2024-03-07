@@ -151,6 +151,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={county}
                     onChange={(e) => setCounty(e.target.value)}
@@ -167,6 +168,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={lastReview}
                     onChange={(e) => setLastReview(e.target.value)}
@@ -178,6 +180,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={lastReviewDate}
                     onChange={(e) => setLastReviewDate(e.target.value)}
@@ -190,6 +193,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
@@ -202,6 +206,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
@@ -216,6 +221,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={researched}
                     onChange={(e) => setResearched(e.target.value)}
@@ -279,11 +285,11 @@ const AddPage = () => {
             </tr>
             <tr className='long-data'>
               <td className='long-data'>
-                <textarea value={reason} onChange={(e) => setReason(e.target.value)} />
+                <textarea value={reason} class="reason-mitigation-textbox" onChange={(e) => setReason(e.target.value)} />
               </td>
 
               <td className='long-data'>
-                <textarea value={mitigationPlan} onChange={(e) => setMitigationPlan(e.target.value)} />
+                <textarea value={mitigationPlan} class="reason-mitigation-textbox" onChange={(e) => setMitigationPlan(e.target.value)} />
               </td>
             </tr>
           </table>
