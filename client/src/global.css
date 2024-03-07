@@ -151,6 +151,17 @@ button:hover {
   transition: 0.15s ease-in-out;
 }
 
+.reason-mitigation-textbox{
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  overflow: auto;
+  border-radius: 0px;
+}
+
 .button:hover {
   background-color: #09626e;
   
