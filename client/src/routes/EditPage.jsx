@@ -178,6 +178,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
+                  class="reason-mitigation-textbox"
                   name="issue_start_date"
                   type="date"
                   value={formValues.issue_start_date !== '' ? formValues.issue_start_date : formatDate(selectedItem['Issue Start Date'])}
@@ -191,6 +192,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
+                  class="reason-mitigation-textbox"
                   name="estimated_resolution_date"
                   type="date"
                   value={formValues.est_resolution_date !== '' ? formValues.est_resolution_date : formatDate(selectedItem['Est Resolution Date'])}
@@ -208,6 +210,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
+                  class="reason-mitigation-textbox"
                   name="dao_member_user"
                   type="text"
                   value={formValues.dao_member_user !== '' ? formValues.dao_member_user : selectedItem["DAO Member (User)"]}
@@ -222,6 +225,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
+                  class="reason-mitigation-textbox"
                   name="last_reviewed_date"
                   type="date"
                   value={formValues.last_reviewed_date !== '' ? formValues.last_reviewed_date : formatDate(selectedItem['Last Reviewed Date'])}
@@ -267,6 +271,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
+                  class="reason-mitigation-textbox"
                   name="research_method"
                   type="text"
                   value={formValues.research_method !== '' ? formValues.research_method : selectedItem['Research Method']}
@@ -291,12 +296,9 @@ const EditPage = () => {
                 </select>
               </label>
               {formValues.clears === 'other' && (
-                <>
-                  <br />
                   <label>
-                    <input type="text" name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
+                    <input type="text" class="reason-mitigation-textbox"name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
                   </label>
-                </>
               )}
               <br />
             </td>
@@ -315,14 +317,16 @@ const EditPage = () => {
               <td className='long-data'>
                 
                 <textarea
+                  class="reason-mitigation-textbox"
                   name="reason"
                   value={formValues.reason !== '' ? formValues.reason : selectedItem.Reason}
                   onChange={handleInputChange}
                 />
               </td>
 
-              <td className='long-data'>
+              <td>
                 <textarea
+                  class="reason-mitigation-textbox"
                   name="mitigation_plan"
                   value={formValues.mitigation_plan !== '' ? formValues.mitigation_plan : selectedItem['Mitigation Plan']}
                   onChange={handleInputChange}
