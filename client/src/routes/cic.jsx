@@ -1,14 +1,69 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import '../global.css';
 //backend-imports
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 import { AnomalyContext } from '../context/AnomalyContext';
-
 import LogoutButton from "./LogoutButton.jsx";
-
+import { useAuth0 } from "@auth0/auth0-react";
+import axios from 'axios';
 
 const ActiveItemsPage = (props) => {
+  const navigate = useNavigate(); // Use useNavigate hook for redirection
+  const [isAuthenticated, setIsAuthenticated] = useState(null); 
+
+  
+  const { getAccessTokenSilently } = useAuth0();
+
+  if (isAuthenticated === true){
+    console.log("we are authenticated");
+  }
+  else{
+    console.log("not authenticated");
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const accessToken = await getAccessTokenSilently();
+        console.log("Access token retreived successfully");
+        // Now you can use this accessToken to make authorized API calls
+        const response = await axios.get('/api/protected', {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        });
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchData();
+  }, [getAccessTokenSilently]);
+
+  
+  useEffect(() => {
+    
+    AnomalyFinder.get('/checkAuth' ,{
+      headers: {
+        Authorization: 'Bearer YOUR_ACCESS_TOKEN'
+      }
+    })
+      .then(response => {
+        console.log(response.data);
+        setIsAuthenticated(true); 
+      })
+      .catch(error => {
+        if (error.response && error.response.status === 401) {
+          setIsAuthenticated(false); 
+          navigate('/'); 
+        } else {
+          console.error('Error fetching data: ', error);
+        }
+      });
+  }, []);
+
   const [ items, setItems ] = useState([]);
   useEffect(() => {
     fetchData();  
@@ -183,6 +238,12 @@ const ActiveItemsPage = (props) => {
       item.last_reviewed_date?.toLowerCase().startsWith(searchTermLower)
     ) && item.status === 'Active';
   });
+
+  
+  if (null === null) {
+    console.log("loading verified");
+    return <div>Loading...</div>; 
+  }
 
   return (
       <div className="container">

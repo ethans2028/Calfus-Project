@@ -7,10 +7,17 @@ import AuditPage from './routes/AuditPage';
 import EditPage from './routes/EditPage';
 import { AnomalyContextProvider } from './context/AnomalyContext';
 import NewPage from './routes/NewAnomalyPage'; // adjust the path as needed
+import { Auth0Provider } from '@auth0/auth0-react';
 
 const App = () => {
   return (
     <AnomalyContextProvider>
+      <Auth0Provider
+        domain="dev-o34bqen6xipaqjxs.us.auth0.com"
+        clientId="aeP5JpgwYxGAjJrWc0zLTEHXKMUcoSTo"
+        redirectUri="http://localhost:3000/cic"
+        audience="http://localhost:5000"
+        >
       <div>
         <Router>
           <Routes> 
@@ -24,9 +31,11 @@ const App = () => {
           </Routes>
         </Router>
       </div>
+      </Auth0Provider>
     </AnomalyContextProvider>
   )
 }
 
 export default App;
+
 
