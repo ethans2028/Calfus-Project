@@ -74,14 +74,17 @@ const EditPage = () => {
       return;
     }
 
-    var message = "Updated ";
+
+    // "Updated [field] from [previous] to [new], Updated..."
+    var message = "";
     var start = true;
     for (let item in itemSet){
+      const auditMessage = "Updated " + auditTranspositions[itemSet[item]] + " from \"" + selectedItem[itemSet[item]] + "\" to \"" + formValues[itemSet[item]] + "\"";
       if (start){
         start = false;
-        message = message + auditTranspositions[itemSet[item]];
+        message = message + auditMessage;
       }else{
-        message = message + ", " + auditTranspositions[itemSet[item]];
+        message = message + ", " + auditMessage;
       }
 
     }
@@ -92,24 +95,27 @@ const EditPage = () => {
     console.log(auditInfo)
 
     setIsLoading('submitting');
+    var anomDone = false
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
-
+        anomDone = true
       })
       .catch((error) => {
         console.error('Error updating item', error);
+        anomDone = true
       });
 
-
+    var auditDone = false
     AnomalyFinder.put(`/${id}/changes`, auditInfo)
       .then((response) => {
         console.log('Successfully updated audit log!');
+        auditDone = true
       })
       .catch((error) => {
         console.error('Error updating item', error);
+        auditDone = true
       });
-
     setIsLoading('submitted');
   };
 
@@ -205,7 +211,7 @@ const EditPage = () => {
               <label>
                 <input
                   class="reason-mitigation-textbox"
-                  name="last_review"
+                  name="dao_member_user"
                   type="text"
                   value={formValues.dao_member_user !== '' ? formValues.dao_member_user : selectedItem["DAO Member (User)"]}
                   onChange={handleInputChange}

@@ -57,11 +57,56 @@ const AuditPage = () => {
     const mappedData = filtData.map((edit, ind) => {
         const day = edit.date.substring(0, 10)
         const time = edit.date.substring(11, 19)
-        return (<tr key={edit.id} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
-            <td>{edit.dao_member}</td>
-            <td>{day}   {time}</td>
-            <td>{edit.change}</td>
-        </tr>)
+        var parse = edit.change
+        var actionSet = []
+        var num = 0
+        while (parse.length > 0){
+          if (parse.indexOf(", Updated") === -1){
+            actionSet[num] = parse
+            parse = ""
+            num = num + 1
+          }
+          else{ 
+            actionSet[num] = parse.substring(0, parse.indexOf(", Updated"))
+            parse = parse.substring(parse.indexOf(", Updated")+2)
+            num = num + 1
+          }
+          
+        }
+        var other = []
+        var lis = 0
+        for (var action in actionSet){
+          var bit = actionSet[action]
+          // new audits are going to be in this format
+          const regex = /Updated (.*) from "(.*)" to "(.*)"/
+          // if it's not in this format, it's presented in a different form
+          // (nothing in "Field Changed" or "Previous Value", whole of change in "New Value/Action Taken")
+          const read = bit.match(regex)
+          if (read !== null){
+            var field = read[1]
+            var prevSet = read[2]
+            var newSet = read[3]
+            var output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
+              <td>{edit.dao_member}</td>
+              <td>{day}   {time}</td>
+              <td>{field}</td>
+              <td>{prevSet}</td>
+              <td>{newSet}</td>
+            </tr>
+          }
+          else{
+            var output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
+              <td>{edit.dao_member}</td>
+              <td>{day}   {time}</td>
+              <td></td>
+              <td></td>
+              <td>{actionSet[action]}</td>
+            </tr>
+          }
+          other[lis] = output
+          lis = lis + 1
+        }
+        return other
     }
     ); 
     
@@ -112,7 +157,9 @@ const AuditPage = () => {
                 <tr style={{backgroundColor: '#bcbcbc'}}>
                     <th width={500}>Username</th>
                     <th width={200}>Date</th>
-                    <th width={2000}>Action</th>
+                    <th width={200}>Field Changed</th>
+                    <th width={900}>Previous Value</th>
+                    <th width={900}>New Value/Action Taken</th>
                 </tr>
             </thead>
             <tbody>{mappedData}</tbody>

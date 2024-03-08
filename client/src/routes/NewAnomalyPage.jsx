@@ -56,9 +56,6 @@ const AddPage = () => {
         console.log(response);
         id = response.data.data.anomalies[0].id;
         console.log(id);
-
-        
-
         const auditItem = {report_id: id, datetime: new Date(Date.now()),
           member: currentUser, change: "Added anomaly to tracker",
           county: county, state: state}
