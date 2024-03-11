@@ -81,7 +81,7 @@ app.put("/api/v1/anomalies/new", async(req, res) => {
         anomalies: datas.rows,
       },
     });
-
+    console.log('success')
   } catch (err) {
     res.status(500).json({ error: 'An error occurred while updating data'});
     console.log(err);
@@ -116,7 +116,7 @@ app.put('/api/v1/anomalies/:id', async (req, res) => {
         anomalies: datas.rows,
       },
     });
-
+    console.log('success')
   } catch (err) {
     res.status(500).json({ error: 'An error occurred while updating data'});
     console.log(err);
