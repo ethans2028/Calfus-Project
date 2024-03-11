@@ -4,6 +4,10 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, button, input, textarea {
   padding: 0;
   box-sizing: border-box;
 }
+td {
+  text-align: center;
+  vertical-align: middle;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -149,6 +153,16 @@ button:hover {
   width: 150px;
   border-radius: 25px;
   transition: 0.15s ease-in-out;
+}
+
+.reason-mitigation-textbox{
+  width: 100%;
+  height: 100%;
+  padding: 1px;
+  border: .3px solid #ddd;
+  font-size: 1rem;
+  overflow: auto;
+  border-radius: 0px;
 }
 
 .button:hover {

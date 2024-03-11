@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
+import AnomalyFinder from "../apis/AnomalyFinder.js";
+
 import LogoutButton from "./LogoutButton.jsx";  // like the Edit page, I see no reason to put this here
 
 const AddPage = () => {
@@ -15,34 +17,74 @@ const AddPage = () => {
   const [mitigationPlan, setMitigationPlan] = useState('');
 
   //Dates
-  const [startDate, setStartDate] = useState('');
-  const [endDate, setEndDate] = useState('');
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
   const [lastReview, setLastReview] = useState('');
-  const [lastReviewDate, setLastReviewDate] = useState('');
+  const [lastReviewDate, setLastReviewDate] = useState(new Date());
 
   // Drop down
-  const [state, setState] = useState('');
-  const [impactSeverity, setImpactSeverity] = useState('');
-  const [clears, setClears] = useState('');
-  const [possibleHits, setPossibleHits] = useState('');
+  const [state, setState] = useState('WA');
+  const [impactSeverity, setImpactSeverity] = useState('Low');
+  const [clears, setClears] = useState('Yes');
+  const [possibleHits, setPossibleHits] = useState('Delayed Time');
   const [researched, setResearched] = useState('');
   const [otherResearch, setOtherResearch] = useState('');
 
-  const [dobRedaction, setDobRedaction] = useState('');
-  const [status, setStatus] = useState('');
+  const [dobRedaction, setDobRedaction] = useState(true);
+  const [status, setStatus] = useState('Active');
+
+  const currentUser = "John Green";
 
   const handleButtonClick_home = () => {
     setRedirect_home(true);
   };
-
+ 
   const handleSubmit = () => {
-    setRedirectDetailPage(true);
-    console.log('Form submitted!');
+
+    const submittedItem = {act_resolution_date: null, clears: clears,
+        county: county, dao_member_user: lastReview, dob_redaction: dobRedaction,
+        est_resolution_date: endDate, impact_severity: impactSeverity, issue_start_date: startDate,
+        last_reviewed_date: lastReviewDate, links: extraLinks, mitigation_plan: mitigationPlan,
+        possible_hits: possibleHits, reason: reason, research_method: (clears === 'other' ? otherResearch : clears),
+        state: state, status: status}
+
+    var id = -1;
     // Add logic for handling the form submission (e.g., adding a new entry)
+    AnomalyFinder.put(`/new`, submittedItem)
+      .then((response) => {
+        console.log('Successfully added item!');
+        console.log(response);
+        id = response.data.data.anomalies[0].id;
+        console.log(id);
+        const auditItem = {report_id: id, datetime: new Date(Date.now()),
+          member: currentUser, change: "Added anomaly to tracker",
+          county: county, state: state}
+
+        AnomalyFinder.put(`/${id}/changes`, auditItem)
+          .then((response) => {
+            console.log('Successfully added item!');
+          })
+          .catch((error) => {
+            console.error('Error updating item', error);
+          });
+      })
+      .catch((error) => {
+        console.error('Error updating item', error);
+      });
+      
+
+    
+    // create first entry of audit log
+
+    
+      
+    setRedirectDetailPage(true);
+    
   };
+  
 
   if (redirect_DetailPage) {
-    return <Navigate to="/anomalies/:CASACRAMENTO" />;
+    return <Navigate to="/cic" />;
   }
 
   if (redirect_home) {
@@ -106,6 +148,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={county}
                     onChange={(e) => setCounty(e.target.value)}
@@ -122,6 +165,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={lastReview}
                     onChange={(e) => setLastReview(e.target.value)}
@@ -133,6 +177,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={lastReviewDate}
                     onChange={(e) => setLastReviewDate(e.target.value)}
@@ -145,6 +190,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={startDate}
                     onChange={(e) => setStartDate(e.target.value)}
@@ -157,6 +203,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="date"
                     value={endDate}
                     onChange={(e) => setEndDate(e.target.value)}
@@ -171,6 +218,7 @@ const AddPage = () => {
               <td>
                 <label>
                   <input
+                    class="reason-mitigation-textbox"
                     type="text"
                     value={researched}
                     onChange={(e) => setResearched(e.target.value)}
@@ -234,11 +282,11 @@ const AddPage = () => {
             </tr>
             <tr className='long-data'>
               <td className='long-data'>
-                <textarea value={reason} onChange={(e) => setReason(e.target.value)} />
+                <textarea value={reason} class="reason-mitigation-textbox" onChange={(e) => setReason(e.target.value)} />
               </td>
 
               <td className='long-data'>
-                <textarea value={mitigationPlan} onChange={(e) => setMitigationPlan(e.target.value)} />
+                <textarea value={mitigationPlan} class="reason-mitigation-textbox" onChange={(e) => setMitigationPlan(e.target.value)} />
               </td>
             </tr>
           </table>
