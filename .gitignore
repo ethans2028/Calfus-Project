@@ -1,6 +1,7 @@
 /node_modules
 /server/node_modules
 /server/.env
+/server/serverless.yml
 
 /client/.env
 /client/node_modules
