@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { Pool } = require('pg');
@@ -209,9 +209,21 @@ app.get("/api/v1/anomalies/:id/changes", async (req, res) => {
 
 
 
-const port = process.env.PORT || 3002;
-app.listen(port, () => {
-  console.log(`server is up and listening on ${port}`);
-});
+// const port = process.env.PORT || 3002;
+// app.listen(port, () => {
+//   console.log(`server is up and listening on ${port}`);
+// });
+
+var port;
+
+if(process.env.ENVIRONMENT != "lambda"){
+
+  port = process.env.PORT || 3002;
+
+  app.listen(port, () => {
+    console.log(`Sever running on port: ${port}`);
+  });
+  app.js
+} 
 
 module.exports.handler = serverless(app);
