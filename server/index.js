@@ -227,3 +227,5 @@ if(process.env.ENVIRONMENT != "lambda"){
 } 
 
 module.exports.handler = serverless(app);
+
+require("dotenv").config();
