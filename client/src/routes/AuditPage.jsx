@@ -94,7 +94,7 @@ const AuditPage = () => {
             var prevSet = read[2]
             var newSet = read[3]
             var output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee', 
-            borderTop: top ? '1px solid' : 'hidden', borderBottom: bottom ? '1px solid' : 'hidden'}}>
+            borderTop: top ? '1px solid' : '2px dotted grey', borderBottom: bottom ? '1px solid' : '2px dotted grey'}}>
               <td>{edit.dao_member}</td>
               <td>{day}   {time}</td>
               <td>{field}</td>

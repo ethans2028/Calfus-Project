@@ -190,7 +190,7 @@ const ActiveItemsPage = (props) => {
         <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
-          <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
+          <input name="search" type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
           <Link to="/NewPage" className="button"> + New Entry</Link>
         </div>
         <div>

@@ -1,9 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import '../global.css'; 
+import States from '../util/state_county_list.json';
+import Values from '../util/field_values.json'
 
 import  AnomalyFinder  from '../apis/AnomalyFinder';
 import { AnomalyContext } from '../context/AnomalyContext';
+
 
 const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "clears": "Clears", "county": "County",
                               "dao_member_user": "Last Review", "dob_redaction": "DOB Redaction", "est_resolution_date": "Estimated Resolution Date",
@@ -12,12 +15,13 @@ const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "c
                               "possible_hits": "Possible Hits", "reason": "Reason", "research_method": "Research Method",
                               "state": "State", "status": "Status"}
 
+
+
 const EditPage = () => {
   const { id } = useParams();
   const [ selectedItem, setSelectedItem ] = useState({});
   const [formValues, setFormValues] = useState({});
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
-
 
   // temporary variable for current user
   const currentUser = "John Green";
@@ -99,7 +103,16 @@ const EditPage = () => {
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
-        anomDone = true
+        AnomalyFinder.put(`/${id}/changes`, auditInfo)
+        .then((response) => {
+          console.log('Successfully updated audit log!');
+          auditDone = true
+        })
+        .catch((error) => {
+          console.error('Error updating item', error);
+          auditDone = true
+        });
+        setIsLoading('submitted');
       })
       .catch((error) => {
         console.error('Error updating item', error);
@@ -107,16 +120,7 @@ const EditPage = () => {
       });
 
     var auditDone = false
-    AnomalyFinder.put(`/${id}/changes`, auditInfo)
-      .then((response) => {
-        console.log('Successfully updated audit log!');
-        auditDone = true
-      })
-      .catch((error) => {
-        console.error('Error updating item', error);
-        auditDone = true
-      });
-    setIsLoading('submitted');
+    
   };
 
   const handleInputChange = (event) => {
@@ -151,11 +155,11 @@ const EditPage = () => {
             <td>
             <label>
               <select name="status" value={formValues.status} onChange={handleInputChange}>
-              {['Active', 'Not Active'].map((statusOption) => (
-                <option key={statusOption} value={statusOption}>
-                {statusOption}
-                </option>
-              ))}
+                {Values.status.map((statusOption) => (
+                      <option key={statusOption} value={statusOption}>
+                        {statusOption}
+                      </option>
+                    ))}
               </select>
             </label>
             <br />  
@@ -165,11 +169,11 @@ const EditPage = () => {
             <td>
             <label>
               <select name="impact_severity" value={formValues.impact_severity} onChange={handleInputChange}>
-                {['Low', 'Medium', 'High'].map((severityOption) => (
-                  <option key={severityOption} value={severityOption}>
-                    {severityOption}
-                  </option>
-                ))}
+                {Values.impactSeverity.map((severityOption) => (
+                      <option key={severityOption} value={severityOption}>
+                        {severityOption}
+                      </option>
+                    ))}
               </select>
             </label>
             <br />
@@ -240,24 +244,25 @@ const EditPage = () => {
             <td>
               <label>
                 <select name="dob_redaction" value={formValues.dob_redaction} onChange={handleInputChange}>
-                  {['yes', 'no'].map((redactionOption) => (
-                    <option key={redactionOption} value={redactionOption}>
-                      {redactionOption}
-                    </option>
-                  ))}
+                  {Values.dobRedaction.map((dob) => (
+                      <option key={dob} value={dob}>
+                        {dob}
+                      </option>
+                    ))}
                 </select>
               </label>
               <br />
             </td>
+
             <th>Possible Hits</th>
             <td>
               <label>
                 <select name="possible_hits" value={formValues.possible_hits} onChange={handleInputChange}>
-                  {['Delayed Time', 'Effects delivery date'].map((hitOption) => (
-                    <option key={hitOption} value={hitOption}>
-                      {hitOption}
-                    </option>
-                  ))}
+                  {Values.possibleHits.map((hits) => (
+                      <option key={hits} value={hits}>
+                        {hits}
+                      </option>
+                    ))}
                 </select>
               </label>
               <br />
@@ -288,23 +293,20 @@ const EditPage = () => {
             <td>
               <label>
                 <select name="clears" value={formValues.clears} onChange={handleInputChange}>
-                  {['yes', 'no', 'other'].map((clearOption) => (
-                    <option key={clearOption} value={clearOption}>
-                      {clearOption}
-                    </option>
-                  ))}
+                  {Values.clears.map((clears) => (
+                      <option key={clears} value={clears}>
+                        {clears}
+                      </option>
+                    ))}
                 </select>
               </label>
-              {formValues.clears === 'other' && (
+              {formValues.clears === 'Other' && (
                   <label>
                     <input type="text" class="reason-mitigation-textbox"name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
                   </label>
               )}
               <br />
             </td>
-            
-            
-          
           </tr>
         </table>
         <table className="TextTable">
