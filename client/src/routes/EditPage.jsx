@@ -47,6 +47,7 @@ const EditPage = () => {
   }; 
 
 
+
   if (isLoading === 'loading') {
     return <div>Loading...</div>; // Or any other loading indicator
   }
@@ -106,17 +107,17 @@ const EditPage = () => {
         AnomalyFinder.put(`/${id}/changes`, auditInfo)
         .then((response) => {
           console.log('Successfully updated audit log!');
-          auditDone = true
+          setIsLoading('submitted');
         })
         .catch((error) => {
-          console.error('Error updating item', error);
-          auditDone = true
+          console.error('Error updating audit log', error);
+          setIsLoading('error')
         });
-        setIsLoading('submitted');
+        
       })
       .catch((error) => {
         console.error('Error updating item', error);
-        anomDone = true
+        setIsLoading('error');
       });
 
     var auditDone = false
@@ -150,6 +151,7 @@ const EditPage = () => {
       <form onSubmit={(event) => { event.preventDefault(); handleSubmit(); }}>
       <div className='details-data'>
         <table>
+          <tbody>
           <tr>
             <th>Status</th>
             <td>
@@ -182,7 +184,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="issue_start_date"
                   type="date"
                   value={formValues.issue_start_date !== '' ? formValues.issue_start_date : formatDate(selectedItem['Issue Start Date'])}
@@ -196,7 +198,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="estimated_resolution_date"
                   type="date"
                   value={formValues.est_resolution_date !== '' ? formValues.est_resolution_date : formatDate(selectedItem['Est Resolution Date'])}
@@ -214,7 +216,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="dao_member_user"
                   type="text"
                   value={formValues.dao_member_user !== '' ? formValues.dao_member_user : selectedItem["DAO Member (User)"]}
@@ -229,7 +231,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="last_reviewed_date"
                   type="date"
                   value={formValues.last_reviewed_date !== '' ? formValues.last_reviewed_date : formatDate(selectedItem['Last Reviewed Date'])}
@@ -276,7 +278,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="research_method"
                   type="text"
                   value={formValues.research_method !== '' ? formValues.research_method : selectedItem['Research Method']}
@@ -302,24 +304,28 @@ const EditPage = () => {
               </label>
               {formValues.clears === 'Other' && (
                   <label>
-                    <input type="text" class="reason-mitigation-textbox"name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
+                    <input type="text" className="reason-mitigation-textbox" name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
                   </label>
               )}
               <br />
             </td>
           </tr>
+          </tbody>
         </table>
         <table className="TextTable">
+          <thead>
             <tr>
               <th>Reason</th>
               <th>Mitigation Plan</th>
             </tr>
+          </thead>
+          <tbody>
             <tr className='long-data'>
 
               <td className='long-data'>
                 
                 <textarea
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="reason"
                   value={formValues.reason !== '' ? formValues.reason : selectedItem.Reason}
                   onChange={handleInputChange}
@@ -328,13 +334,14 @@ const EditPage = () => {
 
               <td>
                 <textarea
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="mitigation_plan"
                   value={formValues.mitigation_plan !== '' ? formValues.mitigation_plan : selectedItem['Mitigation Plan']}
                   onChange={handleInputChange}
                 />
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
         <div className='edit-btn-div'>

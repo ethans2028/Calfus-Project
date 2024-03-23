@@ -3,5 +3,5 @@
     "impactSeverity": ["Short-Term", "Medium-Term", "Long-Term", "New Normal"],
     "possibleHits": ["Delayed Time", "Affects Delivery Date"],
     "clears": ["Yes", "No", "Other"],
-    "dobRedaction": ["Yes", "No"]
+    "dobRedaction": ["true", "false"]
 }
