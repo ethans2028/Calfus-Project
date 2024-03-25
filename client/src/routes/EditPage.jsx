@@ -1,11 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import '../global.css'; 
-import States from '../util/state_county_list.json';
 import Values from '../util/field_values.json'
 
 import  AnomalyFinder  from '../apis/AnomalyFinder';
-import { AnomalyContext } from '../context/AnomalyContext';
 
 
 const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "clears": "Clears", "county": "County",
@@ -14,8 +12,6 @@ const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "c
                               "last_reviewed_date": "Last Reviewed Date", "links": "Links", "mitigation_plan": "Mitigation Plan",
                               "possible_hits": "Possible Hits", "reason": "Reason", "research_method": "Research Method",
                               "state": "State", "status": "Status"}
-
-
 
 const EditPage = () => {
   const { id } = useParams();
@@ -34,6 +30,18 @@ const EditPage = () => {
     console.log("it's changing!", selectedItem);
   }, [selectedItem]);
   
+  //used to convert dates from the JSON into the format used for type date in react
+  const formatDate = (inputDate) => {
+    if (!inputDate) return '';
+    const regex = /^([0-9]{4})-([0-9]{2})-([0-9]{2})/
+    const result = inputDate.match(regex)
+    if (!result) return inputDate;
+    const year = result[1];
+    const month = result[2].padStart(2, '0');
+    const day = result[3].padStart(2, '0');
+    return `${year}-${month}-${day}`;
+    };
+
   const fetchData = async () => {
     AnomalyFinder.get(`/${id}`)
     .then((response) => {
@@ -45,8 +53,6 @@ const EditPage = () => {
       console.error('Error fetching data for anomaly', error);
     });
   }; 
-
-
 
   if (isLoading === 'loading') {
     return <div>Loading...</div>; // Or any other loading indicator
@@ -68,7 +74,7 @@ const EditPage = () => {
 
     for (let item in formValues){
       if (formValues[item] !== selectedItem[item]){
-        itemSet.push(item)
+          itemSet.push(item)
       }
     }
 
@@ -84,7 +90,7 @@ const EditPage = () => {
     var message = "";
     var start = true;
     for (let item in itemSet){
-      const auditMessage = "Updated " + auditTranspositions[itemSet[item]] + " from \"" + selectedItem[itemSet[item]] + "\" to \"" + formValues[itemSet[item]] + "\"";
+      const auditMessage = "Updated " + auditTranspositions[itemSet[item]] + " from \"" + formatDate(selectedItem[itemSet[item]]) + "\" to \"" + formValues[itemSet[item]] + "\"";
       if (start){
         start = false;
         message = message + auditMessage;
@@ -100,7 +106,6 @@ const EditPage = () => {
     console.log(auditInfo)
 
     setIsLoading('submitting');
-    var anomDone = false
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
@@ -119,8 +124,6 @@ const EditPage = () => {
         console.error('Error updating item', error);
         setIsLoading('error');
       });
-
-    var auditDone = false
     
   };
 
@@ -129,15 +132,7 @@ const EditPage = () => {
     setFormValues({ ...formValues, [name]: value });
   };
   
-  //used to convert dates from the JSON into the format used for type date in react
-  const formatDate = (inputDate) => {
-    const date = new Date(inputDate);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-    };
-
+  
 
   return (
     <div className='details-page'>
@@ -187,7 +182,7 @@ const EditPage = () => {
                   className="reason-mitigation-textbox"
                   name="issue_start_date"
                   type="date"
-                  value={formValues.issue_start_date !== '' ? formValues.issue_start_date : formatDate(selectedItem['Issue Start Date'])}
+                  value={formValues.issue_start_date !== '' ? formatDate(formValues.issue_start_date) : formatDate(selectedItem['Issue Start Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -201,7 +196,7 @@ const EditPage = () => {
                   className="reason-mitigation-textbox"
                   name="estimated_resolution_date"
                   type="date"
-                  value={formValues.est_resolution_date !== '' ? formValues.est_resolution_date : formatDate(selectedItem['Est Resolution Date'])}
+                  value={formValues.est_resolution_date !== '' ? formatDate(formValues.est_resolution_date) : formatDate(selectedItem['Est Resolution Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -234,7 +229,7 @@ const EditPage = () => {
                   className="reason-mitigation-textbox"
                   name="last_reviewed_date"
                   type="date"
-                  value={formValues.last_reviewed_date !== '' ? formValues.last_reviewed_date : formatDate(selectedItem['Last Reviewed Date'])}
+                  value={formValues.last_reviewed_date !== '' ? formatDate(formValues.last_reviewed_date) : formatDate(selectedItem['Last Reviewed Date'])}
                   onChange={handleInputChange}
                 />
               </label>

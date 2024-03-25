@@ -25,7 +25,6 @@ const AuditPage = () => {
   const fetchData = async () => {
     AnomalyFinder.get(`/${id}/changes`)
     .then((response) => {
-      console.log(response)
       setAudits(response.data.data.anomalies);
       setIsLoading('loaded'); 
     })
@@ -37,20 +36,12 @@ const AuditPage = () => {
     return <div>Loading...</div>; 
   }
 
-
-    // setting up for later - these are all the "modifiable" fields
-    
-    
     // filtering code (stolen partially from Charlie's code)
     
     const changeUname = event => {
         f_u(event.target.value);
     }
     
-    function SubtableItems(props){
-
-    }
-
 
     const filtData = audits.filter(edit => {
       if (unameFilter === '') return true;
@@ -86,14 +77,14 @@ const AuditPage = () => {
           // if it's not in this format, it's presented in a different form
           // (nothing in "Field Changed" or "Previous Value", whole of change in "New Value/Action Taken")
           const read = bit.match(regex)
+          var output
           if (read !== null){
             var top = (lis === 0)
             var bottom = (lis === num-1)
-            console.log(top, bottom)
             var field = read[1]
             var prevSet = read[2]
             var newSet = read[3]
-            var output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee', 
+            output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee', 
             borderTop: top ? '1px solid' : '2px dotted grey', borderBottom: bottom ? '1px solid' : '2px dotted grey'}}>
               <td>{edit.dao_member}</td>
               <td>{day}   {time}</td>
@@ -103,7 +94,7 @@ const AuditPage = () => {
             </tr>
           }
           else{
-            var output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
+            output = <tr key={(edit.id, lis)} style={{ backgroundColor: ind % 2 === 1 ? '#d9d9d9' : '#eeeeee' }}>
               <td>{edit.dao_member}</td>
               <td>{day}   {time}</td>
               <td></td>

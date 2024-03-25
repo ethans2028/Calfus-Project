@@ -6,8 +6,6 @@ import AnomalyFinder from "../apis/AnomalyFinder.js";
 import States from '../util/state_county_list.json';
 import Values from '../util/field_values.json'
 
-import LogoutButton from "./LogoutButton.jsx";  // like the Edit page, I see no reason to put this here
-
 const AddPage = () => {
 
   const [isLoading, setIsLoading] = useState('waiting');
@@ -16,7 +14,6 @@ const AddPage = () => {
   const [reason, setReason] = useState('');
   const [county, setCounty] = useState('');
   const [manCounty, setManCounty] = useState('');
-  const [username, setUsername] = useState('');
   const [extraLinks, setExtraLinks] = useState('');
   const [mitigationPlan, setMitigationPlan] = useState('');
 

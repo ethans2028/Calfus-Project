@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../global.css';
 //backend-imports
 import  AnomalyFinder  from '../apis/AnomalyFinder';
-import { AnomalyContext } from '../context/AnomalyContext';
 
 import LogoutButton from "./LogoutButton.jsx";
 
