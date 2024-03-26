@@ -58,6 +58,7 @@ const AnomalyDetailPage = () => {
 
       <div className='details-data'>
         <table>
+          <tbody>
           <tr>
             <th>Status</th>
             <td>{selectedItem.status || 'NO DATA'}</td>
@@ -88,18 +89,25 @@ const AnomalyDetailPage = () => {
             <th>DOB Redaction?</th>
             <td>{selectedItem.dob_redaction !== null ? selectedItem.dob_redaction.toString() : 'NO DATA'}</td>
           </tr>
+          </tbody>
         </table>
 
         <table>
-          <tr>
-            <th>Reason</th>
-            <th>Mitigation Plan</th>
-          </tr>
-          <tr className='long-data'>
-            <td className='long-data'>{selectedItem.reason}</td>
-            <td className='long-data'>{selectedItem.mitigation_plan}</td>
+          <thead>
+            <tr>
+              <th>Reason</th>
+              <th>Mitigation Plan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className='long-data'>
+              <td className='long-data'>{selectedItem.reason}</td>
+              <td className='long-data'>{selectedItem.mitigation_plan}</td>
             
-          </tr>
+            </tr>
+
+          </tbody>
+          
         </table>
       </div>
       

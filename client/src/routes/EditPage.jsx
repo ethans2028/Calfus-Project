@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BrowserRouter as Router, Link, Navigate, useParams} from 'react-router-dom';
 import '../global.css'; 
+import Values from '../util/field_values.json'
 
 import  AnomalyFinder  from '../apis/AnomalyFinder';
-import { AnomalyContext } from '../context/AnomalyContext';
+
 
 const auditTranspositions = {"act_resolution_date": "Actual Resolution Date", "clears": "Clears", "county": "County",
                               "dao_member_user": "Last Review", "dob_redaction": "DOB Redaction", "est_resolution_date": "Estimated Resolution Date",
@@ -18,7 +19,6 @@ const EditPage = () => {
   const [formValues, setFormValues] = useState({});
   const [isLoading, setIsLoading] = useState('loading'); // Add this line
 
-
   // temporary variable for current user
   const currentUser = "John Green";
 
@@ -30,6 +30,18 @@ const EditPage = () => {
     console.log("it's changing!", selectedItem);
   }, [selectedItem]);
   
+  //used to convert dates from the JSON into the format used for type date in react
+  const formatDate = (inputDate) => {
+    if (!inputDate) return '';
+    const regex = /^([0-9]{4})-([0-9]{2})-([0-9]{2})/
+    const result = inputDate.match(regex)
+    if (!result) return inputDate;
+    const year = result[1];
+    const month = result[2].padStart(2, '0');
+    const day = result[3].padStart(2, '0');
+    return `${year}-${month}-${day}`;
+    };
+
   const fetchData = async () => {
     AnomalyFinder.get(`/${id}`)
     .then((response) => {
@@ -41,7 +53,6 @@ const EditPage = () => {
       console.error('Error fetching data for anomaly', error);
     });
   }; 
-
 
   if (isLoading === 'loading') {
     return <div>Loading...</div>; // Or any other loading indicator
@@ -63,7 +74,7 @@ const EditPage = () => {
 
     for (let item in formValues){
       if (formValues[item] !== selectedItem[item]){
-        itemSet.push(item)
+          itemSet.push(item)
       }
     }
 
@@ -79,7 +90,7 @@ const EditPage = () => {
     var message = "";
     var start = true;
     for (let item in itemSet){
-      const auditMessage = "Updated " + auditTranspositions[itemSet[item]] + " from \"" + selectedItem[itemSet[item]] + "\" to \"" + formValues[itemSet[item]] + "\"";
+      const auditMessage = "Updated " + auditTranspositions[itemSet[item]] + " from \"" + formatDate(selectedItem[itemSet[item]]) + "\" to \"" + formValues[itemSet[item]] + "\"";
       if (start){
         start = false;
         message = message + auditMessage;
@@ -95,28 +106,25 @@ const EditPage = () => {
     console.log(auditInfo)
 
     setIsLoading('submitting');
-    var anomDone = false
     AnomalyFinder.put(`/${id}`, formValues)
       .then((response) => {
         console.log('Successfully updated item!');
-        anomDone = true
+        AnomalyFinder.put(`/${id}/changes`, auditInfo)
+        .then((response) => {
+          console.log('Successfully updated audit log!');
+          setIsLoading('submitted');
+        })
+        .catch((error) => {
+          console.error('Error updating audit log', error);
+          setIsLoading('error')
+        });
+        
       })
       .catch((error) => {
         console.error('Error updating item', error);
-        anomDone = true
+        setIsLoading('error');
       });
-
-    var auditDone = false
-    AnomalyFinder.put(`/${id}/changes`, auditInfo)
-      .then((response) => {
-        console.log('Successfully updated audit log!');
-        auditDone = true
-      })
-      .catch((error) => {
-        console.error('Error updating item', error);
-        auditDone = true
-      });
-    setIsLoading('submitted');
+    
   };
 
   const handleInputChange = (event) => {
@@ -124,15 +132,7 @@ const EditPage = () => {
     setFormValues({ ...formValues, [name]: value });
   };
   
-  //used to convert dates from the JSON into the format used for type date in react
-  const formatDate = (inputDate) => {
-    const date = new Date(inputDate);
-    const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, '0');
-    const day = String(date.getDate()).padStart(2, '0');
-    return `${year}-${month}-${day}`;
-    };
-
+  
 
   return (
     <div className='details-page'>
@@ -146,16 +146,17 @@ const EditPage = () => {
       <form onSubmit={(event) => { event.preventDefault(); handleSubmit(); }}>
       <div className='details-data'>
         <table>
+          <tbody>
           <tr>
             <th>Status</th>
             <td>
             <label>
               <select name="status" value={formValues.status} onChange={handleInputChange}>
-              {['Active', 'Not Active'].map((statusOption) => (
-                <option key={statusOption} value={statusOption}>
-                {statusOption}
-                </option>
-              ))}
+                {Values.status.map((statusOption) => (
+                      <option key={statusOption} value={statusOption}>
+                        {statusOption}
+                      </option>
+                    ))}
               </select>
             </label>
             <br />  
@@ -165,11 +166,11 @@ const EditPage = () => {
             <td>
             <label>
               <select name="impact_severity" value={formValues.impact_severity} onChange={handleInputChange}>
-                {['Low', 'Medium', 'High'].map((severityOption) => (
-                  <option key={severityOption} value={severityOption}>
-                    {severityOption}
-                  </option>
-                ))}
+                {Values.impactSeverity.map((severityOption) => (
+                      <option key={severityOption} value={severityOption}>
+                        {severityOption}
+                      </option>
+                    ))}
               </select>
             </label>
             <br />
@@ -178,10 +179,10 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="issue_start_date"
                   type="date"
-                  value={formValues.issue_start_date !== '' ? formValues.issue_start_date : formatDate(selectedItem['Issue Start Date'])}
+                  value={formValues.issue_start_date !== '' ? formatDate(formValues.issue_start_date) : formatDate(selectedItem['Issue Start Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -192,10 +193,10 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="estimated_resolution_date"
                   type="date"
-                  value={formValues.est_resolution_date !== '' ? formValues.est_resolution_date : formatDate(selectedItem['Est Resolution Date'])}
+                  value={formValues.est_resolution_date !== '' ? formatDate(formValues.est_resolution_date) : formatDate(selectedItem['Est Resolution Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -210,7 +211,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="dao_member_user"
                   type="text"
                   value={formValues.dao_member_user !== '' ? formValues.dao_member_user : selectedItem["DAO Member (User)"]}
@@ -225,10 +226,10 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="last_reviewed_date"
                   type="date"
-                  value={formValues.last_reviewed_date !== '' ? formValues.last_reviewed_date : formatDate(selectedItem['Last Reviewed Date'])}
+                  value={formValues.last_reviewed_date !== '' ? formatDate(formValues.last_reviewed_date) : formatDate(selectedItem['Last Reviewed Date'])}
                   onChange={handleInputChange}
                 />
               </label>
@@ -240,24 +241,25 @@ const EditPage = () => {
             <td>
               <label>
                 <select name="dob_redaction" value={formValues.dob_redaction} onChange={handleInputChange}>
-                  {['yes', 'no'].map((redactionOption) => (
-                    <option key={redactionOption} value={redactionOption}>
-                      {redactionOption}
-                    </option>
-                  ))}
+                  {Values.dobRedaction.map((dob) => (
+                      <option key={dob} value={dob}>
+                        {dob}
+                      </option>
+                    ))}
                 </select>
               </label>
               <br />
             </td>
+
             <th>Possible Hits</th>
             <td>
               <label>
                 <select name="possible_hits" value={formValues.possible_hits} onChange={handleInputChange}>
-                  {['Delayed Time', 'Effects delivery date'].map((hitOption) => (
-                    <option key={hitOption} value={hitOption}>
-                      {hitOption}
-                    </option>
-                  ))}
+                  {Values.possibleHits.map((hits) => (
+                      <option key={hits} value={hits}>
+                        {hits}
+                      </option>
+                    ))}
                 </select>
               </label>
               <br />
@@ -271,7 +273,7 @@ const EditPage = () => {
             <td>
               <label>
                 <input
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="research_method"
                   type="text"
                   value={formValues.research_method !== '' ? formValues.research_method : selectedItem['Research Method']}
@@ -288,36 +290,37 @@ const EditPage = () => {
             <td>
               <label>
                 <select name="clears" value={formValues.clears} onChange={handleInputChange}>
-                  {['yes', 'no', 'other'].map((clearOption) => (
-                    <option key={clearOption} value={clearOption}>
-                      {clearOption}
-                    </option>
-                  ))}
+                  {Values.clears.map((clears) => (
+                      <option key={clears} value={clears}>
+                        {clears}
+                      </option>
+                    ))}
                 </select>
               </label>
-              {formValues.clears === 'other' && (
+              {formValues.clears === 'Other' && (
                   <label>
-                    <input type="text" class="reason-mitigation-textbox"name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
+                    <input type="text" className="reason-mitigation-textbox" name="otherResearch" value={formValues.otherResearch} onChange={handleInputChange} required/>
                   </label>
               )}
               <br />
             </td>
-            
-            
-          
           </tr>
+          </tbody>
         </table>
         <table className="TextTable">
+          <thead>
             <tr>
               <th>Reason</th>
               <th>Mitigation Plan</th>
             </tr>
+          </thead>
+          <tbody>
             <tr className='long-data'>
 
               <td className='long-data'>
                 
                 <textarea
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="reason"
                   value={formValues.reason !== '' ? formValues.reason : selectedItem.Reason}
                   onChange={handleInputChange}
@@ -326,13 +329,14 @@ const EditPage = () => {
 
               <td>
                 <textarea
-                  class="reason-mitigation-textbox"
+                  className="reason-mitigation-textbox"
                   name="mitigation_plan"
                   value={formValues.mitigation_plan !== '' ? formValues.mitigation_plan : selectedItem['Mitigation Plan']}
                   onChange={handleInputChange}
                 />
               </td>
             </tr>
+            </tbody>
           </table>
         </div>
         <div className='edit-btn-div'>

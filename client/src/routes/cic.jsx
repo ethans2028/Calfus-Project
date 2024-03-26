@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import '../global.css';
 //backend-imports
 import  AnomalyFinder  from '../apis/AnomalyFinder';
-import { AnomalyContext } from '../context/AnomalyContext';
 
 import LogoutButton from "./LogoutButton.jsx";
 
@@ -190,7 +189,7 @@ const ActiveItemsPage = (props) => {
         <LogoutButton/>
         <h1 className='page-header'>Current Impacted Counties</h1>
         <div style={{ display: 'flex', flexDirection: 'row', justifyItems: 'center'}}> 
-          <input type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
+          <input name="search" type="text" placeholder="Search by State, County, Severity, or Last Review" onChange={handleSearch} style={{ marginRight: '5px' }}/>          
           <Link to="/NewPage" className="button"> + New Entry</Link>
         </div>
         <div>

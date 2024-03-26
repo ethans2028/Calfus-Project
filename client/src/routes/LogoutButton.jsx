@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import { Navigate} from 'react-router-dom';
 import '../global.css'; // Import the global CSS file
-import VariableName from "../assets/logo.jpg";
-import logo from '../assets/logo.jpg';
 import { useAuth0 } from "@auth0/auth0-react";
 
 // This is a Logout Button object
